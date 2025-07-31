@@ -50,19 +50,19 @@ const ContactSection = () => {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/ezefavour",
+      url: "https://github.com/Code-With-Fred",
       color: "hover:text-gray-900 dark:hover:text-white",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/ezefavour",
+      url: "https://linkedin.com/in/kedin.com/in/favour-chimereze-eze-37b1b235a/",
       color: "hover:text-blue-600",
     },
     {
       name: "Twitter",
       icon: Twitter,
-      url: "https://twitter.com/ezefavour",
+      url: "https://twitter.com/chimereze_eze",
       color: "hover:text-blue-400",
     },
   ]
