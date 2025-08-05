@@ -23,12 +23,12 @@ const ProjectsSection = () => {
       type: "development",
     },
     {
-      title: "Task Management API",
-      description: "RESTful API for task management with advanced features like team collaboration, file attachments, and real-time notifications.",
+      title: "Real Estate website",
+      description: "this is a real estate website where users can buy and sale there houses",
       image: "/api/placeholder/600/400",
-      technologies: ["Express.js", "MongoDB", "Socket.io", "JWT", "AWS S3"],
-      demoUrl: "#",
-      githubUrl: "#",
+      technologies: ["Typescript", "MongoDB", "tailwind", "framer", "React"],
+      demoUrl: "https://wisper-prime-nigeria.vercel.app/",
+      githubUrl: "https://github.com/Code-With-Fred/wisper-prime-nigeria.git",
       type: "development",
     },
     {
@@ -36,8 +36,8 @@ const ProjectsSection = () => {
       description: "A comprehensive design system and component library with full TypeScript support, Storybook documentation, and automated testing.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "TypeScript", "Storybook", "Jest", "Rollup"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://thrive-africa-health-initiative.vercel.app/",
+      githubUrl: "https://github.com/Code-With-Fred/health.git",
       type: "development",
     },
     {
