@@ -23,8 +23,8 @@ const ProjectsSection = () => {
       type: "development",
     },
     {
-      title: "Real Estate website",
-      description: "this is a real estate website where users can buy and sale there houses",
+      title: "Real Estate Website",
+      description: "This is a real estate website where users can buy and sale there houses",
       image: "/api/placeholder/600/400",
       technologies: ["Typescript", "MongoDB", "tailwind", "framer", "React"],
       demoUrl: "https://wisper-prime-nigeria.vercel.app/",
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       type: "development",
     },
     {
-      title: "React Component Library",
+      title: "N.G.O Website",
       description: "A comprehensive design system and component library with full TypeScript support, Storybook documentation, and automated testing.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "TypeScript", "Storybook", "Jest", "Rollup"],
