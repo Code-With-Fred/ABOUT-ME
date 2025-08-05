@@ -4,6 +4,7 @@ import { ExternalLink, Github, FileText } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import img1 from "@/assest/Screenshot (55).png"
 
 const ProjectsSection = () => {
   const [ref, inView] = useInView({
@@ -13,12 +14,12 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include real-time inventory, payment processing, and admin dashboard.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
-      demoUrl: "#",
-      githubUrl: "#",
+      title: "TradePro",
+      description: "For now a frontend project on a trading platform where users can trade with ease.",
+      image: img1,
+      technologies: ["React", "Typescript", "Tailwind", "Framer"],
+      demoUrl: "https://trade-pro-wine.vercel.app/",
+      githubUrl: "https://github.com/Code-With-Fred/TradePro",
       type: "development",
     },
     {
@@ -153,7 +154,7 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Actions */}
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <Button size="sm" variant="outline" className="flex-1">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         View
@@ -162,7 +163,32 @@ const ProjectsSection = () => {
                         <Github className="h-4 w-4 mr-2" />
                         Code
                       </Button>
-                    </div>
+                    </div> */}
+                    {/* Actions */}
+<div className="flex gap-2">
+  <a
+    href={project.demoUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <Button size="sm" variant="outline" className="w-full">
+      <ExternalLink className="h-4 w-4 mr-2" />
+      View
+    </Button>
+  </a>
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <Button size="sm" variant="ghost" className="w-full">
+      <Github className="h-4 w-4 mr-2" />
+      Code
+    </Button>
+  </a>
+</div>
                   </CardContent>
                 </Card>
               </motion.div>

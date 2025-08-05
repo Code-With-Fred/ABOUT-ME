@@ -179,7 +179,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-muted-foreground">eze.favour@example.com</p>
+                        <p className="text-muted-foreground">ezefavourchimereze@gmail.com</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -188,7 +188,7 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <p className="font-medium">Location</p>
-                        <p className="text-muted-foreground">Lagos, Nigeria</p>
+                        <p className="text-muted-foreground">Port-Harcourt, Nigeria</p>
                       </div>
                     </div>
                   </div>
