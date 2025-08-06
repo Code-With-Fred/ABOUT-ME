@@ -33,9 +33,9 @@ const ProjectsSection = () => {
     },
     {
       title: "N.G.O Website",
-      description: "A comprehensive design system and component library with full TypeScript support, Storybook documentation, and automated testing.",
+      description: "An N.G.O website use in reaching out to individuals who are unable to take good care of them selves.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "TypeScript", "Storybook", "Jest", "Rollup"],
+      technologies: ["React", "TypeScript", "Tailwind", "Mongodb", "framer motion"],
       demoUrl: "https://thrive-africa-health-initiative.vercel.app/",
       githubUrl: "https://github.com/Code-With-Fred/health.git",
       type: "development",
