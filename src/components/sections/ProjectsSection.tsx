@@ -53,7 +53,7 @@ const ProjectsSection = () => {
       title: "Machine Learning Blog Series",
       description: "10-part series explaining machine learning concepts for web developers, with practical examples and code implementations.",
       image: "/api/placeholder/600/400",
-      technologies: ["Python", "TensorFlow", "Jupyter", "Medium"],
+      technologies: ["TS", "TensorFlow", "Jupyter", "Medium"],
       demoUrl: "#",
       githubUrl: "#",
       type: "writing",
