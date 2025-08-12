@@ -1,0 +1,7 @@
+<!-- Save this as favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#000000"></rect>
+  <text x="50%" y="50%" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle" alignment-baseline="central">
+    CwF
+  </text>
+</svg>
