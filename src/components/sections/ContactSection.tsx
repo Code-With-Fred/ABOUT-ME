@@ -31,20 +31,52 @@ const ContactSection = () => {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to send message");
+    }
 
     toast({
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon!",
-    })
+    });
 
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+    setFormData({ name: "", email: "", message: "" });
+  } catch (err) {
+    toast({
+      title: "Error",
+      description: "Something went wrong. Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
   }
+};
+
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   setIsSubmitting(true)
+
+  //   // Simulate form submission
+  //   await new Promise(resolve => setTimeout(resolve, 1000))
+
+  //   toast({
+  //     title: "Message sent!",
+  //     description: "Thanks for reaching out. I'll get back to you soon!",
+  //   })
+
+  //   setFormData({ name: "", email: "", message: "" })
+  //   setIsSubmitting(false)
+  // }
 
   const socialLinks = [
     {
