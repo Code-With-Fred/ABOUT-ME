@@ -41,7 +41,7 @@ const ProjectsSection = () => {
       type: "development",
     },
     {
-      title: "Clothing Brand E-commerce",
+      title: "Clothing Brand E-Commerce",
       description: "This is a clothing brand website where users can order their cloths and also make payment on delivery.",
       image: "/api/placeholder/600/400",
       technologies: ["OpenAPI", "Postman", "Swagger", "Markdown"],
