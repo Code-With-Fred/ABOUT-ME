@@ -8,10 +8,11 @@ const HeroSection = () => {
     document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })
   }
 
-  const handleDownloadResume = () => {
-    // Replace with actual resume download logic
-    console.log("Downloading resume...")
-  }
+ // ...existing code...
+const handleDownloadResume = () => {
+  window.open("/fred-resume.pdf", "_blank");
+};
+// ...existing code...
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
