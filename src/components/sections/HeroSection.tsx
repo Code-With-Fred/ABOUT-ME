@@ -19,7 +19,7 @@ const handleDownloadResume = () => {
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/3 rounded-m   full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
