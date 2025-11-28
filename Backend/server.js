@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: EMAIL_USER,
-    pass: EMAIL_PASS, // must be Gmail App Password if 2FA enabled
+    pass: EMAIL_PASS,
   },
 });
 
@@ -43,30 +43,30 @@ app.post('/api/contact', async (req, res) => {
   const mailToMe = {
     from: `"Website Contact" <${EMAIL_USER}>`,
     to: TO_EMAIL,
-    subject: `New Contact Form Message from ${name}`,
+    subject: `New contact from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p>${message}</p>`,
   };
 
-  const mailToUser = {
+  const autoReply = {
     from: `"${EMAIL_USER}" <${EMAIL_USER}>`,
     to: email,
-    subject: 'Thank you for contacting me!',
-    text: `Hi ${name},\n\nThank you for reaching out! I'll get back to you soon.\n\nBest,\n${EMAIL_USER}`,
-    html: `<p>Hi ${name},</p><p>Thank you for reaching out! I'll get back to you soon.</p><p>Best,<br/>${EMAIL_USER}</p>`
+    subject: 'Thanks for contacting me',
+    text: `Hi ${name},\n\nThanks for reaching out. I'll reply soon.\n\nBest,\n${EMAIL_USER}`,
+    html: `<p>Hi ${name},</p><p>Thanks for reaching out. I'll reply soon.</p><p>Best,<br/>${EMAIL_USER}</p>`
   };
 
   try {
     const r1 = await transporter.sendMail(mailToMe);
-    const r2 = await transporter.sendMail(mailToUser);
-    console.log('Sent:', r1.messageId, r2.messageId);
-    return res.status(200).json({ message: 'Emails sent successfully' });
+    const r2 = await transporter.sendMail(autoReply);
+    console.log('Emails sent:', r1.messageId, r2.messageId);
+    return res.status(200).json({ message: 'Emails sent' });
   } catch (err) {
-    console.error('Error sending emails:', err);
-    return res.status(500).json({ error: 'Failed to send email', details: err.message });
+    console.error('Send error:', err);
+    return res.status(500).json({ error: 'Failed to send', details: err.message });
   }
 });
 
-const serverPort = PORT || 5000;
+const serverPort = PORT || 5001;
 app.listen(serverPort, () => console.log(`Server running on port ${serverPort}`));
 // ...existing code...
