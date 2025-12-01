@@ -59,38 +59,54 @@ const AboutSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              About <span className="text-primary">Eze Favour</span>
+            </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8" />
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Bio */}
+            {/* Bio - SEO OPTIMIZED */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">
-                Bridging Code & Communication
+                Full Stack Web Designer & Developer in Port Harcourt, Nigeria
               </h3>
+              
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with a unique dual expertise in 
-                software engineering and technical writing. With over 4 years of experience, 
-                I've helped startups and enterprises build scalable applications while 
-                creating documentation that actually gets read.
+                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>web designer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
+                With expertise in <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Web3 development</strong>, 
+                I build scalable web applications and create technical content for startups and enterprises across Africa and globally.
               </p>
+
               <p className="text-muted-foreground leading-relaxed">
-                My journey started with curiosity about how things work under the hood. 
-                This led me to not just build software, but also explain how it works to 
-                others. I believe that great code should be accompanied by great 
-                documentation, and that's what sets me apart.
+                As a <strong>software engineer</strong> with over 4 years of experience, my journey started with curiosity about how technology works. 
+                This led me to not just build software, but also explain it through <strong>technical writing</strong>. 
+                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web design</strong>, 
+                <strong>frontend development</strong>, and <strong>full-stack solutions</strong>. I believe that great code should be accompanied by great documentation — 
+                that's what sets me apart as a <strong>web designer and developer</strong>.
               </p>
+
               <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding or writing, you'll find me exploring new technologies, 
-                contributing to open source projects, or mentoring upcoming developers. 
-                I'm always excited about the next challenge!
+                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web design services</strong> tailored to your business needs. 
+                I've helped businesses across Nigeria and Africa establish their digital presence through scalable, user-friendly solutions.
               </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                When I'm not coding or writing, you'll find me exploring new Web3 technologies, contributing to open source projects, 
+                or mentoring upcoming <strong>developers in Nigeria</strong> and Africa. I'm always excited about the next challenge in web development!
+              </p>
+
+              {/* Hidden SEO Keywords */}
+              <div className="hidden text-xs text-muted-foreground">
+                <p>Services: web design, web development, full-stack development, frontend development, backend development, React development, Node.js development, blockchain development, Web3, Sui, responsive website design, UI/UX design, technical writing, software engineering</p>
+                <p>Location: Port Harcourt, Nigeria, Africa, Worldwide</p>
+                <p>Skills: React, Node.js, TypeScript, JavaScript, HTML, CSS, Next.js, Tailwind CSS, MongoDB, Web3, Blockchain, Sui ecosystem</p>
+              </div>
             </motion.div>
 
             {/* Passions Grid */}
             <motion.div variants={itemVariants} className="grid sm:grid-cols-2 gap-6">
-              {passions.map((passion, index) => (
+              {passions.map((passion) => (
                 <motion.div
                   key={passion.title}
                   variants={itemVariants}
