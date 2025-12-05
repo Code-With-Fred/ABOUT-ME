@@ -75,8 +75,12 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
+    <section 
+      id="projects" 
+      className="py-16 sm:py-20 lg:py-24"
+      aria-labelledby="projects-heading"
+    >
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -85,12 +89,15 @@ const ProjectsSection = () => {
           className="max-w-7xl mx-auto"
         >
           {/* Section Header - SEO OPTIMIZED */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-16">
+            <h2 
+              id="projects-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+            >
               Featured <span className="text-primary">Web Development</span> Projects
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 sm:mb-8" aria-hidden="true" />
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-2">
               Showcase of my <strong>web development</strong> projects built with <strong>React</strong>, <strong>TypeScript</strong>, and <strong>modern web technologies</strong>. 
               From <strong>e-commerce websites</strong> to <strong>real estate platforms</strong>, each project demonstrates professional web design and full-stack development expertise.
             </p>
@@ -105,57 +112,56 @@ const ProjectsSection = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+            role="list"
+            aria-label="Project portfolio"
+          >
             {projects.map((project) => (
-              <motion.div
+              <motion.article
                 key={project.title}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
                 className="group"
+                role="listitem"
               >
                 <Card className="overflow-hidden h-full transition-smooth hover:shadow-hover">
                   {/* Project Image */}
                   <div className="relative overflow-hidden bg-muted aspect-video">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                       {project.type === "development" ? (
-                        <Github className="h-12 w-12 text-primary/50" />
+                        <Github className="h-10 sm:h-12 w-10 sm:w-12 text-primary/50" aria-hidden="true" />
                       ) : (
-                        <FileText className="h-12 w-12 text-primary/50" />
+                        <FileText className="h-10 sm:h-12 w-10 sm:w-12 text-primary/50" aria-hidden="true" />
                       )}
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <Badge variant={project.type === "development" ? "default" : "secondary"}>
+                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
+                      <Badge variant={project.type === "development" ? "default" : "secondary"} className="text-xs">
                         {project.type === "development" ? "Development" : "Writing"}
                       </Badge>
                     </div>
                   </div>
 
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 sm:p-6">
                     {/* Title with Keywords */}
-                    <h3 className="font-semibold text-lg mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                     
                     {/* SEO Description */}
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
                       {project.description}
                     </p>
 
-                    {/* Hidden Long Description for SEO */}
-                    <div className="hidden text-xs text-muted-foreground">
-                      <p>{project.longDescription}</p>
-                      <p>Keywords: {project.keywords}</p>
-                    </div>
-
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge key={tech} variant="outline" className="text-xs">
+                        <Badge key={tech} variant="outline" className="text-[10px] sm:text-xs">
                           {tech}
                         </Badge>
                       ))}
                       {project.technologies.length > 3 && (
-                        <Badge variant="outline" className="text-xs">
+                        <Badge variant="outline" className="text-[10px] sm:text-xs">
                           +{project.technologies.length - 3}
                         </Badge>
                       )}
@@ -167,30 +173,30 @@ const ProjectsSection = () => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={`View ${project.title} - Live Demo`}
+                        aria-label={`View ${project.title} live demo`}
                         className="flex-1"
                       >
-                        <Button size="sm" variant="outline" className="w-full">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          View Live
+                        <Button size="sm" variant="outline" className="w-full text-xs sm:text-sm">
+                          <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" aria-hidden="true" />
+                          Live
                         </Button>
                       </a>
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={`View ${project.title} - Source Code on GitHub`}
+                        aria-label={`View ${project.title} source code on GitHub`}
                         className="flex-1"
                       >
-                        <Button size="sm" variant="ghost" className="w-full">
-                          <Github className="h-4 w-4 mr-2" />
+                        <Button size="sm" variant="ghost" className="w-full text-xs sm:text-sm">
+                          <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" aria-hidden="true" />
                           Code
                         </Button>
                       </a>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </motion.div>
