@@ -61,12 +61,7 @@ const ServicesSection = () => {
       description: "Transform your outdated website into a modern, high-performing digital presence that converts visitors into customers.",
       features: ["Modern Refresh", "Better UX", "Improved Speed"]
     },
-    {
-      icon: FileText,
-      title: "Technical Writing",
-      description: "Clear, comprehensive documentation, API guides, and technical content that helps developers and users succeed.",
-      features: ["Documentation", "API Guides", "Tutorials"]
-    },
+ 
   ]
 
   const containerVariants = {
