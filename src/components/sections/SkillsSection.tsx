@@ -69,8 +69,12 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section 
+      id="skills" 
+      className="py-16 sm:py-20 lg:py-24 bg-muted/30"
+      aria-labelledby="skills-heading"
+    >
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -79,47 +83,53 @@ const SkillsSection = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-16">
+            <h2 
+              id="skills-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+            >
               Skills & Expertise
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 sm:mb-8" aria-hidden="true" />
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-2">
               A comprehensive overview of my technical skills and areas of
               expertise, spanning both development and technical communication.
             </p>
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
             {skillCategories.map((category, index) => (
-              <motion.div
+              <motion.article
                 key={category.title}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
                 className="group"
               >
                 <Card className="h-full transition-smooth hover:shadow-hover">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3 sm:p-6">
                     {/* Category Header */}
-                    <div className="text-center mb-6">
-                      <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
+                    <div className="text-center mb-4 sm:mb-6">
+                      <div 
+                        className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform"
+                        aria-hidden="true"
+                      >
                         {category.icon}
                       </div>
-                      <h3 className="font-semibold text-lg">
+                      <h3 className="font-semibold text-sm sm:text-lg">
                         {category.title}
                       </h3>
                     </div>
 
                     {/* Skills List */}
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                       {category.skills.map((skill) => (
                         <div key={skill.name}>
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium">
+                          <div className="flex justify-between items-center mb-1.5 sm:mb-2">
+                            <span className="text-xs sm:text-sm font-medium truncate mr-2">
                               {skill.name}
                             </span>
-                            <span className="text-xs text-muted-foreground">
+                            <span className="text-[10px] sm:text-xs text-muted-foreground flex-shrink-0">
                               {skill.level}%
                             </span>
                           </div>
@@ -128,22 +138,26 @@ const SkillsSection = () => {
                             animate={inView ? { width: "100%" } : { width: 0 }}
                             transition={{ duration: 1, delay: index * 0.2 }}
                           >
-                            <Progress value={skill.level} className="h-2" />
+                            <Progress 
+                              value={skill.level} 
+                              className="h-1.5 sm:h-2" 
+                              aria-label={`${skill.name} proficiency: ${skill.level}%`}
+                            />
                           </motion.div>
                         </div>
                       ))}
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
 
           {/* Additional Info */}
-          <motion.div variants={itemVariants} className="mt-16 text-center">
-            <Card className="p-8 bg-primary/5 border-primary/20">
-              <h3 className="text-xl font-semibold mb-4">Always Learning</h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+          <motion.div variants={itemVariants} className="mt-10 sm:mt-16 text-center">
+            <Card className="p-4 sm:p-8 bg-primary/5 border-primary/20">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Always Learning</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
                 Technology evolves rapidly, and so do I. I'm constantly
                 exploring new frameworks, tools, and methodologies to stay at
                 the forefront of development and technical communication.

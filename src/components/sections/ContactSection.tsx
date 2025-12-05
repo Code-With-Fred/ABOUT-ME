@@ -115,8 +115,12 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section 
+      id="contact" 
+      className="py-16 sm:py-20 lg:py-24 bg-muted/30"
+      aria-labelledby="contact-heading"
+    >
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -125,22 +129,27 @@ const ContactSection = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or need help with development or technical writing? 
+          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-16">
+            <h2 
+              id="contact-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+            >
+              Let's Work Together
+            </h2>
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 sm:mb-8" aria-hidden="true" />
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-2">
+              Have a project in mind or need help with <strong>web design</strong> or <strong>development</strong>? 
               I'd love to hear from you. Let's create something amazing together!
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <Card className="p-8 shadow-soft">
+              <Card className="p-4 sm:p-8 shadow-soft">
                 <CardContent className="p-0">
-                  <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Send a Message</h3>
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" aria-label="Contact form">
                     <div>
                       <Label htmlFor="name">Name</Label>
                       <Input
