@@ -80,8 +80,8 @@ const Footer = () => {
                 Code-With-Fred
               </h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                Professional <strong>web designer</strong> and <strong>full-stack developer</strong> creating 
-                modern, responsive websites for businesses in Nigeria and worldwide.
+                Professional <strong>web developer</strong> and <strong>full-stack software engineer</strong> creating 
+                modern, responsive websites for businesses in <strong>Port Harcourt</strong>, <strong>Lagos</strong>, <strong>Abuja</strong>, and Nigeria.
               </p>
               {/* Social Links */}
               <div className="flex gap-3" role="list" aria-label="Social media links">
@@ -135,7 +135,7 @@ const Footer = () => {
             >
               <h3 className="font-semibold mb-4 text-sm sm:text-base">Services</h3>
               <ul className="space-y-2.5 text-muted-foreground text-sm" role="list">
-                <li role="listitem">Web Design</li>
+                <li role="listitem">Website Development</li>
                 <li role="listitem">Full Stack Development</li>
                 <li role="listitem">E-Commerce Solutions</li>
                 <li role="listitem">SEO Optimization</li>
@@ -217,7 +217,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center text-xs text-muted-foreground/60 mt-6"
           >
-            Best Web Designer & Full Stack Developer in Port Harcourt, Nigeria
+            Best Web Developer & Full Stack Software Engineer in Port Harcourt, Lagos, Abuja, Nigeria
           </motion.p>
         </div>
       </div>

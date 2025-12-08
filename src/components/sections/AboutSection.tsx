@@ -76,26 +76,26 @@ const AboutSection = () => {
             {/* Bio - SEO OPTIMIZED */}
             <motion.article variants={itemVariants} className="space-y-4 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
-                Full Stack Web Designer & Developer in Port Harcourt, Nigeria
+                Full Stack Web Developer & Software Engineer in Port Harcourt, Nigeria
               </h3>
               
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>web designer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
+                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>software engineer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
                 With expertise in <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Web3 development</strong>, 
-                I build scalable web applications and create technical content for startups and enterprises across Africa and globally.
+                I build scalable web applications and create technical content for startups and enterprises across <strong>Lagos</strong>, <strong>Abuja</strong>, and globally.
               </p>
 
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 As a <strong>software engineer</strong> with over 4 years of experience, my journey started with curiosity about how technology works. 
                 This led me to not just build software, but also explain it through <strong>technical writing</strong>. 
-                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web design</strong>, 
+                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web development</strong>, 
                 <strong>frontend development</strong>, and <strong>full-stack solutions</strong>. I believe that great code should be accompanied by great documentation — 
-                that's what sets me apart as a <strong>web designer and developer</strong>.
+                that's what sets me apart as a <strong>web developer and software engineer</strong>.
               </p>
 
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web design services</strong> tailored to your business needs. 
-                I've helped businesses across Nigeria and Africa establish their digital presence through scalable, user-friendly solutions.
+                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web development services</strong> tailored to your business needs. 
+                I've helped businesses across <strong>Port Harcourt</strong>, <strong>Lagos</strong>, <strong>Abuja</strong>, and Africa establish their digital presence through scalable, user-friendly solutions.
               </p>
 
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">

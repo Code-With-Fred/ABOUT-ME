@@ -62,7 +62,7 @@ const handleDownloadResume = () => {
           >
             <TypeAnimation
               sequence={[
-                "Web Designer",
+                "Web Developer",
                 2000,
                 "Full-Stack Developer",
                 2000,
@@ -85,9 +85,9 @@ const handleDownloadResume = () => {
             transition={{ delay: 0.8 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2"
           >
-            Professional <strong>web designer</strong> and <strong>full-stack developer</strong> based in{" "}
-            <strong>Port Harcourt, Nigeria</strong>. I craft beautiful, performant web applications 
-            and write technical content that helps businesses grow.
+            Professional <strong>web developer</strong> and <strong>full-stack software engineer</strong> based in{" "}
+            <strong>Port Harcourt, Nigeria</strong>. I build beautiful, performant web applications 
+            and write technical content that helps businesses grow across <strong>Lagos</strong>, <strong>Abuja</strong>, and Nigeria.
           </motion.p>
 
           {/* CTA Buttons */}

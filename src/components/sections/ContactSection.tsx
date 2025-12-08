@@ -31,52 +31,39 @@ const ContactSection = () => {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const res = await fetch("http://localhost:5001/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch("https://ajqmjvrfjiuauorcfhtw.supabase.co/functions/v1/send-contact-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    if (!res.ok) {
-      throw new Error("Failed to send message");
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Failed to send message");
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon!",
+      });
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error("Contact form error:", err);
+      toast({
+        title: "Error",
+        description: err.message || "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
+  };
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-  } catch (err) {
-    toast({
-      title: "Error",
-      description: "Something went wrong. Please try again later.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault()
-  //   setIsSubmitting(true)
-
-  //   // Simulate form submission
-  //   await new Promise(resolve => setTimeout(resolve, 1000))
-
-  //   toast({
-  //     title: "Message sent!",
-  //     description: "Thanks for reaching out. I'll get back to you soon!",
-  //   })
-
-  //   setFormData({ name: "", email: "", message: "" })
-  //   setIsSubmitting(false)
-  // }
 
   const socialLinks = [
     {
