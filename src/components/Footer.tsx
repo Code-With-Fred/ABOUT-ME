@@ -35,7 +35,7 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/favour-chimereze-eze-37b1b235a",
+      url: "https://www.linkedin.com/in/eze-favour-chimereze-807954398/",
       label: "Connect on LinkedIn"
     },
     {
