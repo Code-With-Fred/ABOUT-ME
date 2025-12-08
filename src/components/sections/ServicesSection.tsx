@@ -51,9 +51,9 @@ const ServicesSection = () => {
     },
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description: "User-centered design that creates intuitive, engaging experiences. From wireframes to pixel-perfect interfaces.",
-      features: ["User Research", "Prototyping", "Visual Design"]
+      title: "Landing Page Design",
+      description: "High-converting landing pages that capture leads and drive sales. Optimized for performance and conversions.",
+      features: ["Lead Generation", "A/B Testing", "Fast Loading"]
     },
     {
       icon: Rocket,
