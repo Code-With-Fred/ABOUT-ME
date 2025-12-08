@@ -73,7 +73,7 @@ const AboutSection = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Bio - SEO OPTIMIZED */}
+            {/* Bio - SEO WELL OPTIMIZED */}
             <motion.article variants={itemVariants} className="space-y-4 sm:space-y-6">
               <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
                 Full Stack Web Developer & Software Engineer in Port Harcourt, Nigeria
