@@ -70,13 +70,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Section -->
-  <url>
-    <loc>https://codewithfred.name.ng/#blog</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Contact Section -->
   <url>
