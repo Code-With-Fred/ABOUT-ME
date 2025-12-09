@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage - Best Web Developer in Nigeria -->
   <url>
     <loc>https://codewithfred.name.ng/</loc>
-    <lastmod>2025-09-18</lastmod>
+    <lastmod>2025-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://codewithfred.name.ng/my%20profile.jpg</image:loc>
+      <image:title>Eze Favour - Best Web Developer in Nigeria</image:title>
+      <image:caption>Full Stack Web Developer specializing in React, Node.js, TypeScript</image:caption>
+    </image:image>
   </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#about</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#services</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projects/Portfolio Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#projects</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://codewithfred.name.ng/assets/project-ecommerce.jpg</image:loc>
+      <image:title>E-commerce Website Project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codewithfred.name.ng/assets/project-ngo.jpg</image:loc>
+      <image:title>NGO Website Project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://codewithfred.name.ng/assets/project-realestate.jpg</image:loc>
+      <image:title>Real Estate Website Project</image:title>
+    </image:image>
+  </url>
+
+  <!-- Skills Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#skills</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#testimonials</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#blog</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://codewithfred.name.ng/#contact</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
