@@ -1,18 +1,13 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { ArrowDown, Download, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })
-  }
-
- // ...existing code...
-const handleDownloadResume = () => {
-  window.open("/fred-resume.pdf", "_blank");
-};
-// ...existing code...
+  const handleDownloadResume = () => {
+    window.open("/fred-resume.pdf", "_blank");
+  };
 
   return (
     <section 
@@ -97,15 +92,16 @@ const handleDownloadResume = () => {
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
           >
-            <Button
-              size="lg"
-              onClick={scrollToProjects}
-              className="group transition-smooth shadow-soft hover:shadow-hover w-full sm:w-auto"
-              aria-label="View my projects"
-            >
-              <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
-              View Projects
-            </Button>
+            <Link to="/projects">
+              <Button
+                size="lg"
+                className="group transition-smooth shadow-soft hover:shadow-hover w-full sm:w-auto"
+                aria-label="View my projects"
+              >
+                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                View Projects
+              </Button>
+            </Link>
             <Button
               variant="outline"
               size="lg"
@@ -125,14 +121,15 @@ const handleDownloadResume = () => {
             transition={{ delay: 1.5 }}
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="cursor-pointer"
-              onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              <ArrowDown className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
-            </motion.div>
+            <Link to="/about">
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+                className="cursor-pointer"
+              >
+                <ArrowDown className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
+              </motion.div>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
