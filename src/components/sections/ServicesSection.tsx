@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { 
@@ -8,7 +9,6 @@ import {
   ShoppingCart, 
   Palette,
   Rocket,
-  FileText
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -157,12 +157,12 @@ const ServicesSection = () => {
                 Every business is unique. Let's discuss your specific requirements and create 
                 a tailored solution that fits your budget and goals.
               </p>
-              <a 
-                href="#contact"
+              <Link 
+                to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-smooth text-sm sm:text-base"
               >
                 Get Free Consultation
-              </a>
+              </Link>
             </Card>
           </motion.div>
         </motion.div>
