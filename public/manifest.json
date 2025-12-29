@@ -1,0 +1,24 @@
+{
+  "name": "Code-With-Fred - Best Web Developer in Nigeria",
+  "short_name": "Code-With-Fred",
+  "description": "Eze Favour - Top-rated web developer and full-stack software engineer in Port Harcourt, Lagos, and Abuja, Nigeria. Expert in React, Node.js, TypeScript.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "developer tools"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

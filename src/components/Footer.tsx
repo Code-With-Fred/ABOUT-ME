@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Heart, ArrowUp, Mail, MapPin, Phone, Github, Twitter, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -7,22 +8,15 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/projects", label: "Projects" },
+    { href: "/skills", label: "Skills" },
+    { href: "/contact", label: "Contact" },
   ]
 
   const socialLinks = [
@@ -115,12 +109,12 @@ const Footer = () => {
               <ul className="space-y-2.5" role="list">
                 {quickLinks.map((link) => (
                   <li key={link.href} role="listitem">
-                    <button
-                      onClick={() => scrollToSection(link.href)}
+                    <Link
+                      to={link.href}
                       className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {link.label}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
