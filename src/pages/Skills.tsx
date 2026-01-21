@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
 import Breadcrumbs from "@/components/Breadcrumb"
 import SkillsSection from "@/components/sections/SkillsSection"
+import CTABanner from "@/components/CTABanner"
 import Footer from "@/components/Footer"
 
 const Skills = () => {
@@ -34,6 +35,10 @@ const Skills = () => {
       <main id="main-content" role="main" className="pt-20">
         <Breadcrumbs />
         <SkillsSection />
+        <CTABanner 
+          variant="minimal"
+          title="Have a project that needs these skills?"
+        />
       </main>
       
       <Footer />
