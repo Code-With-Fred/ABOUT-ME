@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
+import Breadcrumbs from "@/components/Breadcrumb"
 import AboutSection from "@/components/sections/AboutSection"
 import Footer from "@/components/Footer"
 
@@ -31,6 +32,7 @@ const About = () => {
       </header>
       
       <main id="main-content" role="main" className="pt-20">
+        <Breadcrumbs />
         <AboutSection />
       </main>
       
