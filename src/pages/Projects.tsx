@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
 import Breadcrumbs from "@/components/Breadcrumb"
 import ProjectsSection from "@/components/sections/ProjectsSection"
+import CTABanner from "@/components/CTABanner"
 import Footer from "@/components/Footer"
 
 const Projects = () => {
@@ -34,6 +35,10 @@ const Projects = () => {
       <main id="main-content" role="main" className="pt-20">
         <Breadcrumbs />
         <ProjectsSection />
+        <CTABanner 
+          title="Want something similar?"
+          description="I can build a custom solution tailored to your needs. Let's create something amazing together."
+        />
       </main>
       
       <Footer />

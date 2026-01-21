@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
 import Breadcrumbs from "@/components/Breadcrumb"
 import ServicesSection from "@/components/sections/ServicesSection"
+import CTABanner from "@/components/CTABanner"
 import Footer from "@/components/Footer"
 
 const Services = () => {
@@ -34,6 +35,10 @@ const Services = () => {
       <main id="main-content" role="main" className="pt-20">
         <Breadcrumbs />
         <ServicesSection />
+        <CTABanner 
+          title="Need a custom solution?"
+          description="Every project is unique. Let's discuss your specific requirements and find the perfect solution for your business."
+        />
       </main>
       
       <Footer />
