@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
+import Breadcrumbs from "@/components/Breadcrumb"
 import HeroSection from "@/components/sections/HeroSection"
 import Footer from "@/components/Footer"
 
