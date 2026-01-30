@@ -14,10 +14,10 @@ const PricingSection = () => {
 
   const packages = [
     {
-      name: "Starter",
+      name: "Standard",
       icon: Zap,
-      price: "₦150,000",
-      priceUSD: "$100",
+      price: "₦350,000",
+      priceUSD: "$230",
       description: "Perfect for small businesses and personal websites",
       features: [
         "Up to 5 pages",
@@ -26,7 +26,7 @@ const PricingSection = () => {
         "Contact form integration",
         "Social media links",
         "1 month free support",
-        "Delivery in 1-2 weeks",
+        "Delivery in 2-3 weeks",
       ],
       popular: false,
       color: "from-blue-500 to-cyan-500",
@@ -34,8 +34,8 @@ const PricingSection = () => {
     {
       name: "Professional",
       icon: Star,
-      price: "₦350,000",
-      priceUSD: "$230",
+      price: "₦550,000",
+      priceUSD: "$360",
       description: "Ideal for growing businesses needing advanced features",
       features: [
         "Up to 10 pages",
@@ -45,16 +45,16 @@ const PricingSection = () => {
         "Email newsletter setup",
         "Analytics dashboard",
         "3 months free support",
-        "Delivery in 2-3 weeks",
+        "Delivery in 3-4 weeks",
       ],
       popular: true,
       color: "from-primary to-purple-600",
     },
     {
-      name: "Enterprise",
+      name: "Premium",
       icon: Crown,
-      price: "₦600,000+",
-      priceUSD: "$400+",
+      price: "₦800,000+",
+      priceUSD: "$520+",
       description: "Complete solution for large-scale business needs",
       features: [
         "Unlimited pages",
