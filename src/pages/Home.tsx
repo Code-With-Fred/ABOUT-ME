@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async"
 import Navigation from "@/components/Navigation"
-import Breadcrumbs from "@/components/Breadcrumb"
 import HeroSection from "@/components/sections/HeroSection"
 import PageTransition from "@/components/PageTransition"
 import Footer from "@/components/Footer"
+import ScrollToTop from "@/components/ScrollToTop"
 
 const Home = () => {
   return (
@@ -38,6 +38,7 @@ const Home = () => {
         </main>
         
         <Footer />
+        <ScrollToTop />
       </div>
     </PageTransition>
   )
