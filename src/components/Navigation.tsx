@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -7,6 +8,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle"
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +20,17 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/projects", label: "Projects" },
+    { href: "/skills", label: "Skills" },
+    { href: "/testimonials", label: "Testimonials" },
+    { href: "/contact", label: "Contact" },
   ]
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsMobileMenuOpen(false)
-    }
+  const isActive = (href: string) => {
+    return location.pathname === href
   }
 
   return (
@@ -47,28 +46,38 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gradient cursor-pointer"
-            onClick={() => scrollToSection("#home")}
-          >
-            EF
-          </motion.div>
+          <Link to="/">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="text-2xl font-bold text-gradient cursor-pointer"
+            >
+              EF
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.button
+              <motion.div
                 key={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground/80 hover:text-foreground transition-smooth relative group"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </motion.button>
+                <Link
+                  to={item.href}
+                  className={`relative group transition-smooth ${
+                    isActive(item.href) 
+                      ? "text-primary font-medium" 
+                      : "text-foreground/80 hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                    isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
+                </Link>
+              </motion.div>
             ))}
             <ThemeToggle />
           </div>
@@ -97,7 +106,7 @@ const Navigation = () => {
         >
           <div className="py-4 space-y-4">
             {navItems.map((item, index) => (
-              <motion.button
+              <motion.div
                 key={item.href}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{
@@ -105,11 +114,19 @@ const Navigation = () => {
                   x: isMobileMenuOpen ? 0 : -20,
                 }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-foreground/80 hover:text-foreground transition-smooth py-2"
               >
-                {item.label}
-              </motion.button>
+                <Link
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block w-full text-left py-2 transition-smooth ${
+                    isActive(item.href) 
+                      ? "text-primary font-medium" 
+                      : "text-foreground/80 hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </motion.div>

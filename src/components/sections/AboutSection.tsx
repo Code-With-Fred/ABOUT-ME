@@ -48,8 +48,12 @@ const AboutSection = () => {
   ]
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section 
+      id="about" 
+      className="py-16 sm:py-20 lg:py-24 bg-muted/30"
+      aria-labelledby="about-heading"
+    >
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -58,69 +62,75 @@ const AboutSection = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-16">
+            <h2 
+              id="about-heading"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+            >
               About <span className="text-primary">Eze Favour</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 sm:mb-8" aria-hidden="true" />
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Bio - SEO OPTIMIZED */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-semibold mb-4">
-                Full Stack Web Designer & Developer in Port Harcourt, Nigeria
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            {/* Bio - SEO WELL OPTIMIZED */}
+            <motion.article variants={itemVariants} className="space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+                Full Stack Web Developer & Software Engineer in Port Harcourt, Nigeria
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed">
-                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>web designer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>software engineer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
                 With expertise in <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Web3 development</strong>, 
-                I build scalable web applications and create technical content for startups and enterprises across Africa and globally.
+                I build scalable web applications and create technical content for startups and enterprises across <strong>Lagos</strong>, <strong>Abuja</strong>, and globally.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 As a <strong>software engineer</strong> with over 4 years of experience, my journey started with curiosity about how technology works. 
                 This led me to not just build software, but also explain it through <strong>technical writing</strong>. 
-                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web design</strong>, 
+                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web development</strong>, 
                 <strong>frontend development</strong>, and <strong>full-stack solutions</strong>. I believe that great code should be accompanied by great documentation — 
-                that's what sets me apart as a <strong>web designer and developer</strong>.
+                that's what sets me apart as a <strong>web developer and software engineer</strong>.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed">
-                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web design services</strong> tailored to your business needs. 
-                I've helped businesses across Nigeria and Africa establish their digital presence through scalable, user-friendly solutions.
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web development services</strong> tailored to your business needs. 
+                I've helped businesses across <strong>Port Harcourt</strong>, <strong>Lagos</strong>, <strong>Abuja</strong>, and Africa establish their digital presence through scalable, user-friendly solutions.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 When I'm not coding or writing, you'll find me exploring new Web3 technologies, contributing to open source projects, 
                 or mentoring upcoming <strong>developers in Nigeria</strong> and Africa. I'm always excited about the next challenge in web development!
               </p>
 
-              {/* Hidden SEO Keywords */}
-              <div className="hidden text-xs text-muted-foreground">
-                <p>Services: web design, web development, full-stack development, frontend development, backend development, React development, Node.js development, blockchain development, Web3, Sui, responsive website design, UI/UX design, technical writing, software engineering</p>
-                <p>Location: Port Harcourt, Nigeria, Africa, Worldwide</p>
-                <p>Skills: React, Node.js, TypeScript, JavaScript, HTML, CSS, Next.js, Tailwind CSS, MongoDB, Web3, Blockchain, Sui ecosystem</p>
-              </div>
-            </motion.div>
+            </motion.article>
 
             {/* Passions Grid */}
-            <motion.div variants={itemVariants} className="grid sm:grid-cols-2 gap-6">
+            <motion.div 
+              variants={itemVariants} 
+              className="grid grid-cols-2 gap-3 sm:gap-6"
+              role="list"
+              aria-label="Areas of expertise"
+            >
               {passions.map((passion) => (
-                <motion.div
+                <motion.article
                   key={passion.title}
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   className="group"
+                  role="listitem"
                 >
-                  <Card className="p-6 h-full transition-smooth hover:shadow-hover">
-                    <passion.icon className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                    <h4 className="font-semibold mb-2">{passion.title}</h4>
-                    <p className="text-sm text-muted-foreground">
+                  <Card className="p-4 sm:p-6 h-full transition-smooth hover:shadow-hover">
+                    <passion.icon 
+                      className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-3 sm:mb-4 group-hover:scale-110 transition-transform" 
+                      aria-hidden="true"
+                    />
+                    <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">{passion.title}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {passion.description}
                     </p>
                   </Card>
-                </motion.div>
+                </motion.article>
               ))}
             </motion.div>
           </div>
