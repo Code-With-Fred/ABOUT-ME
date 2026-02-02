@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import imgTradePro from "@/assets/project-tradepro.jpg"
 import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgNGO from "@/assets/project-ngo.jpg"
+import imgHealTrackCare from "@/assets/project-healtrackcare.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 
 const ProjectsSection = () => {
@@ -45,10 +46,10 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Code-With-Fred/health.git",
       type: "development",
     },
-      {
+    {
       title: "HealTrackCare",
       description: "A comprehensive healthcare platform that allows users to easily book appointments with qualified healthcare professionals. Features secure user authentication, intuitive appointment scheduling, detailed doctor profiles, and a fully responsive design for seamless access across devices.",
-      image: imgNGO,
+      image: imgHealTrackCare,
       technologies: ["React", "TypeScript", "MongoDB", "Tailwind CSS", "Web Design"],
       demoUrl: "https://www.healtrackcare.com/",
       // githubUrl: "https://github.com/Code-With-Fred/health.git",
