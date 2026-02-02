@@ -45,6 +45,15 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Code-With-Fred/health.git",
       type: "development",
     },
+      {
+      title: "HealTrackCare",
+      description: "A comprehensive healthcare platform that allows users to easily book appointments with qualified healthcare professionals. Features secure user authentication, intuitive appointment scheduling, detailed doctor profiles, and a fully responsive design for seamless access across devices.",
+      image: imgNGO,
+      technologies: ["React", "TypeScript", "MongoDB", "Tailwind CSS", "Web Design"],
+      demoUrl: "https://www.healtrackcare.com/",
+      // githubUrl: "https://github.com/Code-With-Fred/health.git",
+      type: "development",
+    },
     {
       title: "A therapist website",
       description: "A fully responsive and accessible therapist website built with modern web technologies. Features appointment booking, service listings, and a clean, professional design.",
