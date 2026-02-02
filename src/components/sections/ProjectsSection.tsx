@@ -46,12 +46,12 @@ const ProjectsSection = () => {
       type: "development",
     },
     {
-      title: "Clothing E-Commerce",
-      description: "A complete e-commerce website for a clothing brand in Nigeria. Features product catalog, shopping cart, payment on delivery, and order management with responsive design optimized for mobile shopping.",
+      title: "A therapist website",
+      description: "A fully responsive and accessible therapist website built with modern web technologies. Features appointment booking, service listings, and a clean, professional design.",
       image: imgEcommerce,
       technologies: ["React", "TypeScript", "API Integration", "Tailwind CSS", "E-Commerce"],
-      demoUrl: "https://clothing-brand-website-gamma.vercel.app/",
-      githubUrl: "https://github.com/Code-With-Fred/Clothing-brand-website.git",
+      demoUrl: "https://www.confidantszone.com/",
+      githubUrl: "https://github.com/Code-With-Fred/kindred-paths-ai.git",
       type: "development",
     },
   ]
