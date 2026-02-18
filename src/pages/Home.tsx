@@ -4,19 +4,21 @@ import HeroSection from "@/components/sections/HeroSection"
 import PageTransition from "@/components/PageTransition"
 import Footer from "@/components/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
+import StructuredData from "@/components/StructuredData"
 
 const Home = () => {
   return (
     <PageTransition>
+      <StructuredData />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
           <title>Eze Favour Chimereze | Best Web Developer in Port Harcourt, Lagos & Abuja Nigeria</title>
           <meta name="description" content="Hire Eze Favour Chimereze, a professional full-stack web developer and technical writer in Port Harcourt, Lagos, and Abuja Nigeria. Expert in React, Node.js, and modern web technologies." />
           <meta name="keywords" content="web developer Nigeria, best web developer Port Harcourt, full stack developer Lagos, web designer Abuja, React developer Nigeria, software engineer Port Harcourt" />
-          <link rel="canonical" href="https://favourchimereze.com/" />
+          <link rel="canonical" href="https://codewithfred.name.ng/" />
           <meta property="og:title" content="Eze Favour Chimereze | Best Web Developer in Nigeria" />
           <meta property="og:description" content="Professional full-stack web developer and technical writer based in Nigeria. Creating stunning, high-performance websites." />
-          <meta property="og:url" content="https://favourchimereze.com/" />
+          <meta property="og:url" content="https://codewithfred.name.ng/" />
           <meta property="og:type" content="website" />
           <meta name="twitter:title" content="Eze Favour Chimereze | Best Web Developer in Nigeria" />
           <meta name="twitter:description" content="Professional full-stack web developer and technical writer based in Nigeria." />

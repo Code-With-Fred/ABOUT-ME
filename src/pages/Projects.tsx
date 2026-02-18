@@ -14,11 +14,19 @@ const Projects = () => {
           <title>Portfolio & Projects | Eze Favour Chimereze - Web Developer Nigeria</title>
           <meta name="description" content="Explore my portfolio of web development projects including e-commerce websites, business applications, and custom web solutions. See real examples of my work as a web developer in Nigeria." />
           <meta name="keywords" content="web development portfolio Nigeria, website projects Port Harcourt, React projects Lagos, web developer work samples, Nigerian developer portfolio" />
-          <link rel="canonical" href="https://favourchimereze.com/projects" />
+          <link rel="canonical" href="https://codewithfred.name.ng/projects" />
           <meta property="og:title" content="Portfolio & Projects | Eze Favour Chimereze" />
           <meta property="og:description" content="Explore my portfolio of web development projects and see real examples of my work." />
-          <meta property="og:url" content="https://favourchimereze.com/projects" />
+          <meta property="og:url" content="https://codewithfred.name.ng/projects" />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
           <meta name="twitter:title" content="Web Development Portfolio | Eze Favour Chimereze" />
           <meta name="twitter:description" content="Real examples of websites and applications I've built for clients." />
         </Helmet>

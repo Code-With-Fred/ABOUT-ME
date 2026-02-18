@@ -13,6 +13,9 @@ import Skills from "./pages/Skills";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import WebDevelopment from "./pages/WebDevelopment";
+import SEOOptimization from "./pages/SEOOptimization";
+import EcommerceSolutions from "./pages/EcommerceSolutions";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+        <Route path="/services/seo-optimization" element={<SEOOptimization />} />
+        <Route path="/services/ecommerce-solutions" element={<EcommerceSolutions />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/testimonials" element={<Testimonials />} />

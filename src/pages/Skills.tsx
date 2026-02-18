@@ -52,7 +52,7 @@ const Skills = () => {
     "name": "Eze Favour Chimereze",
     "jobTitle": "Full Stack Web Developer",
     "description": "Professional full-stack developer specializing in React, Node.js, and modern web technologies",
-    "url": "https://favourchimereze.com",
+    "url": "https://codewithfred.name.ng",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Port Harcourt",
@@ -80,13 +80,21 @@ const Skills = () => {
           <title>Technical Skills | Eze Favour Chimereze - React, Node.js, Full Stack Developer Nigeria</title>
           <meta name="description" content="Discover the technical skills of Eze Favour Chimereze: React.js, Next.js, Node.js, TypeScript, PostgreSQL, MongoDB, and 50+ web technologies. Expert full-stack developer in Port Harcourt, Lagos, and Abuja, Nigeria." />
           <meta name="keywords" content="React developer Nigeria, Node.js expert Port Harcourt, TypeScript developer Lagos, full stack developer Abuja, JavaScript developer Nigeria, Next.js developer, PostgreSQL expert, MongoDB developer, Tailwind CSS, web development skills Nigeria, frontend developer Port Harcourt, backend developer Lagos" />
-          <link rel="canonical" href="https://favourchimereze.com/skills" />
+          <link rel="canonical" href="https://codewithfred.name.ng/skills" />
           
           {/* Open Graph */}
           <meta property="og:title" content="Technical Skills | Eze Favour Chimereze - Full Stack Developer" />
           <meta property="og:description" content="50+ technical skills including React, Node.js, TypeScript, and modern web technologies. Serving clients in Port Harcourt, Lagos, Abuja, and worldwide." />
-          <meta property="og:url" content="https://favourchimereze.com/skills" />
+          <meta property="og:url" content="https://codewithfred.name.ng/skills" />
           <meta property="og:type" content="profile" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
           <meta property="og:locale" content="en_NG" />
           <meta property="og:site_name" content="Eze Favour Chimereze - Web Developer" />
           

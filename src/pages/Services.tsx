@@ -16,11 +16,19 @@ const Services = () => {
           <title>Web Development Services | Eze Favour Chimereze - Port Harcourt, Lagos, Abuja</title>
           <meta name="description" content="Professional web development services including custom websites, e-commerce solutions, web applications, and technical writing. Serving clients in Port Harcourt, Lagos, Abuja, and worldwide." />
           <meta name="keywords" content="web development services Nigeria, custom website design Port Harcourt, e-commerce development Lagos, React development Abuja, full stack services Nigeria" />
-          <link rel="canonical" href="https://favourchimereze.com/services" />
+          <link rel="canonical" href="https://codewithfred.name.ng/services" />
           <meta property="og:title" content="Web Development Services | Eze Favour Chimereze" />
           <meta property="og:description" content="Professional web development services including custom websites, e-commerce, and web applications." />
-          <meta property="og:url" content="https://favourchimereze.com/services" />
+          <meta property="og:url" content="https://codewithfred.name.ng/services" />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
           <meta name="twitter:title" content="Web Development Services Nigeria" />
           <meta name="twitter:description" content="Custom websites, e-commerce, and web applications by Eze Favour Chimereze." />
         </Helmet>

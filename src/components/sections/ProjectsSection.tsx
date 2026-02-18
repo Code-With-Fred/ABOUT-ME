@@ -4,12 +4,12 @@ import { ExternalLink, Github } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Helmet } from "react-helmet-async"
 
 // Import project images
 import imgTradePro from "@/assets/project-tradepro.jpg"
 import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgNGO from "@/assets/project-ngo.jpg"
-import imgHealTrackCare from "@/assets/project-healtrackcare.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 
 const ProjectsSection = () => {
@@ -46,10 +46,10 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/Code-With-Fred/health.git",
       type: "development",
     },
-    {
-      title: "HealTrackCare",
-      description: "A comprehensive healthcare platform that allows users to easily book appointments with qualified healthcare professionals. Features secure user authentication, intuitive appointment scheduling, detailed doctor profiles, and a fully responsive design for seamless access across devices.",
-      image: imgHealTrackCare,
+      {
+      title: "A professional healthcare website.",
+      description: "A standered healthcare website where users can book an appointments with healthcare professionals.",
+      image: imgNGO,
       technologies: ["React", "TypeScript", "MongoDB", "Tailwind CSS", "Web Design"],
       demoUrl: "https://www.healtrackcare.com/",
       // githubUrl: "https://github.com/Code-With-Fred/health.git",
@@ -65,6 +65,27 @@ const ProjectsSection = () => {
       type: "development",
     },
   ]
+
+  // Prepare JSON-LD for projects to improve discoverability by search engines and AI tools
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Featured Projects - Code-With-Fred",
+    "description": "A curated list of featured web development projects by Eze Favour (Code-With-Fred)",
+    "itemListElement": projects.map((p, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": p.demoUrl,
+      "item": {
+        "@type": "CreativeWork",
+        "name": p.title,
+        "description": p.description,
+        "image": typeof p.image === "string" ? p.image : undefined,
+        "url": p.demoUrl,
+        "keywords": p.technologies.join(", ")
+      }
+    }))
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,6 +108,9 @@ const ProjectsSection = () => {
       className="py-16 sm:py-20 lg:py-24"
       aria-labelledby="projects-heading"
     >
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(projectsSchema)}</script>
+      </Helmet>
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}

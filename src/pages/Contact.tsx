@@ -13,11 +13,19 @@ const Contact = () => {
           <title>Contact Eze Favour Chimereze | Hire a Web Developer in Nigeria</title>
           <meta name="description" content="Get in touch with Eze Favour Chimereze for your web development project. Based in Port Harcourt, serving clients in Lagos, Abuja, and worldwide. Request a free consultation today." />
           <meta name="keywords" content="hire web developer Nigeria, contact web developer Port Harcourt, web development quote Lagos, freelance developer Abuja, get website built Nigeria" />
-          <link rel="canonical" href="https://favourchimereze.com/contact" />
+          <link rel="canonical" href="https://codewithfred.name.ng/contact" />
           <meta property="og:title" content="Contact Eze Favour Chimereze | Hire a Web Developer" />
           <meta property="og:description" content="Get in touch for your web development project. Request a free consultation today." />
-          <meta property="og:url" content="https://favourchimereze.com/contact" />
+          <meta property="og:url" content="https://codewithfred.name.ng/contact" />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
           <meta name="twitter:title" content="Hire a Web Developer in Nigeria" />
           <meta name="twitter:description" content="Contact Eze Favour Chimereze for professional web development services." />
         </Helmet>

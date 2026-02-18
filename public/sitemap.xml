@@ -8,11 +8,11 @@
   <!-- Homepage - Best Web Developer in Nigeria -->
   <url>
     <loc>https://codewithfred.name.ng/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://codewithfred.name.ng/my%20profile.jpg</image:loc>
+      <image:loc>https://codewithfred.name.ng/my-profile.jpg</image:loc>
       <image:title>Eze Favour - Best Web Developer in Nigeria</image:title>
       <image:caption>Full Stack Web Developer specializing in React, Node.js, TypeScript</image:caption>
     </image:image>
@@ -21,7 +21,7 @@
   <!-- About Page -->
   <url>
     <loc>https://codewithfred.name.ng/about</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +29,7 @@
   <!-- Services Page -->
   <url>
     <loc>https://codewithfred.name.ng/services</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,7 +37,7 @@
   <!-- Projects/Portfolio Page -->
   <url>
     <loc>https://codewithfred.name.ng/projects</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -57,7 +57,7 @@
   <!-- Skills Page -->
   <url>
     <loc>https://codewithfred.name.ng/skills</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -65,7 +65,7 @@
   <!-- Testimonials Page -->
   <url>
     <loc>https://codewithfred.name.ng/testimonials</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

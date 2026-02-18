@@ -13,11 +13,19 @@ const Testimonials = () => {
           <title>Client Testimonials & Reviews | Eze Favour Chimereze - Web Developer</title>
           <meta name="description" content="Read testimonials and reviews from satisfied clients. See why businesses in Port Harcourt, Lagos, Abuja, and worldwide trust Eze Favour Chimereze for their web development needs." />
           <meta name="keywords" content="web developer reviews Nigeria, client testimonials Port Harcourt, web development feedback, trusted developer Lagos, best web developer reviews Abuja" />
-          <link rel="canonical" href="https://favourchimereze.com/testimonials" />
+          <link rel="canonical" href="https://codewithfred.name.ng/testimonials" />
           <meta property="og:title" content="Client Testimonials | Eze Favour Chimereze" />
           <meta property="og:description" content="Read reviews from satisfied clients who trusted me with their web development projects." />
-          <meta property="og:url" content="https://favourchimereze.com/testimonials" />
+          <meta property="og:url" content="https://codewithfred.name.ng/testimonials" />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
           <meta name="twitter:title" content="Client Reviews | Web Developer Nigeria" />
           <meta name="twitter:description" content="Testimonials from clients in Port Harcourt, Lagos, Abuja, and worldwide." />
         </Helmet>
