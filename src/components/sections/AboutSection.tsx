@@ -6,7 +6,7 @@ const strengths = [
   {
     icon: Layers,
     title: "End-to-End Product Building",
-    description: "From database architecture to pixel-perfect UI — I own the entire stack and deliver complete, production-ready products.",
+    description: "From database architecture to pixel-perfect UI I own the entire stack and deliver complete, production-ready products.",
   },
   {
     icon: Zap,
@@ -21,7 +21,7 @@ const strengths = [
   {
     icon: TrendingUp,
     title: "Modern Tech, Real Results",
-    description: "React, Node.js, TypeScript, Supabase — I use the best modern tools to deliver products that compete with the best.",
+    description: "React, Node.js, TypeScript, Supabase I use the best modern tools to deliver products that compete with the best.",
   },
 ]
 
@@ -84,7 +84,7 @@ const AboutSection = () => {
               transition={{ delay: 0.3 }}
               className="text-muted-foreground leading-relaxed"
             >
-              My approach is product-first — I think about user experience, business logic, monetization, 
+              My approach is product-first I think about user experience, business logic, monetization, 
               and scalability before writing a single line of code. Whether you're a startup founder in 
               <strong className="text-foreground"> Lagos</strong>, a business owner in <strong className="text-foreground">Abuja</strong>, 
               or a company anywhere in the world, I bring the same level of strategic, premium execution to every project.
