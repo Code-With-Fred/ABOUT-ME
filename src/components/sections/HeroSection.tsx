@@ -1,137 +1,137 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { TypeAnimation } from "react-type-animation"
-import { ArrowDown, Download, Eye } from "lucide-react"
+import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
-    window.open("/fred-resume.pdf", "_blank");
-  };
+    window.open("/fred-resume.pdf", "_blank")
+  }
 
   return (
-    <section 
-      id="home" 
-      className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden pt-16 sm:pt-20"
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Background Animation */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute top-10 left-5 sm:top-20 sm:left-20 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-5 sm:bottom-20 sm:right-20 w-64 sm:w-96 h-64 sm:h-96 bg-primary/3 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+      {/* Ambient background */}
+      <div className="absolute inset-0" aria-hidden="true">
+        {/* Grid */}
+        <div className="absolute inset-0 grid-bg opacity-40" />
+        {/* Gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/8 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: "2s" }} />
+        {/* Top fade */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Greeting */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground mb-4"
-          >
-            👋 Hello, I'm
-          </motion.p>
-
-          {/* Name */}
-          <motion.h1
-            id="hero-heading"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-gradient"
-          >
-            Eze Favour
-          </motion.h1>
-
-          {/* Typing Animation */}
-          <div 
-            className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold mb-6 sm:mb-8 h-12 sm:h-16 md:h-20"
-            aria-live="polite"
-            aria-label="Professional roles"
-          >
-            <TypeAnimation
-              sequence={[
-                "Web Developer",
-                2000,
-                "Full-Stack Developer",
-                2000,
-                "Technical Writer",
-                2000,
-                "Software Engineer",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="text-primary"
-            />
-          </div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2"
-          >
-            Professional <strong>web developer</strong> and <strong>full-stack software engineer</strong> based in{" "}
-            <strong>Port Harcourt, Nigeria</strong>. I build beautiful, performant web applications 
-            and write technical content that helps businesses grow across <strong>Lagos</strong>, <strong>Abuja</strong>, and Nigeria.
-          </motion.p>
-
-          {/* CTA Buttons */}
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Status badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center md:justify-start mb-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+              </span>
+              <span className="text-sm text-muted-foreground font-medium">Available for new projects</span>
+            </div>
+          </motion.div>
+
+          {/* Main headline */}
+          <motion.h1
+            id="hero-heading"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display leading-[0.95] tracking-tight mb-6 text-center md:text-left"
+          >
+            <span className="block">I build digital</span>
+            <span className="block">products that</span>
+            <span className="block text-gradient">scale & convert.</span>
+          </motion.h1>
+
+          {/* Supporting text */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed text-center md:text-left"
+          >
+            Full-stack product engineer crafting modern{" "}
+            <strong className="text-foreground">SaaS platforms</strong>,{" "}
+            <strong className="text-foreground">marketplaces</strong>, and{" "}
+            <strong className="text-foreground">business-ready web systems</strong>{" "}
+            that look premium and solve real problems.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
             <Link to="/projects">
               <Button
                 size="lg"
-                className="group transition-smooth shadow-soft hover:shadow-hover w-full sm:w-auto"
+                className="group w-full sm:w-auto text-base px-8 py-6 glow-sm hover:glow-md transition-all duration-300"
                 aria-label="View my projects"
               >
-                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
                 View Projects
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group w-full sm:w-auto text-base px-8 py-6 border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+                aria-label="Work with me"
+              >
+                <Sparkles className="mr-2 h-5 w-5" aria-hidden="true" />
+                Work With Me
               </Button>
             </Link>
             <Button
-              variant="outline"
+              variant="ghost"
               size="lg"
               onClick={handleDownloadResume}
-              className="group transition-smooth shadow-soft hover:shadow-hover w-full sm:w-auto"
+              className="group w-full sm:w-auto text-base px-8 py-6 text-muted-foreground hover:text-foreground transition-all duration-300"
               aria-label="Download my resume"
             >
-              <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
-              Download Resume
+              <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+              Resume
             </Button>
           </motion.div>
 
-          {/* Scroll Indicator */}
+          {/* Floating tech indicators */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            transition={{ duration: 1, delay: 1.2 }}
+            className="mt-16 md:mt-24 flex flex-wrap gap-3 justify-center md:justify-start"
           >
-            <Link to="/about">
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-                className="cursor-pointer"
+            {["React", "TypeScript", "Node.js", "Next.js", "Supabase", "Tailwind CSS"].map((tech, i) => (
+              <motion.span
+                key={tech}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.3 + i * 0.1 }}
+                className="px-3 py-1.5 text-xs font-medium rounded-md border border-border/50 bg-card/50 text-muted-foreground backdrop-blur-sm"
               >
-                <ArrowDown className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
-              </motion.div>
-            </Link>
+                {tech}
+              </motion.span>
+            ))}
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

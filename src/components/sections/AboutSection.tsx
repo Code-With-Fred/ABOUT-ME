@@ -1,138 +1,117 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Code2, PenTool, Coffee, Heart } from "lucide-react"
-import { Card } from "@/components/ui/card"
+import { Layers, Zap, Target, TrendingUp } from "lucide-react"
+
+const strengths = [
+  {
+    icon: Layers,
+    title: "End-to-End Product Building",
+    description: "From database architecture to pixel-perfect UI — I own the entire stack and deliver complete, production-ready products.",
+  },
+  {
+    icon: Zap,
+    title: "Performance & Scalability",
+    description: "Every system I build is optimized for speed and designed to handle growth — from 10 users to 10,000.",
+  },
+  {
+    icon: Target,
+    title: "Business-Driven Development",
+    description: "I don't just write code. I build solutions that drive revenue, reduce friction, and create real business value.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Modern Tech, Real Results",
+    description: "React, Node.js, TypeScript, Supabase — I use the best modern tools to deliver products that compete with the best.",
+  },
+]
 
 const AboutSection = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
-  }
-
-  const passions = [
-    {
-      icon: Code2,
-      title: "Clean Code",
-      description: "I believe in writing maintainable, scalable code that tells a story.",
-    },
-    {
-      icon: PenTool,
-      title: "Technical Writing",
-      description: "Making complex concepts accessible through clear, engaging documentation.",
-    },
-    {
-      icon: Coffee,
-      title: "Problem Solving",
-      description: "I love tackling challenging problems and finding elegant solutions.",
-    },
-    {
-      icon: Heart,
-      title: "User Experience",
-      description: "Creating delightful experiences that users actually want to use.",
-    },
-  ]
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
   return (
-    <section 
-      id="about" 
-      className="py-16 sm:py-20 lg:py-24 bg-muted/30"
+    <section
+      id="about"
+      className="py-24 sm:py-32 relative"
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-16">
-            <h2 
-              id="about-heading"
-              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          {/* Label */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            className="text-sm font-medium uppercase tracking-widest text-primary mb-4"
+          >
+            About
+          </motion.p>
+
+          {/* Big positioning statement */}
+          <motion.h2
+            id="about-heading"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-8 max-w-4xl"
+          >
+            I don't just build websites.{" "}
+            <span className="text-muted-foreground">
+              I engineer digital products that power businesses, automate workflows, and generate revenue.
+            </span>
+          </motion.h2>
+
+          {/* Two-column narrative */}
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="text-muted-foreground leading-relaxed"
             >
-              About <span className="text-primary">Eze Favour</span>
-            </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6 sm:mb-8" aria-hidden="true" />
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Bio - SEO WELL OPTIMIZED */}
-            <motion.article variants={itemVariants} className="space-y-4 sm:space-y-6">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
-                Full Stack Web Developer & Software Engineer in Port Harcourt, Nigeria
-              </h3>
-              
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                I'm <strong>Eze Favour</strong>, a passionate <strong>full-stack developer</strong> and <strong>software engineer</strong> based in <strong>Port Harcourt, Nigeria</strong>. 
-                With expertise in <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Web3 development</strong>, 
-                I build scalable web applications and create technical content for startups and enterprises across <strong>Lagos</strong>, <strong>Abuja</strong>, and globally.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                As a <strong>software engineer</strong> with over 4 years of experience, my journey started with curiosity about how technology works. 
-                This led me to not just build software, but also explain it through <strong>technical writing</strong>. 
-                I specialize in <strong>blockchain development</strong> (especially Sui ecosystem), <strong>responsive web development</strong>, 
-                <strong>frontend development</strong>, and <strong>full-stack solutions</strong>. I believe that great code should be accompanied by great documentation — 
-                that's what sets me apart as a <strong>web developer and software engineer</strong>.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                Whether you need a modern website, a web application, or blockchain integration, I deliver <strong>professional web development services</strong> tailored to your business needs. 
-                I've helped businesses across <strong>Port Harcourt</strong>, <strong>Lagos</strong>, <strong>Abuja</strong>, and Africa establish their digital presence through scalable, user-friendly solutions.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                When I'm not coding or writing, you'll find me exploring new Web3 technologies, contributing to open source projects, 
-                or mentoring upcoming <strong>developers in Nigeria</strong> and Africa. I'm always excited about the next challenge in web development!
-              </p>
-
-            </motion.article>
-
-            {/* Passions Grid */}
-            <motion.div 
-              variants={itemVariants} 
-              className="grid grid-cols-2 gap-3 sm:gap-6"
-              role="list"
-              aria-label="Areas of expertise"
+              I'm <strong className="text-foreground">Eze Favour</strong>, a full-stack product engineer based in 
+              <strong className="text-foreground"> Port Harcourt, Nigeria</strong>. With 4+ years building for the web, 
+              I specialize in creating SaaS platforms, multi-vendor marketplaces, booking systems, admin dashboards, 
+              and complex web applications that businesses actually depend on.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3 }}
+              className="text-muted-foreground leading-relaxed"
             >
-              {passions.map((passion) => (
-                <motion.article
-                  key={passion.title}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  className="group"
-                  role="listitem"
-                >
-                  <Card className="p-4 sm:p-6 h-full transition-smooth hover:shadow-hover">
-                    <passion.icon 
-                      className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-3 sm:mb-4 group-hover:scale-110 transition-transform" 
-                      aria-hidden="true"
-                    />
-                    <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">{passion.title}</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                      {passion.description}
-                    </p>
-                  </Card>
-                </motion.article>
-              ))}
-            </motion.div>
+              My approach is product-first — I think about user experience, business logic, monetization, 
+              and scalability before writing a single line of code. Whether you're a startup founder in 
+              <strong className="text-foreground"> Lagos</strong>, a business owner in <strong className="text-foreground">Abuja</strong>, 
+              or a company anywhere in the world, I bring the same level of strategic, premium execution to every project.
+            </motion.p>
+          </div>
+
+          {/* Strength cards */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            {strengths.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.3 + i * 0.1 }}
+                className="group p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold font-display text-base mb-1.5">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
