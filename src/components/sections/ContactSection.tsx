@@ -43,7 +43,7 @@ const ContactSection = () => {
   const socials = [
     { icon: Github, url: "https://github.com/Code-With-Fred", label: "GitHub" },
     { icon: Linkedin, url: "https://www.linkedin.com/in/eze-favour-chimereze-807954398/", label: "LinkedIn" },
-    { icon: Twitter, url: "https://twitter.com/chimereze_eze", label: "Twitter" },
+    { icon: Twitter, url: "https://twitter.com/codewithfreddev", label: "Twitter" },
   ]
 
   return (
@@ -75,7 +75,7 @@ const ContactSection = () => {
               <span className="text-gradient">digital product?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Whether it's a SaaS platform, marketplace, or custom web app — let's talk about bringing your vision to life.
+              Whether it's a SaaS platform, marketplace, or custom web app let's talk about bringing your vision to life.
             </p>
           </motion.div>
 
@@ -99,7 +99,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold font-display text-sm">WhatsApp</p>
-                  <p className="text-sm text-muted-foreground">Quick response — usually within hours</p>
+                  <p className="text-sm text-muted-foreground">Quick response usually within hours</p>
                 </div>
                 <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
               </a>
