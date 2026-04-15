@@ -160,7 +160,7 @@ const ProjectsSection = () => {
                   Storvia
                 </h3>
                 <p className="text-xl sm:text-2xl text-muted-foreground mb-6 max-w-2xl leading-relaxed">
-                  A scalable multi-vendor marketplace platform where businesses create stores, sellers manage products, and admins earn commissions — built for real digital commerce.
+                  A scalable multi-vendor marketplace platform where businesses create stores, sellers manage products, and admins earn commissions built for real digital commerce.
                 </p>
 
                 {/* Features grid */}
