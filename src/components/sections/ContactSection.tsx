@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Send, ArrowRight, Mail, Phone, MapPin, Github, Linkedin, Twitter, MessageCircle } from "lucide-react"
+import { Send, ArrowRight, Mail, MapPin, Github, Linkedin, Twitter, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -49,7 +49,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-24 sm:py-32 relative surface-1"
+      className="py-16 sm:py-24 md:py-32 relative surface-1"
       aria-labelledby="contact-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -60,76 +60,73 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Big CTA statement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-16"
           >
             <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">Let's Build</p>
             <h2
               id="contact-heading"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6 max-w-3xl mx-auto leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-display mb-4 sm:mb-6 max-w-3xl mx-auto leading-tight"
             >
               Ready to build your next{" "}
               <span className="text-gradient">digital product?</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Whether it's a SaaS platform, marketplace, or custom web app let's talk about bringing your vision to life.
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
+              Whether it's a SaaS platform, marketplace, or custom web app — let's talk about bringing your vision to life.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-[1fr,1.2fr] gap-8 sm:gap-12">
+          <div className="grid lg:grid-cols-[1fr,1.2fr] gap-6 sm:gap-8 lg:gap-12">
             {/* Left: Contact info */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-3 sm:space-y-4"
             >
-              {/* Quick contact cards */}
               <a
                 href="https://wa.me/2347041648121"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 rounded-xl border border-border/50 bg-card/50 hover:border-accent/30 hover:bg-card transition-all duration-300 group"
+                className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl border border-border/50 bg-card/50 hover:border-accent/30 hover:bg-card transition-all duration-300 group"
               >
-                <div className="p-3 rounded-lg bg-accent/10 text-accent">
-                  <MessageCircle className="h-5 w-5" />
+                <div className="p-2.5 sm:p-3 rounded-lg bg-accent/10 text-accent flex-shrink-0">
+                  <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-semibold font-display text-sm">WhatsApp</p>
-                  <p className="text-sm text-muted-foreground">Quick response usually within hours</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Quick response — usually within hours</p>
                 </div>
-                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0" />
               </a>
 
               <a
                 href="mailto:ezefavourchimereze@gmail.com"
-                className="flex items-center gap-4 p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/30 hover:bg-card transition-all duration-300 group"
+                className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/30 hover:bg-card transition-all duration-300 group"
               >
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
+                <div className="p-2.5 sm:p-3 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-semibold font-display text-sm">Email</p>
-                  <p className="text-sm text-muted-foreground">ezefavourchimereze@gmail.com</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground truncate">ezefavourchimereze@gmail.com</p>
                 </div>
-                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
               </a>
 
-              <div className="flex items-center gap-4 p-5 rounded-xl border border-border/50 bg-card/50">
-                <div className="p-3 rounded-lg bg-secondary text-muted-foreground">
-                  <MapPin className="h-5 w-5" />
+              <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl border border-border/50 bg-card/50">
+                <div className="p-2.5 sm:p-3 rounded-lg bg-secondary text-muted-foreground flex-shrink-0">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
                 <div>
                   <p className="font-semibold font-display text-sm">Location</p>
-                  <p className="text-sm text-muted-foreground">Port Harcourt, Nigeria · Serving globally</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Port Harcourt, Nigeria · Serving globally</p>
                 </div>
               </div>
 
-              {/* Social links */}
-              <div className="flex gap-3 pt-2">
+              <div className="flex gap-2 sm:gap-3 pt-1 sm:pt-2">
                 {socials.map((s) => (
                   <a
                     key={s.label}
@@ -137,7 +134,7 @@ const ContactSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="p-3 rounded-lg border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/20 transition-all duration-300"
+                    className="p-2.5 sm:p-3 rounded-lg border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/20 transition-all duration-300"
                   >
                     <s.icon className="h-4 w-4" />
                   </a>
@@ -150,12 +147,12 @@ const ContactSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="p-6 sm:p-8 rounded-xl border border-border/50 bg-card/50"
+              className="p-4 sm:p-6 md:p-8 rounded-xl border border-border/50 bg-card/50"
             >
-              <h3 className="text-lg font-bold font-display mb-6">Send a message</h3>
-              <form onSubmit={handleSubmit} className="space-y-5" aria-label="Contact form">
+              <h3 className="text-base sm:text-lg font-bold font-display mb-4 sm:mb-6">Send a message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5" aria-label="Contact form">
                 <div>
-                  <Label htmlFor="name" className="text-sm">Name</Label>
+                  <Label htmlFor="name" className="text-xs sm:text-sm">Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -163,11 +160,11 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     placeholder="Your name"
                     required
-                    className="mt-1.5 bg-background/50"
+                    className="mt-1.5 bg-background/50 text-sm"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-sm">Email</Label>
+                  <Label htmlFor="email" className="text-xs sm:text-sm">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -176,20 +173,20 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     placeholder="you@example.com"
                     required
-                    className="mt-1.5 bg-background/50"
+                    className="mt-1.5 bg-background/50 text-sm"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="message" className="text-sm">Tell me about your project</Label>
+                  <Label htmlFor="message" className="text-xs sm:text-sm">Tell me about your project</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="What are you building? What problem does it solve? What's your timeline?"
-                    rows={5}
+                    placeholder="What are you building? What's your timeline?"
+                    rows={4}
                     required
-                    className="mt-1.5 resize-none bg-background/50"
+                    className="mt-1.5 resize-none bg-background/50 text-sm"
                   />
                 </div>
                 <Button

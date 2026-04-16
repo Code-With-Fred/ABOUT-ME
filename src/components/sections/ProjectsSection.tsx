@@ -7,10 +7,10 @@ import { Helmet } from "react-helmet-async"
 
 import imgTradePro from "@/assets/project-tradepro.jpg"
 import imgRealEstate from "@/assets/project-realestate.jpg"
-import imgNGO from "@/assets/project-ngo.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 import imgHealTrackCare from "@/assets/project-healtrackcare.jpg"
 import imgDCMedTech from "@/assets/Screenshot (54).png"
+import imgStorvia from "@/assets/project-storvia.jpg"
 
 const storviaFeatures = [
   { icon: ShoppingBag, label: "Multi-Vendor Marketplace" },
@@ -97,7 +97,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="py-24 sm:py-32 relative"
+      className="py-16 sm:py-24 md:py-32 relative"
       aria-labelledby="projects-heading"
     >
       <Helmet>
@@ -125,7 +125,7 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-6 max-w-3xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4 sm:mb-6 max-w-3xl"
           >
             Products I've built.{" "}
             <span className="text-muted-foreground">Problems I've solved.</span>
@@ -134,7 +134,7 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15 }}
-            className="text-muted-foreground max-w-2xl mb-16 text-lg"
+            className="text-muted-foreground max-w-2xl mb-10 sm:mb-16 text-base sm:text-lg"
           >
             Every project is approached as a product — with user experience, business logic, and scalability at the core.
           </motion.p>
@@ -144,81 +144,93 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-20 relative group"
+            className="mb-12 sm:mb-20 relative group"
           >
             <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 overflow-hidden">
-              <div className="p-8 sm:p-12">
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+              {/* Storvia Dashboard Image */}
+              <div className="relative overflow-hidden aspect-[16/8] sm:aspect-[16/7]">
+                <img
+                  src={imgStorvia}
+                  alt="Storvia — Multi-vendor marketplace dashboard with product listings, analytics, and order management"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-wrap gap-2">
+                  <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 backdrop-blur-sm text-xs">
                     🚀 Flagship Product
                   </Badge>
-                  <Badge variant="outline" className="text-muted-foreground">
+                  <Badge variant="outline" className="text-muted-foreground backdrop-blur-sm text-xs">
                     Marketplace / SaaS
                   </Badge>
                 </div>
+              </div>
 
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
+              <div className="p-5 sm:p-8 md:p-12 -mt-8 sm:-mt-12 relative z-10">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 sm:mb-4">
                   Storvia
                 </h3>
-                <p className="text-xl sm:text-2xl text-muted-foreground mb-6 max-w-2xl leading-relaxed">
-                  A scalable multi-vendor marketplace platform where businesses create stores, sellers manage products, and admins earn commissions built for real digital commerce.
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-5 sm:mb-6 max-w-2xl leading-relaxed">
+                  A scalable multi-vendor marketplace platform where businesses create stores, sellers manage products, and admins earn commissions — built for real digital commerce.
                 </p>
 
                 {/* Features grid */}
-                <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-6 sm:mb-8">
                   {storviaFeatures.map((f) => (
-                    <div key={f.label} className="flex items-center gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                      <f.icon className="h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-sm font-medium">{f.label}</span>
+                    <div key={f.label} className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-background/50 border border-border/30">
+                      <f.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                      <span className="text-xs sm:text-sm font-medium">{f.label}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Stack */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
                   {["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "Stripe", "Admin Dashboard"].map((t) => (
-                    <span key={t} className="px-3 py-1 text-xs font-medium rounded-full border border-border/50 text-muted-foreground">
+                    <span key={t} className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full border border-border/50 text-muted-foreground">
                       {t}
                     </span>
                   ))}
                 </div>
 
                 {/* Storytelling */}
-                <div className="grid sm:grid-cols-3 gap-6 mb-8 p-6 rounded-xl bg-background/50 border border-border/30">
+                <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-background/50 border border-border/30">
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-2">Problem</p>
-                    <p className="text-sm text-muted-foreground">Small businesses in Nigeria lack access to affordable, feature-rich marketplace platforms.</p>
+                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Problem</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Small businesses in Nigeria lack access to affordable, feature-rich marketplace platforms.</p>
                   </div>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-2">Solution</p>
-                    <p className="text-sm text-muted-foreground">A fully-managed multi-vendor marketplace with role-based access, product management, and automated commissions.</p>
+                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Solution</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">A fully-managed multi-vendor marketplace with role-based access, product management, and automated commissions.</p>
                   </div>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-2">Impact</p>
-                    <p className="text-sm text-muted-foreground">Enables vendors to launch stores in minutes with built-in payments, inventory, and order management.</p>
+                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Impact</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Enables vendors to launch stores in minutes with built-in payments, inventory, and order management.</p>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <a href="https://www.storevia.name.ng/" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="group glow-sm hover:glow-md transition-all">
+                    <Button size="lg" className="w-full sm:w-auto group glow-sm hover:glow-md transition-all">
                       Explore Storvia
                       <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Button>
                   </a>
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
                     View Case Study
                   </Button>
                 </div>
               </div>
 
               {/* Ambient glow */}
-              <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+              <div className="absolute -bottom-20 -right-20 w-60 sm:w-80 h-60 sm:h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
             </div>
           </motion.div>
 
           {/* Other projects */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {projects.map((project, i) => (
               <motion.article
                 key={project.title}
@@ -229,15 +241,15 @@ const ProjectsSection = () => {
               >
                 <div className="grid md:grid-cols-[1fr,1.2fr] gap-0 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card/80 transition-all duration-500 overflow-hidden">
                   {/* Image */}
-                  <div className="relative overflow-hidden aspect-[16/10] md:aspect-auto">
+                  <div className="relative overflow-hidden aspect-[16/10]">
                     <img
                       src={project.image}
                       alt={`${project.title} — ${project.tagline}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20 md:to-card/80" />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent to-card/20 md:to-card/80" />
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
                       <Badge variant="secondary" className="text-xs backdrop-blur-sm bg-background/70">
                         {project.category}
                       </Badge>
@@ -245,30 +257,30 @@ const ProjectsSection = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 sm:p-8 flex flex-col justify-center">
-                    <h3 className="text-xl sm:text-2xl font-bold font-display mb-2 group-hover:text-primary transition-colors">
+                  <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-display mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                       {project.tagline}
                     </p>
 
                     {/* Problem/Solution mini */}
-                    <div className="space-y-2 mb-4">
-                      <p className="text-sm">
+                    <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+                      <p className="text-xs sm:text-sm">
                         <span className="text-primary font-medium">Problem:</span>{" "}
                         <span className="text-muted-foreground">{project.problem}</span>
                       </p>
-                      <p className="text-sm">
+                      <p className="text-xs sm:text-sm">
                         <span className="text-accent font-medium">Solution:</span>{" "}
                         <span className="text-muted-foreground">{project.solution}</span>
                       </p>
                     </div>
 
                     {/* Stack */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
+                    <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-4 sm:mb-6">
                       {project.stack.map((t) => (
-                        <span key={t} className="px-2 py-0.5 text-[11px] font-medium rounded border border-border/50 text-muted-foreground">
+                        <span key={t} className="px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-[11px] font-medium rounded border border-border/50 text-muted-foreground">
                           {t}
                         </span>
                       ))}
@@ -279,10 +291,10 @@ const ProjectsSection = () => {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline underline-offset-4"
+                      className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-primary hover:underline underline-offset-4"
                     >
                       View Live Product
-                      <ExternalLink className="h-3.5 w-3.5" />
+                      <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                     </a>
                   </div>
                 </div>
