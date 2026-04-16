@@ -10,6 +10,7 @@ import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgNGO from "@/assets/project-ngo.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 import imgHealTrackCare from "@/assets/project-healtrackcare.jpg"
+import imgDCMedTech from "@/assets/Screenshot (54).png"
 
 const storviaFeatures = [
   { icon: ShoppingBag, label: "Multi-Vendor Marketplace" },
@@ -60,14 +61,14 @@ const projects = [
     category: "PropTech",
   },
   {
-    title: "Thrive Africa NGO",
-    tagline: "Nonprofit platform driving healthcare access across underserved communities",
-    problem: "An NGO needed a digital presence to reach donors and volunteers at scale.",
-    solution: "Built a mission-driven website with donation systems, volunteer signups, and impact storytelling.",
-    stack: ["React", "TypeScript", "MongoDB", "Tailwind CSS"],
-    image: imgNGO,
-    demoUrl: "https://thrive-africa-health-initiative.vercel.app/",
-    category: "Non-Profit",
+    title: "DCMedTech Graphix",
+    tagline: "Professional graphics and design services for medical technology companies",
+    problem: "Medical tech companies need high-quality graphics for branding, marketing, and presentations.",
+    solution: "Built a sleek portfolio website showcasing design capabilities, services, and past work.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+    image: imgDCMedTech,
+    demoUrl: "https://dcmedtech-graphix.vercel.app/",
+    category: "Design / Branding",
   },
 ]
 
