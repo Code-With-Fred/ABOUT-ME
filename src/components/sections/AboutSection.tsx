@@ -6,7 +6,7 @@ const strengths = [
   {
     icon: Layers,
     title: "End-to-End Product Building",
-    description: "From database architecture to pixel-perfect UI I own the entire stack and deliver complete, production-ready products.",
+    description: "From database architecture to pixel-perfect UI — I own the entire stack and deliver complete, production-ready products.",
   },
   {
     icon: Zap,
@@ -21,7 +21,7 @@ const strengths = [
   {
     icon: TrendingUp,
     title: "Modern Tech, Real Results",
-    description: "React, Node.js, TypeScript, Supabase I use the best modern tools to deliver products that compete with the best.",
+    description: "React, Node.js, TypeScript, Supabase — I use the best modern tools to deliver products that compete with the best.",
   },
 ]
 
@@ -31,7 +31,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="py-24 sm:py-32 relative"
+      className="py-16 sm:py-24 md:py-32 relative"
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -42,7 +42,6 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Label */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -51,13 +50,12 @@ const AboutSection = () => {
             About
           </motion.p>
 
-          {/* Big positioning statement */}
           <motion.h2
             id="about-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-8 max-w-4xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 sm:mb-8 max-w-4xl"
           >
             I don't just build websites.{" "}
             <span className="text-muted-foreground">
@@ -65,13 +63,12 @@ const AboutSection = () => {
             </span>
           </motion.h2>
 
-          {/* Two-column narrative */}
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-12 sm:mb-20">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="text-muted-foreground leading-relaxed"
+              className="text-sm sm:text-base text-muted-foreground leading-relaxed"
             >
               I'm <strong className="text-foreground">Eze Favour</strong>, a full-stack product engineer based in 
               <strong className="text-foreground"> Port Harcourt, Nigeria</strong>. With 4+ years building for the web, 
@@ -82,32 +79,31 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="text-muted-foreground leading-relaxed"
+              className="text-sm sm:text-base text-muted-foreground leading-relaxed"
             >
-              My approach is product-first I think about user experience, business logic, monetization, 
+              My approach is product-first — I think about user experience, business logic, monetization, 
               and scalability before writing a single line of code. Whether you're a startup founder in 
               <strong className="text-foreground"> Lagos</strong>, a business owner in <strong className="text-foreground">Abuja</strong>, 
               or a company anywhere in the world, I bring the same level of strategic, premium execution to every project.
             </motion.p>
           </div>
 
-          {/* Strength cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {strengths.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
-                className="group p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card transition-all duration-300"
+                className="group p-4 sm:p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card transition-all duration-300"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                    <item.icon className="h-5 w-5" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <item.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold font-display text-base mb-1.5">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <h3 className="font-semibold font-display text-sm sm:text-base mb-1 sm:mb-1.5">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </motion.div>

@@ -43,7 +43,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-24 sm:py-32 relative surface-1"
+      className="py-16 sm:py-24 md:py-32 relative surface-1"
       aria-labelledby="skills-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -66,20 +66,20 @@ const SkillsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-16 max-w-3xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-10 sm:mb-16 max-w-3xl"
           >
             Tools & technologies{" "}
             <span className="text-muted-foreground">I use to build serious products.</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-[280px,1fr] gap-8">
-            {/* Category tabs */}
-            <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
+          <div className="grid md:grid-cols-[240px,1fr] lg:grid-cols-[280px,1fr] gap-4 sm:gap-6 md:gap-8">
+            {/* Category tabs - horizontal scroll on mobile */}
+            <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
               {categories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`text-left px-4 py-3 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                  className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-300 flex-shrink-0 ${
                     activeCategory === cat.id
                       ? "bg-primary/10 text-primary border border-primary/20"
                       : "text-muted-foreground hover:text-foreground hover:bg-card/50 border border-transparent"
@@ -98,19 +98,19 @@ const SkillsSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="p-8 rounded-xl border border-border/50 bg-card/50"
+                className="p-5 sm:p-6 md:p-8 rounded-xl border border-border/50 bg-card/50"
               >
-                <h3 className="text-2xl font-bold font-display mb-3">{active.title}</h3>
-                <p className="text-muted-foreground mb-8 max-w-lg">{active.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold font-display mb-2 sm:mb-3">{active.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg">{active.description}</p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {active.tools.map((tool, i) => (
                     <motion.div
                       key={tool}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.05 }}
-                      className="px-4 py-2.5 rounded-lg border border-border/50 bg-background/50 text-sm font-medium hover:border-primary/30 hover:text-primary transition-all duration-300 cursor-default"
+                      className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-border/50 bg-background/50 text-xs sm:text-sm font-medium hover:border-primary/30 hover:text-primary transition-all duration-300 cursor-default"
                     >
                       {tool}
                     </motion.div>

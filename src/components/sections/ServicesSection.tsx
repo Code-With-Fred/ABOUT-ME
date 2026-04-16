@@ -6,46 +6,14 @@ import {
 } from "lucide-react"
 
 const services = [
-  {
-    icon: Layers,
-    title: "SaaS Platforms",
-    description: "Multi-tenant SaaS products with user management, billing, dashboards, and scalable architecture.",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Marketplaces",
-    description: "Multi-vendor e-commerce platforms with seller management, commission systems, and payment integration.",
-  },
-  {
-    icon: BarChart3,
-    title: "Admin Dashboards",
-    description: "Data-rich management panels with analytics, RBAC, reporting, and real-time monitoring.",
-  },
-  {
-    icon: Globe,
-    title: "Business Websites",
-    description: "High-converting, SEO-optimized websites that establish credibility and drive leads.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Booking Systems",
-    description: "Appointment scheduling platforms with calendars, notifications, and payment processing.",
-  },
-  {
-    icon: Rocket,
-    title: "Startup MVPs",
-    description: "Rapid prototyping and MVP development to validate your idea and get to market fast.",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Custom Web Apps",
-    description: "Tailored web applications with complex business logic, integrations, and real-time features.",
-  },
-  {
-    icon: Shield,
-    title: "Auth & Payment Systems",
-    description: "Secure authentication flows, role-based access control, and payment gateway integration.",
-  },
+  { icon: Layers, title: "SaaS Platforms", description: "Multi-tenant SaaS products with user management, billing, dashboards, and scalable architecture." },
+  { icon: ShoppingBag, title: "Marketplaces", description: "Multi-vendor e-commerce platforms with seller management, commission systems, and payment integration." },
+  { icon: BarChart3, title: "Admin Dashboards", description: "Data-rich management panels with analytics, RBAC, reporting, and real-time monitoring." },
+  { icon: Globe, title: "Business Websites", description: "High-converting, SEO-optimized websites that establish credibility and drive leads." },
+  { icon: CalendarCheck, title: "Booking Systems", description: "Appointment scheduling platforms with calendars, notifications, and payment processing." },
+  { icon: Rocket, title: "Startup MVPs", description: "Rapid prototyping and MVP development to validate your idea and get to market fast." },
+  { icon: MonitorSmartphone, title: "Custom Web Apps", description: "Tailored web applications with complex business logic, integrations, and real-time features." },
+  { icon: Shield, title: "Auth & Payment Systems", description: "Secure authentication flows, role-based access control, and payment gateway integration." },
 ]
 
 const ServicesSection = () => {
@@ -54,7 +22,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-24 sm:py-32 relative surface-1"
+      className="py-16 sm:py-24 md:py-32 relative surface-1"
       aria-labelledby="services-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -77,7 +45,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-6 max-w-3xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4 sm:mb-6 max-w-3xl"
           >
             Real products for{" "}
             <span className="text-muted-foreground">real businesses.</span>
@@ -86,27 +54,27 @@ const ServicesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15 }}
-            className="text-muted-foreground max-w-2xl mb-16 text-lg"
+            className="text-muted-foreground max-w-2xl mb-10 sm:mb-16 text-base sm:text-lg"
           >
-            I help founders, startups, and businesses turn ideas into scalable digital products. Here's what I can build for you.
+            I help founders, startups, and businesses turn ideas into scalable digital products.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + i * 0.05 }}
-                className="group p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card transition-all duration-300"
+                className="group p-4 sm:p-6 rounded-xl border border-border/50 bg-card/50 hover:border-primary/20 hover:bg-card transition-all duration-300"
               >
-                <div className="p-2.5 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="h-5 w-5" />
+                <div className="p-2 sm:p-2.5 rounded-lg bg-primary/10 text-primary w-fit mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <h3 className="font-semibold font-display mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-semibold font-display text-sm sm:text-base mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
