@@ -199,10 +199,12 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <Button size="lg" className="group glow-sm hover:glow-md transition-all">
-                    Explore Storvia
-                    <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Button>
+                  <a href="https://www.storevia.name.ng/" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="group glow-sm hover:glow-md transition-all">
+                      Explore Storvia
+                      <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </Button>
+                  </a>
                   <Button variant="outline" size="lg">
                     View Case Study
                   </Button>
