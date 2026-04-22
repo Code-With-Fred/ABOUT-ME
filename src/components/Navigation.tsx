@@ -154,10 +154,7 @@ const Navigation = () => {
                         Let's Talk
                       </Button>
                     </Link>
-                  </SheetClose>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Available for new projects
-                  </p>
+                </SheetClose>
                 </div>
               </SheetContent>
             </Sheet>
