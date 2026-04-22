@@ -11,7 +11,7 @@ import {
   SheetDescription,
   SheetClose,
 } from "@/components/ui/sheet"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
