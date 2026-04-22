@@ -108,12 +108,10 @@ const Navigation = () => {
                 id="mobile-navigation"
                 className="w-[85vw] max-w-sm bg-background/95 backdrop-blur-xl border-l border-border/50 p-0 flex flex-col"
               >
-                <VisuallyHidden>
-                  <SheetTitle>Navigation menu</SheetTitle>
-                  <SheetDescription>
-                    Site navigation links and primary call to action.
-                  </SheetDescription>
-                </VisuallyHidden>
+                <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+                <SheetDescription className="sr-only">
+                  Site navigation links and primary call to action.
+                </SheetDescription>
 
                 {/* Header */}
                 <div className="flex items-center justify-between px-6 h-16 border-b border-border/50">
