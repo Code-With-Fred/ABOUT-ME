@@ -148,7 +148,7 @@ const ProjectsSection = () => {
           >
             <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 overflow-hidden">
               {/* Storvia Dashboard Image */}
-              <div className="relative overflow-hidden aspect-[16/8] sm:aspect-[16/7]">
+              <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[16/8] md:aspect-[16/7]">
                 <img
                   src={imgStorvia}
                   alt="Storvia — Multi-vendor marketplace dashboard with product listings, analytics, and order management"
@@ -158,30 +158,30 @@ const ProjectsSection = () => {
                   height={1080}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-wrap gap-2">
-                  <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 backdrop-blur-sm text-xs">
+                <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)]">
+                  <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 backdrop-blur-sm text-[10px] sm:text-xs">
                     🚀 Flagship Product
                   </Badge>
-                  <Badge variant="outline" className="text-muted-foreground backdrop-blur-sm text-xs">
+                  <Badge variant="outline" className="text-muted-foreground backdrop-blur-sm text-[10px] sm:text-xs">
                     Marketplace / SaaS
                   </Badge>
                 </div>
               </div>
 
-              <div className="p-5 sm:p-8 md:p-12 -mt-8 sm:-mt-12 relative z-10">
+              <div className="p-5 sm:p-8 md:p-12 -mt-6 sm:-mt-12 relative z-10">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 sm:mb-4">
                   Storvia
                 </h3>
-                <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-5 sm:mb-6 max-w-2xl leading-relaxed">
+                <p className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-5 sm:mb-6 max-w-2xl leading-relaxed">
                   A scalable multi-vendor marketplace platform where businesses create stores, sellers manage products, and admins earn commissions — built for real digital commerce.
                 </p>
 
                 {/* Features grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-6 sm:mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-6 sm:mb-8">
                   {storviaFeatures.map((f) => (
-                    <div key={f.label} className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div key={f.label} className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg bg-background/50 border border-border/30 min-w-0">
                       <f.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
-                      <span className="text-xs sm:text-sm font-medium">{f.label}</span>
+                      <span className="text-xs sm:text-sm font-medium truncate">{f.label}</span>
                     </div>
                   ))}
                 </div>
@@ -196,7 +196,7 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Storytelling */}
-                <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-background/50 border border-border/30">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-background/50 border border-border/30">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Problem</p>
                     <p className="text-xs sm:text-sm text-muted-foreground">Small businesses in Nigeria lack access to affordable, feature-rich marketplace platforms.</p>
@@ -212,7 +212,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="https://www.storevia.name.ng/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.storevia.name.ng/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full sm:w-auto group glow-sm hover:glow-md transition-all">
                       Explore Storvia
                       <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

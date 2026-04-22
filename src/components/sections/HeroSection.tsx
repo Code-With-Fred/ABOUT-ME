@@ -47,7 +47,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-display leading-[0.95] tracking-tight mb-5 sm:mb-6 text-center md:text-left"
+            className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display leading-[1.05] sm:leading-[0.95] tracking-tight mb-5 sm:mb-6 text-center md:text-left"
           >
             <span className="block">I build digital</span>
             <span className="block">products that</span>
@@ -59,7 +59,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 sm:mb-10 leading-relaxed text-center md:text-left mx-auto md:mx-0"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-8 sm:mb-10 leading-relaxed text-center md:text-left mx-auto md:mx-0"
           >
             Full-stack product engineer crafting modern{" "}
             <strong className="text-foreground">SaaS platforms</strong>,{" "}
@@ -73,7 +73,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center md:justify-start w-full"
           >
             <Link to="/projects" className="w-full sm:w-auto">
               <Button
@@ -100,7 +100,7 @@ const HeroSection = () => {
               variant="ghost"
               size="lg"
               onClick={handleDownloadResume}
-              className="group w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 text-muted-foreground hover:text-foreground transition-all duration-300"
+              className="group w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 text-muted-foreground hover:text-foreground border border-border/30 sm:border-0 transition-all duration-300"
               aria-label="Download my resume"
             >
               <Download className="mr-2 h-4 w-4" aria-hidden="true" />
