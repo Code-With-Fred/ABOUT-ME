@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button"
 
 const HeroSection = () => {
   const handleDownloadResume = () => {
-    window.open("/fred-resume.pdf", "_blank")
+    // Open the user's uploaded resume PDF in `public/`.
+    window.open("/my%20resume.pdf", "_blank")
   }
 
   return (
@@ -14,28 +15,27 @@ const HeroSection = () => {
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-12 sm:pt-20 sm:pb-16"
       aria-labelledby="hero-heading"
     >
-      {/* Ambient background */}
+      {/* Clean monochrome background + subtle large logo */}
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 grid-bg opacity-40" />
-        <div className="absolute top-1/4 left-1/4 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] bg-primary/10 rounded-full blur-[100px] sm:blur-[120px] animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[220px] sm:w-[400px] h-[220px] sm:h-[400px] bg-accent/8 rounded-full blur-[90px] sm:blur-[100px] animate-pulse-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute inset-0 opacity-100 bg-background" />
+        <div className="absolute inset-0 grid-bg opacity-6" />
         <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-b from-background to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-5xl mx-auto w-full">
+        <div className="max-w-4xl sm:max-w-5xl mx-auto w-full">
           {/* Main headline */}
           <motion.h1
             id="hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[2rem] xs:text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-display leading-[1.1] sm:leading-[1] tracking-tight mb-5 sm:mb-6 text-center md:text-left break-words"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-display leading-tight sm:leading-[1.02] tracking-tight mb-5 sm:mb-6 text-center md:text-left break-words"
           >
-            <span className="block">I build digital</span>
-            <span className="block">products that</span>
-            <span className="block text-gradient">scale &amp; convert.</span>
+            <span className="block">I build web products</span>
+            <span className="block">that win customers</span>
+            <span className="block text-foreground">and grow revenue.</span>
           </motion.h1>
 
           {/* Supporting text */}
@@ -45,11 +45,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mb-8 sm:mb-10 leading-relaxed text-center md:text-left mx-auto md:mx-0"
           >
-            Full-stack product engineer crafting modern{" "}
-            <strong className="text-foreground">SaaS platforms</strong>,{" "}
-            <strong className="text-foreground">marketplaces</strong>, and{" "}
-            <strong className="text-foreground">business-ready web systems</strong>{" "}
-            that look premium and solve real problems.
+            I partner with founders and product teams to design and ship elegant, reliable web applications focused on clarity, performance, and measurable growth.
           </motion.p>
 
           {/* CTAs */}
@@ -65,7 +61,7 @@ const HeroSection = () => {
                 className="group w-full sm:w-auto h-12 sm:h-12 text-sm sm:text-base px-6 sm:px-8 glow-sm hover:glow-md transition-all duration-300"
                 aria-label="View my projects"
               >
-                View Projects
+                See My Work
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </Button>
             </Link>
@@ -77,7 +73,7 @@ const HeroSection = () => {
                 aria-label="Work with me"
               >
                 <Sparkles className="mr-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
-                Work With Me
+                Start a Project
               </Button>
             </Link>
             <Button

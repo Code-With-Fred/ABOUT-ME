@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}

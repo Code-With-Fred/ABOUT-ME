@@ -23,9 +23,9 @@ const Contact = () => {
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta property="og:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
-          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:title" content="Hire a Web Developer in Nigeria" />
           <meta name="twitter:description" content="Contact Eze Favour Chimereze for professional web development services." />
         </Helmet>

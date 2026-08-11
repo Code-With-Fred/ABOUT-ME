@@ -57,8 +57,8 @@ const CTABanner = ({
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
           {/* Background decorative elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+              <div className="hidden sm:block absolute -top-24 -right-24 w-40 sm:w-64 h-40 sm:h-64 bg-primary/10 rounded-full blur-3xl" />
+              <div className="hidden sm:block absolute -bottom-24 -left-24 w-40 sm:w-64 h-40 sm:h-64 bg-primary/5 rounded-full blur-3xl" />
           </div>
 
           <div className="relative z-10 px-6 py-12 md:px-12 md:py-16 text-center">

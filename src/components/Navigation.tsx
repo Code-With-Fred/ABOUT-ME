@@ -57,16 +57,15 @@ const Navigation = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="relative z-10 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            aria-label="codewithfred — home"
+            className="relative z-10 rounded-full border border-border/30 bg-background/80 px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex items-center gap-3"
+            aria-label="Eze Favour home"
           >
-            <span className="text-lg sm:text-xl font-bold font-display tracking-tight">
-              code<span className="text-primary">with</span>fred
-            </span>
+            <img src="/my%20logo.png" alt="Eze Favour" className="h-8 sm:h-10 w-auto object-contain rounded-full" />
+            <span className="sr-only">Eze Favour</span>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2 flex-wrap overflow-x-auto scrollbar-hide max-w-full">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -76,7 +75,7 @@ const Navigation = () => {
                   isActive(item.href)
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                }`}
+                } whitespace-nowrap`}
               >
                 {item.label}
               </Link>
@@ -88,7 +87,7 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile menu — accessible Sheet */}
+          {/* Mobile menu (accessible Sheet) */}
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>

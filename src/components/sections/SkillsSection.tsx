@@ -19,7 +19,7 @@ const categories = [
     id: "product",
     title: "Product Architecture",
     tools: ["System Design", "Database Modeling", "Auth & RBAC", "Payment Integration", "Real-Time Systems", "Multi-Tenancy", "Caching", "API Gateway"],
-    description: "Full product thinking — from data models and user flows to monetization and scalability patterns.",
+    description: "Full product thinking, from data models and user flows to monetization and scalability patterns.",
   },
   {
     id: "uiux",
@@ -52,7 +52,7 @@ const SkillsSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ const SkillsSection = () => {
             <span className="text-muted-foreground">I use to build serious products.</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-[240px,1fr] lg:grid-cols-[280px,1fr] gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(220px,280px),1fr] gap-4 sm:gap-6 md:gap-8">
             {/* Category tabs - horizontal scroll on mobile */}
             <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
               {categories.map((cat) => (

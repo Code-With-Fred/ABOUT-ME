@@ -17,7 +17,7 @@ const items = [
 
 const TrustStrip = () => {
   return (
-    <section className="py-6 sm:py-8 border-y border-border/30 overflow-hidden" aria-label="Capabilities">
+    <section className="hidden sm:block py-6 sm:py-8 border-y border-border/30 overflow-hidden" aria-label="Capabilities">
       <div className="marquee">
         <div className="marquee-content">
           {[...items, ...items].map((item, i) => (

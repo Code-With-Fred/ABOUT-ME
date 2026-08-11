@@ -25,14 +25,15 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr,1fr,1fr] gap-8 sm:gap-12 mb-8 sm:mb-12">
             {/* Brand */}
-            <div className="sm:col-span-2 md:col-span-1">
-              <span className="text-lg sm:text-xl font-bold font-display tracking-tight block mb-3 sm:mb-4">
-                code<span className="text-primary">with</span>fred
-              </span>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm mb-4 sm:mb-6">
-                Full-stack product engineer building modern SaaS platforms, marketplaces, and business-ready web systems from Port Harcourt, Nigeria.
-              </p>
-              <div className="flex gap-2 sm:gap-3">
+            <div className="sm:col-span-2 md:col-span-1 flex flex-col sm:flex-row items-start gap-4">
+              <div className="w-12 h-12 bg-white text-black flex items-center justify-center font-bold rounded-sm flex-shrink-0">CF</div>
+              <div>
+                <span className="text-lg sm:text-xl font-bold font-display tracking-tight block mb-3 sm:mb-4">code<span className="text-primary">with</span>fred</span>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-full mb-4 sm:mb-6">
+                  Full-stack product engineer building modern SaaS platforms and business-ready web systems from Port Harcourt, Nigeria.
+                </p>
+              </div>
+              <div className="flex gap-2 sm:gap-3 mt-2">
                 {socials.map((s) => (
                   <a
                     key={s.label}
@@ -40,7 +41,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="p-2 sm:p-2.5 rounded-lg border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/20 transition-all duration-300"
+                    className="p-2 sm:p-2.5 rounded-sm border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/20 transition-all duration-300"
                   >
                     <s.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   </a>
@@ -98,7 +99,7 @@ const Footer = () => {
           </div>
 
           <p className="text-center text-[10px] sm:text-[11px] text-muted-foreground/40 mt-6 sm:mt-8">
-            Full-Stack Product Engineer & Web Developer in Port Harcourt, Lagos, Abuja, Nigeria — SaaS, Marketplaces, Web Applications
+            Full-Stack Product Engineer & Web Developer in Port Harcourt, Lagos, Abuja, Nigeria, SaaS, Marketplaces, Web Applications
           </p>
         </div>
       </div>

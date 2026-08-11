@@ -13,7 +13,7 @@ const Services = () => {
     <PageTransition>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Web Development Services | Eze Favour Chimereze - Port Harcourt, Lagos, Abuja</title>
+          <title>Web Development Services | Eze Favour Chimereze | Port Harcourt, Lagos, Abuja</title>
           <meta name="description" content="Professional web development services including custom websites, e-commerce solutions, web applications, and technical writing. Serving clients in Port Harcourt, Lagos, Abuja, and worldwide." />
           <meta name="keywords" content="web development services Nigeria, custom website design Port Harcourt, e-commerce development Lagos, React development Abuja, full stack services Nigeria" />
           <link rel="canonical" href="https://codewithfred.name.ng/services" />
@@ -26,9 +26,9 @@ const Services = () => {
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+          <meta property="og:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
-          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:title" content="Web Development Services Nigeria" />
           <meta name="twitter:description" content="Custom websites, e-commerce, and web applications by Eze Favour Chimereze." />
         </Helmet>

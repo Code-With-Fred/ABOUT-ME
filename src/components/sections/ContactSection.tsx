@@ -22,7 +22,8 @@ const ContactSection = () => {
     e.preventDefault()
     setIsSubmitting(true)
     try {
-      const res = await fetch("https://ajqmjvrfjiuauorcfhtw.supabase.co/functions/v1/send-contact-email", {
+      const endpoint = import.meta.env.VITE_SUPABASE_CONTACT_FUNCTION || "https://ajqmjvrfjiuauorcfhtw.supabase.co/functions/v1/send-contact-email"
+      const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -58,7 +59,7 @@ const ContactSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -74,7 +75,7 @@ const ContactSection = () => {
               <span className="text-gradient">digital product?</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
-              Whether it's a SaaS platform, marketplace, or custom web app — let's talk about bringing your vision to life.
+              Whether it's a SaaS platform, marketplace, or custom web app, let's talk about bringing your vision to life.
             </p>
           </motion.div>
 
@@ -97,7 +98,7 @@ const ContactSection = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="font-semibold font-display text-sm">WhatsApp</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Quick response — usually within hours</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Quick response, usually within hours</p>
                 </div>
                 <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all flex-shrink-0" />
               </a>

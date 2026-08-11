@@ -24,9 +24,9 @@ const About = () => {
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Eze Favour - Web Developer" />
+            <meta property="og:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
-          <meta name="twitter:image:alt" content="Eze Favour - Web Developer" />
+          <meta name="twitter:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:title" content="About Eze Favour Chimereze | Software Engineer Nigeria" />
           <meta name="twitter:description" content="Discover my journey as a passionate software engineer and technical writer." />
         </Helmet>

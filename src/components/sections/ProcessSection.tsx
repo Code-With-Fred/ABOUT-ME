@@ -3,9 +3,9 @@ import { useInView } from "react-intersection-observer"
 import { Search, Lightbulb, Palette, Code2, Rocket } from "lucide-react"
 
 const steps = [
-  { icon: Search, number: "01", title: "Discovery", description: "I start by deeply understanding your business, goals, users, and competitive landscape. No assumptions — just real insights." },
+  { icon: Search, number: "01", title: "Discovery", description: "I start by deeply understanding your business, goals, users, and competitive landscape. No assumptions, just real insights." },
   { icon: Lightbulb, number: "02", title: "Product Strategy", description: "Together, we define the product scope, features, data models, and user flows that align with your business objectives." },
-  { icon: Palette, number: "03", title: "UI/UX Direction", description: "I design interfaces that feel premium, intuitive, and conversion-focused — with clear information hierarchy and purposeful interactions." },
+  { icon: Palette, number: "03", title: "UI/UX Direction", description: "I design interfaces that feel premium, intuitive, and conversion-focused, with clear information hierarchy and purposeful interactions." },
   { icon: Code2, number: "04", title: "Development", description: "Clean, modular, production-ready code using React, Node.js, TypeScript, and modern tooling. Built to scale from day one." },
   { icon: Rocket, number: "05", title: "Launch & Optimize", description: "Rigorous testing, performance tuning, and deployment. Post-launch, I monitor and iterate to maximize product impact." },
 ]
@@ -25,7 +25,7 @@ const ProcessSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}

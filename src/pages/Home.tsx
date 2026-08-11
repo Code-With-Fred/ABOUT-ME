@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async"
+import PageTransition from "@/components/PageTransition"
 import Navigation from "@/components/Navigation"
 import HeroSection from "@/components/sections/HeroSection"
 import TrustStrip from "@/components/sections/TrustStrip"
@@ -9,7 +10,6 @@ import ProcessSection from "@/components/sections/ProcessSection"
 import ServicesSection from "@/components/sections/ServicesSection"
 import TestimonialsSection from "@/components/sections/TestimonialsSection"
 import ContactSection from "@/components/sections/ContactSection"
-import PageTransition from "@/components/PageTransition"
 import Footer from "@/components/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
 import StructuredData from "@/components/StructuredData"
@@ -20,16 +20,16 @@ const Home = () => {
       <StructuredData />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Eze Favour | Full-Stack Product Engineer — SaaS, Marketplaces & Web Apps</title>
-          <meta name="description" content="I build scalable digital products — SaaS platforms, marketplaces, and business-ready web applications. Full-stack product engineer based in Nigeria." />
-          <meta name="keywords" content="product engineer Nigeria, full stack developer, SaaS developer, marketplace developer, web developer Port Harcourt, React developer Nigeria, Node.js developer" />
-          <link rel="canonical" href="https://codewithfred.name.ng/" />
-          <meta property="og:title" content="Eze Favour | Full-Stack Product Engineer" />
-          <meta property="og:description" content="I build scalable digital products — SaaS platforms, marketplaces, and business-ready web applications." />
-          <meta property="og:url" content="https://codewithfred.name.ng/" />
+          <title>Eze Favour | Product Engineer | Web Apps & SaaS</title>
+          <meta name="description" content="I design and build web applications that convert users and grow revenue. Product engineering for startups and SMBs, React, TypeScript, Node.js, Supabase." />
+          <meta name="keywords" content="Eze Favour, product engineer, web developer, React developer, TypeScript, Supabase, SaaS developer" />
+          <link rel="canonical" href="/" />
+          <meta property="og:title" content="Eze Favour | Product Engineer" />
+          <meta property="og:description" content="Designing and building web apps that convert users and drive growth." />
+          <meta property="og:url" content="/" />
           <meta property="og:type" content="website" />
-          <meta name="twitter:title" content="Eze Favour | Full-Stack Product Engineer" />
-          <meta name="twitter:description" content="Building premium digital products that scale." />
+          <meta name="twitter:title" content="Eze Favour | Product Engineer" />
+          <meta name="twitter:description" content="Designing and building web apps that convert users and drive growth." />
         </Helmet>
 
         <a

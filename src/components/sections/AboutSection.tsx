@@ -6,12 +6,12 @@ const strengths = [
   {
     icon: Layers,
     title: "End-to-End Product Building",
-    description: "From database architecture to pixel-perfect UI — I own the entire stack and deliver complete, production-ready products.",
+    description: "From database architecture to pixel-perfect UI, I own the entire stack and deliver complete, production-ready products.",
   },
   {
     icon: Zap,
     title: "Performance & Scalability",
-    description: "Every system I build is optimized for speed and designed to handle growth — from 10 users to 10,000.",
+    description: "Every system I build is optimized for speed and designed to handle growth, from 10 users to 10,000.",
   },
   {
     icon: Target,
@@ -21,7 +21,7 @@ const strengths = [
   {
     icon: TrendingUp,
     title: "Modern Tech, Real Results",
-    description: "React, Node.js, TypeScript, Supabase — I use the best modern tools to deliver products that compete with the best.",
+    description: "React, Node.js, TypeScript, Supabase, I use the best modern tools to deliver products that compete with the best.",
   },
 ]
 
@@ -40,7 +40,7 @@ const AboutSection = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ const AboutSection = () => {
               transition={{ delay: 0.3 }}
               className="text-sm sm:text-base text-muted-foreground leading-relaxed"
             >
-              My approach is product-first — I think about user experience, business logic, monetization, 
+              My approach is product-first, I think about user experience, business logic, monetization,
               and scalability before writing a single line of code. Whether you're a startup founder in 
               <strong className="text-foreground"> Lagos</strong>, a business owner in <strong className="text-foreground">Abuja</strong>, 
               or a company anywhere in the world, I bring the same level of strategic, premium execution to every project.

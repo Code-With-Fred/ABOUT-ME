@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    /* Light mode - clean and premium */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 6%;
+    /* Design tokens: Cream (background), Chocolate (primary), Black/White */
+    --background: 38 100% 95%; /* cream */
+    --foreground: 0 0% 6%;    /* near-black for readable text on cream */
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 6%;
@@ -16,64 +16,67 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 6%;
 
-    --primary: 210 100% 50%;
+    /* Chocolate primary (warm brown) */
+    --primary: 28 60% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 94%;
+    --secondary: 38 100% 96%;
     --secondary-foreground: 0 0% 6%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 38 100% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 160 84% 39%;
+    --accent: 28 60% 24%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 210 100% 50%;
+    --border: 38 100% 88%;
+    --input: 38 100% 96%;
+    --ring: 28 60% 24%;
 
     --radius: 0.5rem;
 
-    --surface-1: 0 0% 96%;
-    --surface-2: 0 0% 92%;
-    --glow: 210 100% 50%;
+    --surface-1: 0 0% 100%;
+    --surface-2: 38 100% 96%;
+    --glow: 28 60% 24%;
   }
 
   .dark {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 93%;
+    /* Dark mode: black background, cream text, warmer primary tint */
+    --background: 0 0% 0%;   /* black */
+    --foreground: 38 100% 95%; /* cream */
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 93%;
+    --card: 0 0% 6%;
+    --card-foreground: 38 100% 95%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 38 100% 95%;
 
-    --primary: 210 100% 60%;
-    --primary-foreground: 0 0% 4%;
+    /* Lighter chocolate for contrast on black */
+    --primary: 28 55% 56%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 93%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 38 100% 95%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 160 84% 39%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 55% 56%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 210 100% 60%;
+    --input: 0 0% 12%;
+    --ring: 28 55% 56%;
 
-    --surface-1: 0 0% 8%;
+    --surface-1: 0 0% 6%;
     --surface-2: 0 0% 12%;
-    --glow: 210 100% 60%;
+    --glow: 28 55% 56%;
   }
 }
 
