@@ -97,8 +97,8 @@ const WebDevelopment = () => {
               <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
               <div className="space-y-3">
                 <p>
-                  <strong>Years of Experience:</strong> 50+ projects delivered to satisfied clients across Nigeria and
-                  internationally.
+                  <strong>Full-Stack Expertise:</strong> 4+ years building production-ready web applications with
+                  React, Node.js, and TypeScript.
                 </p>
                 <p>
                   <strong>Performance-Focused:</strong> Every site we build is optimized for speed, SEO, and conversions.

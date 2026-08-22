@@ -1,19 +1,19 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Quote } from "lucide-react"
+import { Quote, Info } from "lucide-react"
 
 const testimonials = [
-  { name: "Adaeze Nwosu", role: "CEO, Nwosu Logistics", location: "Lagos", text: "Fred built our company website from scratch and the results were amazing. The site is fast, mobile-friendly, and has already helped us get more customers." },
-  { name: "Chukwuemeka Okonkwo", role: "Founder, TechHub PH", location: "Port Harcourt", text: "Working with Fred was a fantastic experience. He understood our vision and delivered a modern, SEO-optimized website that ranks well on Google." },
-  { name: "Blessing Eze", role: "Owner, Bless Fashion Store", location: "Abuja", text: "Our e-commerce website is now generating sales 24/7. Fred created a beautiful online store with easy payment integration. Very professional." },
-  { name: "Emmanuel Chibuike", role: "Startup Founder", location: "Port Harcourt", text: "From concept to deployment, Fred delivered beyond expectations. His expertise in React and Node.js helped us launch our SaaS product on time." },
+  { role: "E-commerce Founder", location: "Example", text: "Built our store from scratch and the results were amazing. The site is fast, mobile-friendly, and easy for our team to manage." },
+  { role: "Startup Founder", location: "Example", text: "Understood our vision and delivered a modern, SEO-optimized website that ranks well on Google." },
+  { role: "Small Business Owner", location: "Example", text: "Our online store now generates sales 24/7, with a clean checkout and easy payment integration." },
+  { role: "SaaS Founder", location: "Example", text: "From concept to deployment, delivered beyond expectations, with React and Node.js used to launch on time." },
 ]
 
-const metrics = [
-  { value: "50+", label: "Projects Shipped" },
-  { value: "40+", label: "Happy Clients" },
-  { value: "4+", label: "Years Experience" },
-  { value: "100%", label: "Delivery Rate" },
+const highlights = [
+  { value: "4+", label: "Years Building" },
+  { value: "React / Node", label: "Core Stack" },
+  { value: "Full-Stack", label: "Product Scope" },
+  { value: "Remote-Ready", label: "Availability" },
 ]
 
 const TestimonialsSection = () => {
@@ -38,29 +38,41 @@ const TestimonialsSection = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             className="text-sm font-medium uppercase tracking-widest text-primary mb-4"
           >
-            Client Proof
+            Working Together
           </motion.p>
           <motion.h2
             id="testimonials-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-10 sm:mb-16 max-w-3xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4 sm:mb-6 max-w-3xl"
           >
-            Trusted by founders{" "}
-            <span className="text-muted-foreground">and businesses across Nigeria.</span>
+            What working with me{" "}
+            <span className="text-muted-foreground">looks like.</span>
           </motion.h2>
 
-          {/* Metrics */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.15 }}
+            className="flex items-start gap-2.5 mb-10 sm:mb-16 rounded-xl border border-border/50 bg-card/40 px-4 py-3 max-w-2xl"
+          >
+            <Info className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              The quotes below are illustrative examples of the kind of feedback I aim to earn &mdash; not from named clients yet. Real testimonials will replace these as projects launch.
+            </p>
+          </motion.div>
+
+          {/* Highlights */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16 p-4 sm:p-6 md:p-8 rounded-xl border border-border/50 bg-card/50"
           >
-            {metrics.map((m) => (
+            {highlights.map((m) => (
               <div key={m.label} className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-primary">{m.value}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary">{m.value}</p>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1">{m.label}</p>
               </div>
             ))}
@@ -70,7 +82,7 @@ const TestimonialsSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {testimonials.map((t, i) => (
               <motion.div
-                key={t.name}
+                key={t.role}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
@@ -81,8 +93,8 @@ const TestimonialsSection = () => {
                   "{t.text}"
                 </p>
                 <div>
-                  <p className="font-semibold font-display text-xs sm:text-sm">{t.name}</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">{t.role} · {t.location}</p>
+                  <p className="font-semibold font-display text-xs sm:text-sm">{t.role}</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">{t.location} testimonial</p>
                 </div>
               </motion.div>
             ))}

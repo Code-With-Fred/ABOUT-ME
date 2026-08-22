@@ -34,8 +34,9 @@ const ContactSection = () => {
       }
       toast({ title: "Message sent!", description: "Thanks for reaching out. I'll get back to you soon!" })
       setFormData({ name: "", email: "", message: "" })
-    } catch (err: any) {
-      toast({ title: "Error", description: err.message || "Something went wrong.", variant: "destructive" })
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Something went wrong."
+      toast({ title: "Error", description: message, variant: "destructive" })
     } finally {
       setIsSubmitting(false)
     }
