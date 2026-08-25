@@ -16,8 +16,13 @@ const services = [
   { icon: Shield, title: "Auth & Payment Systems", description: "Secure authentication flows, role-based access control, and payment gateway integration." },
 ]
 
-const ServicesSection = () => {
+interface ServicesSectionProps {
+  headingLevel?: "h1" | "h2"
+}
+
+const ServicesSection = ({ headingLevel = "h2" }: ServicesSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
+  const Heading = motion[headingLevel]
 
   return (
     <section
@@ -40,7 +45,7 @@ const ServicesSection = () => {
           >
             What I Build
           </motion.p>
-          <motion.h2
+          <Heading
             id="services-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -49,7 +54,7 @@ const ServicesSection = () => {
           >
             Real products for{" "}
             <span className="text-muted-foreground">real businesses.</span>
-          </motion.h2>
+          </Heading>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

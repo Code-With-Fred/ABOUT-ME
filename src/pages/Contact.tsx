@@ -43,7 +43,7 @@ const Contact = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <ContactSection />
+          <ContactSection headingLevel="h1" />
         </main>
         
         <Footer />

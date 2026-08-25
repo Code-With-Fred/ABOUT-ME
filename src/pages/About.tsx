@@ -44,7 +44,7 @@ const About = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <AboutSection />
+          <AboutSection headingLevel="h1" />
           <CTABanner 
             title="Like what you see?"
             description="I'd love to hear about your project. Let's discuss how I can help bring your ideas to life."

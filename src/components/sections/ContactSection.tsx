@@ -1,15 +1,26 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Send, ArrowRight, Mail, MapPin, Github, Linkedin, Twitter, MessageCircle } from "lucide-react"
+import { Send, ArrowRight, Mail, MapPin, Github, Linkedin, Twitter, MessageCircle, MessageSquareText, ClipboardList, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/hooks/use-toast"
 
-const ContactSection = () => {
+const nextSteps = [
+  { icon: MessageSquareText, title: "You reach out", description: "Send a message or WhatsApp with a bit about your project." },
+  { icon: ClipboardList, title: "We scope it together", description: "A short call or thread to nail down goals, timeline, and budget." },
+  { icon: Rocket, title: "We start building", description: "Clear milestones, regular updates, no surprises." },
+]
+
+interface ContactSectionProps {
+  headingLevel?: "h1" | "h2"
+}
+
+const ContactSection = ({ headingLevel = "h2" }: ContactSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
+  const Heading = motion[headingLevel]
   const { toast } = useToast()
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -68,16 +79,41 @@ const ContactSection = () => {
             className="text-center mb-10 sm:mb-16"
           >
             <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">Let's Build</p>
-            <h2
+            <Heading
               id="contact-heading"
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-display mb-4 sm:mb-6 max-w-3xl mx-auto leading-tight"
             >
               Ready to build your next{" "}
               <span className="text-gradient">digital product?</span>
-            </h2>
+            </Heading>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
               Whether it's a SaaS platform, marketplace, or custom web app, let's talk about bringing your vision to life.
             </p>
+            <p className="mt-4 inline-flex items-center gap-2 text-xs sm:text-sm text-primary font-medium">
+              <span className="status-dot" aria-hidden="true" />
+              Usually responds within 24 hours
+            </p>
+          </motion.div>
+
+          {/* What happens next — sets expectations up front to lower friction */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.15 }}
+            className="grid sm:grid-cols-3 gap-3 sm:gap-4 mb-10 sm:mb-16"
+          >
+            {nextSteps.map((step, i) => (
+              <div key={step.title} className="relative p-4 sm:p-5 rounded-xl border border-border/50 bg-card/40">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                    <step.icon className="h-4 w-4" />
+                  </div>
+                  <span className="text-[11px] font-mono text-muted-foreground">Step {i + 1}</span>
+                </div>
+                <p className="font-semibold font-display text-sm mb-1">{step.title}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+              </div>
+            ))}
           </motion.div>
 
           <div className="grid lg:grid-cols-[1fr,1.2fr] gap-6 sm:gap-8 lg:gap-12">

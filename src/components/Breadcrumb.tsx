@@ -16,6 +16,9 @@ const routeLabels: Record<string, string> = {
   skills: "Skills",
   testimonials: "Testimonials",
   contact: "Contact",
+  "web-development": "Web Development",
+  "seo-optimization": "SEO Optimization",
+  "ecommerce-solutions": "E-Commerce Solutions",
 };
 
 const Breadcrumbs = () => {

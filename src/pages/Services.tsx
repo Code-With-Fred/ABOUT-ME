@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
 import Navigation from "@/components/Navigation"
 import Breadcrumbs from "@/components/Breadcrumb"
 import ServicesSection from "@/components/sections/ServicesSection"
@@ -7,6 +9,12 @@ import CTABanner from "@/components/CTABanner"
 import PageTransition from "@/components/PageTransition"
 import Footer from "@/components/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
+
+const deepDives = [
+  { title: "Website Development", href: "/services/web-development", description: "Custom, responsive websites built for performance and conversions." },
+  { title: "E-Commerce Development", href: "/services/ecommerce-solutions", description: "Online stores with secure payments and inventory management." },
+  { title: "SEO Optimization", href: "/services/seo-optimization", description: "On-page, technical, and local SEO to help your site get found." },
+]
 
 const Services = () => {
   return (
@@ -46,7 +54,33 @@ const Services = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <ServicesSection />
+          <ServicesSection headingLevel="h1" />
+
+          <section className="py-12 sm:py-16 relative" aria-labelledby="deep-dives-heading">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="max-w-5xl mx-auto">
+                <h2 id="deep-dives-heading" className="text-xl sm:text-2xl font-bold font-display mb-6 sm:mb-8">
+                  Explore a service in depth
+                </h2>
+                <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
+                  {deepDives.map((d) => (
+                    <Link
+                      key={d.href}
+                      to={d.href}
+                      className="group p-4 sm:p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/30 hover:bg-card transition-all duration-300"
+                    >
+                      <p className="font-semibold font-display text-sm mb-1.5 flex items-center gap-1.5 group-hover:text-primary transition-colors">
+                        {d.title}
+                        <ArrowRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden="true" />
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{d.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           <FAQSection />
           <CTABanner 
             title="Need a custom solution?"

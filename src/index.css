@@ -151,6 +151,36 @@
     background-size: 60px 60px;
   }
 
+  /* Soft radial spotlight used behind hero-type sections for depth without noise */
+  .spotlight-bg {
+    background-image:
+      radial-gradient(ellipse 60% 50% at 50% 0%, hsl(var(--glow) / 0.16), transparent 70%),
+      radial-gradient(ellipse 40% 35% at 85% 15%, hsl(var(--glow) / 0.08), transparent 70%);
+  }
+
+  .status-dot {
+    position: relative;
+    display: inline-flex;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 9999px;
+    background-color: #22c55e;
+  }
+
+  .status-dot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: #22c55e;
+    animation: status-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes status-ping {
+    0% { transform: scale(1); opacity: 0.6; }
+    75%, 100% { transform: scale(2.4); opacity: 0; }
+  }
+
   .noise-bg {
     position: relative;
   }

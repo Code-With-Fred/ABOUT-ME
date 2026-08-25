@@ -78,13 +78,13 @@ const Skills = () => {
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
           <title>Technical Skills | Eze Favour Chimereze | React, Node.js, Full Stack Developer Nigeria</title>
-          <meta name="description" content="Discover the technical skills of Eze Favour Chimereze: React.js, Next.js, Node.js, TypeScript, PostgreSQL, MongoDB, and 50+ web technologies. Expert full-stack developer in Port Harcourt, Lagos, and Abuja, Nigeria." />
+          <meta name="description" content="Discover the technical skills of Eze Favour Chimereze: React.js, Next.js, Node.js, TypeScript, PostgreSQL, MongoDB, and 40+ tools &amp; technologies. Expert full-stack developer in Port Harcourt, Lagos, and Abuja, Nigeria." />
           <meta name="keywords" content="React developer Nigeria, Node.js expert Port Harcourt, TypeScript developer Lagos, full stack developer Abuja, JavaScript developer Nigeria, Next.js developer, PostgreSQL expert, MongoDB developer, Tailwind CSS, web development skills Nigeria, frontend developer Port Harcourt, backend developer Lagos" />
           <link rel="canonical" href="https://codewithfred.name.ng/skills" />
           
           {/* Open Graph */}
           <meta property="og:title" content="Technical Skills | Eze Favour Chimereze | Full Stack Developer" />
-          <meta property="og:description" content="50+ technical skills including React, Node.js, TypeScript, and modern web technologies. Serving clients in Port Harcourt, Lagos, Abuja, and worldwide." />
+          <meta property="og:description" content="40+ tools & technologies including React, Node.js, TypeScript, and modern web technologies. Serving clients in Port Harcourt, Lagos, Abuja, and worldwide." />
           <meta property="og:url" content="https://codewithfred.name.ng/skills" />
           <meta property="og:type" content="profile" />
           <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
@@ -101,7 +101,7 @@ const Skills = () => {
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Technical Skills | Full Stack Developer Nigeria" />
-          <meta name="twitter:description" content="React, Node.js, TypeScript, and 50+ web technologies. Expert developer in Nigeria." />
+          <meta name="twitter:description" content="React, Node.js, TypeScript, and 40+ tools &amp; technologies. Expert developer in Nigeria." />
           
           {/* Additional SEO */}
           <meta name="author" content="Eze Favour Chimereze" />
@@ -133,7 +133,7 @@ const Skills = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <SkillsSection />
+          <SkillsSection headingLevel="h1" />
           <CTABanner 
             variant="minimal"
             title="Have a project that needs these skills?"

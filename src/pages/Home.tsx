@@ -23,10 +23,14 @@ const Home = () => {
           <title>Eze Favour | Product Engineer | Web Apps & SaaS</title>
           <meta name="description" content="I design and build web applications that convert users and grow revenue. Product engineering for startups and SMBs, React, TypeScript, Node.js, Supabase." />
           <meta name="keywords" content="Eze Favour, product engineer, web developer, React developer, TypeScript, Supabase, SaaS developer" />
-          <link rel="canonical" href="/" />
+          <link rel="canonical" href="https://codewithfred.name.ng/" />
           <meta property="og:title" content="Eze Favour | Product Engineer" />
           <meta property="og:description" content="Designing and building web apps that convert users and drive growth." />
-          <meta property="og:url" content="/" />
+          <meta property="og:url" content="https://codewithfred.name.ng/" />
+          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="Eze Favour | Product Engineer" />
           <meta property="og:type" content="website" />
           <meta name="twitter:title" content="Eze Favour | Product Engineer" />
           <meta name="twitter:description" content="Designing and building web apps that convert users and drive growth." />

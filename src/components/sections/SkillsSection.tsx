@@ -35,10 +35,15 @@ const categories = [
   },
 ]
 
-const SkillsSection = () => {
+interface SkillsSectionProps {
+  headingLevel?: "h1" | "h2"
+}
+
+const SkillsSection = ({ headingLevel = "h2" }: SkillsSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
   const [activeCategory, setActiveCategory] = useState("frontend")
   const active = categories.find((c) => c.id === activeCategory)!
+  const Heading = motion[headingLevel]
 
   return (
     <section
@@ -61,7 +66,7 @@ const SkillsSection = () => {
           >
             Capabilities
           </motion.p>
-          <motion.h2
+          <Heading
             id="skills-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -70,7 +75,7 @@ const SkillsSection = () => {
           >
             Tools & technologies{" "}
             <span className="text-muted-foreground">I use to build serious products.</span>
-          </motion.h2>
+          </Heading>
 
           <div className="grid grid-cols-1 md:grid-cols-[minmax(220px,280px),1fr] gap-4 sm:gap-6 md:gap-8">
             {/* Category tabs - horizontal scroll on mobile */}

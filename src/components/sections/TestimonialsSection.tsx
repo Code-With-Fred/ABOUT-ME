@@ -16,8 +16,13 @@ const highlights = [
   { value: "Remote-Ready", label: "Availability" },
 ]
 
-const TestimonialsSection = () => {
+interface TestimonialsSectionProps {
+  headingLevel?: "h1" | "h2"
+}
+
+const TestimonialsSection = ({ headingLevel = "h2" }: TestimonialsSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
+  const Heading = motion[headingLevel]
 
   return (
     <section
@@ -40,7 +45,7 @@ const TestimonialsSection = () => {
           >
             Working Together
           </motion.p>
-          <motion.h2
+          <Heading
             id="testimonials-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -49,7 +54,7 @@ const TestimonialsSection = () => {
           >
             What working with me{" "}
             <span className="text-muted-foreground">looks like.</span>
-          </motion.h2>
+          </Heading>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

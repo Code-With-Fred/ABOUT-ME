@@ -25,8 +25,14 @@ const strengths = [
   },
 ]
 
-const AboutSection = () => {
+interface AboutSectionProps {
+  /** "h1" when this section is a standalone page's main heading, "h2" (default) when embedded on Home. */
+  headingLevel?: "h1" | "h2"
+}
+
+const AboutSection = ({ headingLevel = "h2" }: AboutSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
+  const Heading = motion[headingLevel]
 
   return (
     <section
@@ -50,7 +56,7 @@ const AboutSection = () => {
             About
           </motion.p>
 
-          <motion.h2
+          <Heading
             id="about-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -61,7 +67,7 @@ const AboutSection = () => {
             <span className="text-muted-foreground">
               I engineer digital products that power businesses, automate workflows, and generate revenue.
             </span>
-          </motion.h2>
+          </Heading>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-12 sm:mb-20">
             <motion.p

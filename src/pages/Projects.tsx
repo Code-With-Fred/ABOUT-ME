@@ -44,7 +44,7 @@ const Projects = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <ProjectsSection />
+          <ProjectsSection headingLevel="h1" />
           <CTABanner 
             title="Want something similar?"
             description="I can build a custom solution tailored to your needs. Let's create something amazing together."

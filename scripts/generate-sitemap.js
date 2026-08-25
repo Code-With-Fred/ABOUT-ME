@@ -8,6 +8,9 @@ const routes = [
   '/about',
   '/projects',
   '/services',
+  '/services/web-development',
+  '/services/seo-optimization',
+  '/services/ecommerce-solutions',
   '/skills',
   '/testimonials',
   '/contact'

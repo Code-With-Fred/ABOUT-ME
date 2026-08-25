@@ -10,12 +10,12 @@ const Testimonials = () => {
     <PageTransition>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Client Testimonials & Reviews | Eze Favour Chimereze | Web Developer</title>
-          <meta name="description" content="Read testimonials and reviews from satisfied clients. See why businesses in Port Harcourt, Lagos, Abuja, and worldwide trust Eze Favour Chimereze for their web development needs." />
-          <meta name="keywords" content="web developer reviews Nigeria, client testimonials Port Harcourt, web development feedback, trusted developer Lagos, best web developer reviews Abuja" />
+          <title>Working With Me | Eze Favour Chimereze | Web Developer</title>
+          <meta name="description" content="What working with Eze Favour Chimereze looks like: a full-stack web developer in Port Harcourt, Nigeria, building for clients across Lagos, Abuja, and worldwide." />
+          <meta name="keywords" content="web developer Nigeria, working with a developer Port Harcourt, web development process, hire developer Lagos, freelance developer Abuja" />
           <link rel="canonical" href="https://codewithfred.name.ng/testimonials" />
-          <meta property="og:title" content="Client Testimonials | Eze Favour Chimereze" />
-          <meta property="og:description" content="Read reviews from satisfied clients who trusted me with their web development projects." />
+          <meta property="og:title" content="Working With Me | Eze Favour Chimereze" />
+          <meta property="og:description" content="A look at how I work with clients, from first message to launch." />
           <meta property="og:url" content="https://codewithfred.name.ng/testimonials" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
@@ -26,8 +26,8 @@ const Testimonials = () => {
           <meta property="og:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
           <meta name="twitter:image:alt" content="Eze Favour | Web Developer" />
-          <meta name="twitter:title" content="Client Reviews | Web Developer Nigeria" />
-          <meta name="twitter:description" content="Testimonials from clients in Port Harcourt, Lagos, Abuja, and worldwide." />
+          <meta name="twitter:title" content="Working With Me | Web Developer Nigeria" />
+          <meta name="twitter:description" content="What working together looks like, from first message to launch." />
         </Helmet>
         
         <a 
@@ -43,7 +43,7 @@ const Testimonials = () => {
         
         <main id="main-content" role="main" className="pt-20">
           <Breadcrumbs />
-          <TestimonialsSection />
+          <TestimonialsSection headingLevel="h1" />
         </main>
         
         <Footer />

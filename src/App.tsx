@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "@/hooks/use-theme";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 // Home loads eagerly (it's the most common entry point); every other route
 // is code-split so a first visit doesn't pay for pages it didn't ask for.
@@ -55,6 +56,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <AnimatedRoutes />
+          <StickyMobileCTA />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>

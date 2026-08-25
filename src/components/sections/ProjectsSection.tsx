@@ -1,30 +1,79 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { ArrowUpRight, Info, ShoppingBag, Users, Shield, TrendingUp } from "lucide-react"
+import { ArrowUpRight, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { Helmet } from "react-helmet-async"
+import BrowserFrame from "@/components/BrowserFrame"
 
-import imgFlagship from "@/assets/project-storvia.jpg"
+import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
+import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
+import imgCaptainBlack from "@/assets/project-captainblack.jpg"
+import imgStorevia from "@/assets/project-storevia.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 import imgHealthcare from "@/assets/project-healtrackcare.jpg"
 import imgNgo from "@/assets/project-ngo.jpg"
 import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgTradePro from "@/assets/project-tradepro.jpg"
 
-const projectFeatures = [
-  { icon: ShoppingBag, label: "Responsive Commerce Experience" },
-  { icon: Users, label: "Seller & Customer Dashboards" },
-  { icon: Shield, label: "Secure Payments + Subscriptions" },
-  { icon: TrendingUp, label: "Growth-Ready Architecture" },
+// Real, shipped projects. Keep every claim here verifiable — no invented metrics.
+const realProjects = [
+  {
+    title: "ConfidantsZone",
+    tag: "Mental Wellness Platform",
+    summary: "A platform connecting people with verified therapists, counselors, and support specialists — with anonymous venting, professional matching, and secure sessions.",
+    features: ["Anonymous Venting", "Verified Professional Matching", "Secure Video & Audio Sessions", "Paystack Payments"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    problem: "People seeking mental health support often face stigma, high costs, and no easy way to find a professional who fits their specific situation.",
+    approach: "Built anonymous venting as a low-friction entry point, paired with a verified-professional search and matching system, encrypted sessions, and integrated payments.",
+    demonstrates: "End-to-end product ownership: auth, real-time messaging, video/audio sessions, admin moderation tooling, and a full booking-and-payments flow.",
+    image: imgConfidantsZone,
+    liveUrl: null as string | null,
+    frameLabel: "ConfidantsZone — live preview",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "KelviqTech Enterprise",
+    tag: "Security Technology · Nigeria",
+    summary: "A marketing and product site for a Nigerian security technology company — CCTV, smart locks, video doorbells, and full security system installation.",
+    features: ["Product Catalog", "Service Pages", "WhatsApp Lead Capture", "SEO-Optimized"],
+    stack: ["Next.js", "TypeScript"],
+    problem: "The business had no online presence, making it hard for customers to discover their products or request a quote.",
+    approach: "Designed and built a fast, SEO-ready marketing site with a full product/service catalog and a direct WhatsApp path from every page to convert visitors into leads.",
+    demonstrates: "Business-focused web design: clear positioning, conversion paths, and technical SEO for a local service business.",
+    image: imgKelviqTech,
+    liveUrl: "https://www.kelviqtechenterprise.com/" as string | null,
+    frameLabel: "kelviqtechenterprise.com",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Captain Black Global Services",
+    tag: "Luxury Catering · Lagos",
+    summary: "A marketing site for a premium catering company serving weddings, corporate events, and private dining across Lagos and internationally.",
+    features: ["Event & Wedding Catering Pages", "Photo & Video Gallery", "Quote Request Flow", "WhatsApp Lead Capture"],
+    stack: ["Next.js", "TypeScript"],
+    problem: "A high-end catering brand needed a web presence that matched the quality of the experience it sells — most competitors relied on Instagram alone.",
+    approach: "Built an editorial, photography-led site with a clear quote-request path and gallery to let the work speak for itself.",
+    demonstrates: "Brand-first design: typography, imagery, and pacing carrying the premium positioning, not just the functional requirements.",
+    image: imgCaptainBlack,
+    liveUrl: "https://www.captainblackglobalservice.com/" as string | null,
+    frameLabel: "captainblackglobalservice.com",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Storvia",
+    tag: "Campus Commerce Platform",
+    summary: "A storefront platform letting campus sellers launch a branded store, list products, and receive orders in minutes — no coding required.",
+    features: ["Instant Storefront Creation", "Product Listings", "Order Requests", "Campus Marketplace"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    problem: "Student and campus sellers had no low-friction way to get a branded storefront online without technical setup or fees.",
+    approach: "Built a self-serve storefront builder with instant store creation, a shared marketplace for discovery, and a simple order-request flow.",
+    demonstrates: "Multi-tenant product architecture: per-seller storefronts, a shared marketplace layer, and account/auth handling.",
+    image: imgStorevia,
+    liveUrl: null as string | null,
+    frameLabel: "storevia.name.ng",
+    status: "in-progress" as "live" | "in-progress",
+  },
 ]
-
-const flagship = {
-  title: "PulseCart",
-  summary: "PulseCart combines product discovery, seller tools, subscription billing, and merchant analytics into one polished SaaS experience.",
-  stack: ["React", "TypeScript", "Node.js", "Supabase", "Tailwind CSS", "Stripe"],
-  image: imgFlagship,
-}
 
 const concepts = [
   {
@@ -59,15 +108,26 @@ const concepts = [
   },
 ]
 
-const ProjectsSection = () => {
+interface ProjectsSectionProps {
+  headingLevel?: "h1" | "h2"
+}
+
+const ProjectsSection = ({ headingLevel = "h2" }: ProjectsSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true })
+  const Heading = motion[headingLevel]
 
   const projectsSchema = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "PulseCart | Example Concept Case Study",
-    "description": "PulseCart is an example commerce platform concept demonstrating product engineering capability.",
-    "keywords": flagship.stack.join(", "),
+    "@type": "ItemList",
+    "name": "Projects by Eze Favour",
+    "itemListElement": realProjects.map((p, i) => ({
+      "@type": "CreativeWork",
+      "position": i + 1,
+      "name": p.title,
+      "description": p.summary,
+      ...(p.liveUrl ? { "url": p.liveUrl } : {}),
+      "keywords": p.stack.join(", "),
+    })),
   }
 
   return (
@@ -96,7 +156,7 @@ const ProjectsSection = () => {
           >
             Featured Work
           </motion.p>
-          <motion.h2
+          <Heading
             id="projects-heading"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -105,118 +165,130 @@ const ProjectsSection = () => {
           >
             Products I build.{" "}
             <span className="text-muted-foreground">Problems I solve.</span>
-          </motion.h2>
+          </Heading>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.15 }}
-            className="text-muted-foreground max-w-2xl mb-4 text-base sm:text-lg"
+            className="text-muted-foreground max-w-2xl mb-10 sm:mb-16 text-base sm:text-lg"
           >
             Every project is approached as a product, with user experience, business logic, and scalability at the core.
           </motion.p>
 
-          {/* Honesty note: these are concept builds, not client deliveries */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.18 }}
-            className="flex items-start gap-2.5 mb-10 sm:mb-16 rounded-xl border border-border/50 bg-card/40 px-4 py-3 max-w-2xl"
-          >
-            <Info className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
-            <p className="text-xs sm:text-sm text-muted-foreground">
-              The builds below are example concepts I designed and built to demonstrate how I approach real product problems &mdash; they are not client deliveries. Real case studies will replace these as projects launch.
-            </p>
-          </motion.div>
-
-          {/* Flagship concept */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-12 sm:mb-20 relative group"
-          >
-            <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 overflow-hidden">
-              <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[16/8] md:aspect-[16/7]">
-                <img
-                  src={flagship.image}
-                  alt="PulseCart dashboard concept showing marketplace analytics and commerce workflows"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                  width={1920}
-                  height={1080}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-wrap gap-2 max-w-[calc(100%-1.5rem)]">
-                  <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 backdrop-blur-sm text-[10px] sm:text-xs">
-                    Example Concept
-                  </Badge>
-                  <Badge variant="outline" className="text-muted-foreground backdrop-blur-sm text-[10px] sm:text-xs">
-                    Marketplace / SaaS
-                  </Badge>
+          {/* Real projects */}
+          <div className="space-y-6 sm:space-y-8">
+            {realProjects.map((project, idx) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 40 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.2 + idx * 0.1, duration: 0.8 }}
+                className="rounded-2xl border border-border/50 bg-card/30 overflow-hidden"
+              >
+                <div className="p-4 sm:p-6 md:p-8 pb-0">
+                  <BrowserFrame label={project.frameLabel}>
+                    <img
+                      src={project.image}
+                      alt={`${project.title} — ${project.tag} screenshot`}
+                      className="w-full h-full object-cover object-top aspect-[16/10] sm:aspect-[16/9]"
+                      loading="lazy"
+                      width={1600}
+                      height={900}
+                    />
+                  </BrowserFrame>
                 </div>
-              </div>
 
-              <div className="p-5 sm:p-8 md:p-12 -mt-6 sm:-mt-12 relative z-10">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-3 sm:mb-4">
-                  {flagship.title}
-                </h3>
-                <p className="text-sm sm:text-lg md:text-xl text-muted-foreground mb-5 sm:mb-6 max-w-2xl leading-relaxed">
-                  {flagship.summary}
-                </p>
+                <div className="p-5 sm:p-8 md:p-10">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2 sm:mb-3">
+                    <p className="text-xs sm:text-sm font-medium uppercase tracking-wider text-primary">
+                      {project.tag}
+                    </p>
+                    {project.status === "in-progress" && (
+                      <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-amber-500">
+                        <span className="h-1.5 w-1.5 rounded-full bg-amber-500" aria-hidden="true" />
+                        Backend maintenance in progress
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display mb-3 sm:mb-4">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm sm:text-lg text-muted-foreground mb-5 sm:mb-6 max-w-2xl leading-relaxed">
+                    {project.summary}
+                  </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 mb-6 sm:mb-8">
-                  {projectFeatures.map((f) => (
-                    <div key={f.label} className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg bg-background/50 border border-border/30 min-w-0">
-                      <f.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
-                      <span className="text-xs sm:text-sm font-medium truncate">{f.label}</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mb-5 sm:mb-6">
+                    {project.features.map((f) => (
+                      <div key={f} className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg bg-background/50 border border-border/30 min-w-0">
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
+                        <span className="text-xs sm:text-sm font-medium truncate">{f}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5 sm:mb-6">
+                    {project.stack.map((t) => (
+                      <span key={t} className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full border border-border/50 text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-background/50 border border-border/30">
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Problem</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{project.problem}</p>
                     </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-                  {flagship.stack.map((t) => (
-                    <span key={t} className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full border border-border/50 text-muted-foreground">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-background/50 border border-border/30">
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Problem</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Fragmented commerce systems leave sellers disconnected and customers unable to complete repeat purchases.</p>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Approach</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{project.approach}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Demonstrates</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{project.demonstrates}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Approach</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Unified storefront management, seller dashboards, subscription workflows, and real-time performance insights.</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-1.5 sm:mb-2">Demonstrates</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Full-stack ownership: data modeling, payments, dashboards, and a production-grade UI in one build.</p>
+
+                  <div className="grid gap-3 sm:grid-cols-[1fr,1fr] max-w-xl">
+                    {project.liveUrl && (
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                        <Button size="lg" className="w-full sm:w-auto group glow-sm hover:glow-md transition-all">
+                          Visit Live Site
+                          <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </Button>
+                      </a>
+                    )}
+                    <a href="/contact" className="w-full sm:w-auto">
+                      <Button variant={project.liveUrl ? "outline" : "default"} size="lg" className="w-full sm:w-auto">
+                        Discuss a similar build
+                      </Button>
+                    </a>
                   </div>
                 </div>
-
-                <a href="/contact" className="inline-block w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto group glow-sm hover:glow-md transition-all">
-                    Discuss a similar build
-                    <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Button>
-                </a>
-              </div>
-
-              <div className="absolute -bottom-20 -right-20 w-60 sm:w-80 h-60 sm:h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
 
           {/* More concepts grid */}
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl sm:text-2xl font-bold font-display mb-6 sm:mb-8"
+            className="text-xl sm:text-2xl font-bold font-display mt-12 sm:mt-16 mb-4"
           >
             More concept builds
           </motion.h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.22 }}
+            className="flex items-start gap-2.5 mb-6 sm:mb-8 rounded-xl border border-border/50 bg-card/40 px-4 py-3 max-w-2xl"
+          >
+            <Info className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              The builds below are example concepts I designed and built to demonstrate range beyond the real projects above &mdash; not client deliveries.
+            </p>
+          </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {concepts.map((c, i) => (
               <motion.div
@@ -235,10 +307,8 @@ const ProjectsSection = () => {
                     width={800}
                     height={500}
                   />
-                  <div className="absolute top-2.5 left-2.5">
-                    <Badge variant="outline" className="bg-background/70 backdrop-blur-sm text-[10px]">
-                      Example Concept
-                    </Badge>
+                  <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-medium border border-border/50 bg-background/70 backdrop-blur-sm text-muted-foreground">
+                    Example Concept
                   </div>
                 </div>
                 <div className="p-4 sm:p-5">
