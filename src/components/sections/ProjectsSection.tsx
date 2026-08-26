@@ -9,6 +9,7 @@ import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
 import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
 import imgCaptainBlack from "@/assets/project-captainblack.jpg"
 import imgStorevia from "@/assets/project-storevia.jpg"
+import imgChaDecor from "@/assets/project-chadecor.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 import imgHealthcare from "@/assets/project-healtrackcare.jpg"
 import imgNgo from "@/assets/project-ngo.jpg"
@@ -72,6 +73,20 @@ const realProjects = [
     liveUrl: null as string | null,
     frameLabel: "storevia.name.ng",
     status: "in-progress" as "live" | "in-progress",
+  },
+  {
+    title: "ChaDecor",
+    tag: "Event Decoration & Planning · Nigeria",
+    summary: "A marketing site for an event decoration and planning company handling weddings, birthdays, and corporate celebrations.",
+    features: ["Portfolio Gallery", "Service Packages", "Quote Request Flow", "Testimonials"],
+    stack: ["Next.js", "TypeScript"],
+    problem: "An event decor business needed a site that felt as considered and premium as the events it designs, with a clear path from browsing to booking.",
+    approach: "Built an editorial, photography-first site with dedicated Services, Portfolio, and Packages pages, and a direct quote-request flow.",
+    demonstrates: "Multi-page marketing site architecture with a strong visual identity carried consistently across every page.",
+    image: imgChaDecor,
+    liveUrl: "https://cha-decor.vercel.app/" as string | null,
+    frameLabel: "cha-decor.vercel.app",
+    status: "live" as "live" | "in-progress",
   },
 ]
 
