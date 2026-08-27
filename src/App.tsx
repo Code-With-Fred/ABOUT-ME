@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,20 +7,24 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "@/hooks/use-theme";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import { lazyWithReload } from "@/lib/lazyWithReload";
 
 // Home loads eagerly (it's the most common entry point); every other route
 // is code-split so a first visit doesn't pay for pages it didn't ask for.
+// lazyWithReload (not React.lazy directly) so a visitor who had the site open
+// across a deploy gets one automatic reload instead of a blank page when their
+// browser requests a JS chunk that no longer exists on the server.
 import Home from "./pages/Home";
-const About = lazy(() => import("./pages/About"));
-const Services = lazy(() => import("./pages/Services"));
-const Projects = lazy(() => import("./pages/Projects"));
-const Skills = lazy(() => import("./pages/Skills"));
-const Testimonials = lazy(() => import("./pages/Testimonials"));
-const Contact = lazy(() => import("./pages/Contact"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
-const SEOOptimization = lazy(() => import("./pages/SEOOptimization"));
-const EcommerceSolutions = lazy(() => import("./pages/EcommerceSolutions"));
+const About = lazyWithReload(() => import("./pages/About"));
+const Services = lazyWithReload(() => import("./pages/Services"));
+const Projects = lazyWithReload(() => import("./pages/Projects"));
+const Skills = lazyWithReload(() => import("./pages/Skills"));
+const Testimonials = lazyWithReload(() => import("./pages/Testimonials"));
+const Contact = lazyWithReload(() => import("./pages/Contact"));
+const NotFound = lazyWithReload(() => import("./pages/NotFound"));
+const WebDevelopment = lazyWithReload(() => import("./pages/WebDevelopment"));
+const SEOOptimization = lazyWithReload(() => import("./pages/SEOOptimization"));
+const EcommerceSolutions = lazyWithReload(() => import("./pages/EcommerceSolutions"));
 
 const queryClient = new QueryClient();
 
