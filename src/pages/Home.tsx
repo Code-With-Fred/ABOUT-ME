@@ -3,17 +3,16 @@ import PageTransition from "@/components/PageTransition"
 import Navigation from "@/components/Navigation"
 import HeroSection from "@/components/sections/HeroSection"
 import TrustStrip from "@/components/sections/TrustStrip"
-import AboutSection from "@/components/sections/AboutSection"
 import ProjectsSection from "@/components/sections/ProjectsSection"
-import SkillsSection from "@/components/sections/SkillsSection"
 import ProcessSection from "@/components/sections/ProcessSection"
-import ServicesSection from "@/components/sections/ServicesSection"
-import TestimonialsSection from "@/components/sections/TestimonialsSection"
-import ContactSection from "@/components/sections/ContactSection"
+import CTABanner from "@/components/CTABanner"
 import Footer from "@/components/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
 import StructuredData from "@/components/StructuredData"
 
+// Home is a short, focused landing page on purpose — full depth on About, Skills,
+// Services, and Testimonials lives on their own pages (linked from the nav and
+// from the CTAs below), not duplicated here.
 const Home = () => {
   return (
     <PageTransition>
@@ -50,13 +49,13 @@ const Home = () => {
         <main id="main-content" role="main">
           <HeroSection />
           <TrustStrip />
-          <AboutSection />
-          <ProjectsSection />
-          <SkillsSection />
+          <ProjectsSection variant="compact" />
           <ProcessSection />
-          <ServicesSection />
-          <TestimonialsSection />
-          <ContactSection />
+          <CTABanner
+            title="Ready to build your next digital product?"
+            description="Whether it's a SaaS platform, marketplace, or custom web app, let's talk about bringing your vision to life."
+            buttonText="Start a Project"
+          />
         </main>
 
         <Footer />
