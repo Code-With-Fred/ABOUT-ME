@@ -204,7 +204,7 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
                       src={project.image}
                       alt={`${project.title} — ${project.tag} screenshot`}
                       className="w-full h-full object-cover object-top aspect-[16/10]"
-                      loading="lazy"
+                      loading="eager"
                       width={800}
                       height={500}
                     />
@@ -305,7 +305,7 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
                         src={c.image}
                         alt={`${c.title} concept preview`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
+                        loading="eager"
                         width={800}
                         height={500}
                       />
