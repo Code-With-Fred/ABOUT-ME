@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import BrowserFrame from "@/components/BrowserFrame"
+import Tilt3D from "@/components/Tilt3D"
 import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
 import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
 
@@ -155,34 +156,38 @@ const HeroSection = () => {
                 initial={{ y: 0 }}
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-0 left-0 w-[78%] shadow-2xl"
+                className="absolute top-0 left-0 w-[78%]"
               >
-                <BrowserFrame label="kelviqtechenterprise.com">
-                  <img
-                    src={imgKelviqTech}
-                    alt="KelviqTech Enterprise — live project screenshot"
-                    className="w-full h-auto aspect-[16/10] object-cover object-top"
-                    width={800}
-                    height={500}
-                  />
-                </BrowserFrame>
+                <Tilt3D className="drop-shadow-2xl">
+                  <BrowserFrame label="kelviqtechenterprise.com">
+                    <img
+                      src={imgKelviqTech}
+                      alt="KelviqTech Enterprise — live project screenshot"
+                      className="w-full h-auto aspect-[16/10] object-cover object-top"
+                      width={800}
+                      height={500}
+                    />
+                  </BrowserFrame>
+                </Tilt3D>
               </motion.div>
 
               <motion.div
                 initial={{ y: 0 }}
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-0 right-0 w-[68%] shadow-2xl"
+                className="absolute bottom-0 right-0 w-[68%]"
               >
-                <BrowserFrame label="ConfidantsZone — live preview">
-                  <img
-                    src={imgConfidantsZone}
-                    alt="ConfidantsZone — live project screenshot"
-                    className="w-full h-auto aspect-[16/10] object-cover object-top"
-                    width={800}
-                    height={500}
-                  />
-                </BrowserFrame>
+                <Tilt3D className="drop-shadow-2xl" maxTilt={8}>
+                  <BrowserFrame label="ConfidantsZone — live preview">
+                    <img
+                      src={imgConfidantsZone}
+                      alt="ConfidantsZone — live project screenshot"
+                      className="w-full h-auto aspect-[16/10] object-cover object-top"
+                      width={800}
+                      height={500}
+                    />
+                  </BrowserFrame>
+                </Tilt3D>
               </motion.div>
 
               {/* Ambient glow behind the composition */}
