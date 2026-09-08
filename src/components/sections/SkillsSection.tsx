@@ -79,20 +79,24 @@ const SkillsSection = ({ headingLevel = "h2" }: SkillsSectionProps) => {
 
           <div className="grid grid-cols-1 md:grid-cols-[minmax(220px,280px),1fr] gap-4 sm:gap-6 md:gap-8">
             {/* Category tabs - horizontal scroll on mobile */}
-            <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-300 flex-shrink-0 ${
-                    activeCategory === cat.id
-                      ? "bg-primary/10 text-primary border border-primary/20"
-                      : "text-muted-foreground hover:text-foreground hover:bg-card/50 border border-transparent"
-                  }`}
-                >
-                  {cat.title}
-                </button>
-              ))}
+            <div className="relative md:contents">
+              <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-300 flex-shrink-0 ${
+                      activeCategory === cat.id
+                        ? "bg-primary/10 text-primary border border-primary/20"
+                        : "text-muted-foreground hover:text-foreground hover:bg-card/50 border border-transparent"
+                    }`}
+                  >
+                    {cat.title}
+                  </button>
+                ))}
+              </div>
+              {/* Fade hint that the tab row scrolls — only relevant on the mobile horizontal layout */}
+              <div className="md:hidden pointer-events-none absolute right-0 top-0 bottom-2 w-10 bg-gradient-to-l from-background to-transparent" aria-hidden="true" />
             </div>
 
             {/* Active category content */}
