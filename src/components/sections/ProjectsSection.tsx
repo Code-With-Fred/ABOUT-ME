@@ -12,9 +12,14 @@ import imgCaptainBlack from "@/assets/project-captainblack.jpg"
 import imgStorevia from "@/assets/project-storevia.jpg"
 import imgChaDecor from "@/assets/project-chadecor.jpg"
 import imgDcMedtech from "@/assets/project-dcmedtech.jpg"
+import imgCeendy from "@/assets/project-ceendy.jpg"
+import imgSassyHairs from "@/assets/project-sassyhairs.jpg"
+import imgAnacoda from "@/assets/project-anacoda.jpg"
+import imgZodStores from "@/assets/project-zodstores.jpg"
+import imgDarasun from "@/assets/project-darasun.jpg"
+import imgThriveAfrica from "@/assets/project-thriveafrica.jpg"
 import imgEcommerce from "@/assets/project-ecommerce.jpg"
 import imgHealthcare from "@/assets/project-healtrackcare.jpg"
-import imgNgo from "@/assets/project-ngo.jpg"
 import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgTradePro from "@/assets/project-tradepro.jpg"
 
@@ -80,6 +85,66 @@ const realProjects = [
     frameLabel: "storevia.name.ng",
     status: "in-progress" as "live" | "in-progress",
   },
+  {
+    title: "Ceendy Spa Aesthetics",
+    tag: "Spa & Aesthetics · Lagos",
+    summary: "A booking-first site for a spa and aesthetics studio, built to get a visitor from landing to a confirmed slot in under a minute.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    image: imgCeendy,
+    liveUrl: "https://ceendy-spa-aesthetics.vercel.app/" as string | null,
+    frameLabel: "ceendy-spa-aesthetics.vercel.app",
+    status: "in-progress" as "live" | "in-progress",
+  },
+  {
+    title: "Sassy Hairs",
+    tag: "Hair & Beauty E-Commerce",
+    summary: "An e-commerce storefront for premium wigs, extensions, and hair bundles, with cart, wishlist, and account flows.",
+    stack: ["React", "TypeScript"],
+    image: imgSassyHairs,
+    liveUrl: "https://sassy-hair-haven.vercel.app/" as string | null,
+    frameLabel: "sassy-hair-haven.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Anaconda Marketing",
+    tag: "AI/SEO Marketing Agency · Lagos",
+    summary: "A conversion-focused site for an AI-enhanced copywriting and SEO agency, built around case studies and a lead-capture flow.",
+    stack: ["Next.js", "TypeScript"],
+    image: imgAnacoda,
+    liveUrl: "https://anacodamarketing.vercel.app/" as string | null,
+    frameLabel: "anacodamarketing.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "ZOD Stores",
+    tag: "Sneaker & Fashion E-Commerce",
+    summary: "A product-led storefront for sneakers, slides, and fashion, with a bold visual identity and a full shopping flow.",
+    stack: ["React", "TypeScript"],
+    image: imgZodStores,
+    liveUrl: "https://zod-stores-premium.vercel.app/" as string | null,
+    frameLabel: "zod-stores-premium.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Darasun Doors & Furniture",
+    tag: "Home Goods · Nigeria",
+    summary: "A catalog and lead-generation site for a premium doors, smart locks, and furniture business serving homes and offices.",
+    stack: ["React", "TypeScript"],
+    image: imgDarasun,
+    liveUrl: "https://darasun-premium-living.vercel.app/" as string | null,
+    frameLabel: "darasun-premium-living.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Thrive Africa Health Initiative",
+    tag: "Nonprofit · Health Initiative",
+    summary: "A donor and volunteer-facing site for a Nigerian community health nonprofit, with program pages and a donation flow.",
+    stack: ["React", "TypeScript"],
+    image: imgThriveAfrica,
+    liveUrl: "https://thrive-africa-health-initiative.vercel.app/" as string | null,
+    frameLabel: "thrive-africa-health-initiative.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
 ]
 
 const concepts = [
@@ -94,12 +159,6 @@ const concepts = [
     description: "A healthcare admin concept for scheduling, patient records, and care-team coordination.",
     stack: ["React", "TypeScript", "PostgreSQL"],
     image: imgHealthcare,
-  },
-  {
-    title: "Nonprofit Donation Platform",
-    description: "A donor-facing concept with recurring giving, campaign pages, and impact reporting.",
-    stack: ["React", "Supabase", "Tailwind CSS"],
-    image: imgNgo,
   },
   {
     title: "Real Estate Listings Platform",
@@ -291,7 +350,7 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
                   The builds below are example concepts I designed and built to demonstrate range beyond the real projects above &mdash; not client deliveries.
                 </p>
               </motion.div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
                 {concepts.map((c, i) => (
                   <motion.div
                     key={c.title}

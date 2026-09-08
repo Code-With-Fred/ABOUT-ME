@@ -76,10 +76,11 @@ const AboutSection = ({ headingLevel = "h2" }: AboutSectionProps) => {
               transition={{ delay: 0.2 }}
               className="text-sm sm:text-base text-muted-foreground leading-relaxed"
             >
-              I'm <strong className="text-foreground">Eze Favour</strong>, a full-stack product engineer based in 
-              <strong className="text-foreground"> Port Harcourt, Nigeria</strong>. With 4+ years building for the web, 
-              I specialize in creating SaaS platforms, multi-vendor marketplaces, booking systems, admin dashboards, 
-              and complex web applications that businesses actually depend on.
+              I'm <strong className="text-foreground">Eze Favour</strong>, a full-stack product engineer based in
+              <strong className="text-foreground"> Port Harcourt, Nigeria</strong>. With 4+ years building for the web,
+              I've shipped real sites for businesses across Nigeria &mdash; spas, catering companies, fashion and beauty
+              stores, security tech, home goods, and health nonprofits &mdash; alongside more complex platforms like a
+              mental wellness marketplace and a multi-tenant commerce tool.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
