@@ -35,13 +35,13 @@ const WebDevelopment = () => {
             name="keywords"
             content="website development Port Harcourt, web development Lagos, website developer Abuja, website designer Nigeria, responsive website design, custom website development"
           />
-          <link rel="canonical" href="https://codewithfred.name.ng/services/web-development" />
+          <link rel="canonical" href="https://codewithfred.com.ng/services/web-development" />
           <meta property="og:title" content="Website Development Services | Eze Favour" />
           <meta
             property="og:description"
             content="Custom, modern website development for businesses in Nigeria. React, TypeScript, Node.js expertise."
           />
-          <meta property="og:url" content="https://codewithfred.name.ng/services/web-development" />
+          <meta property="og:url" content="https://codewithfred.com.ng/services/web-development" />
           <meta property="og:type" content="service" />
         </Helmet>
 

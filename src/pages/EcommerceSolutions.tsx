@@ -36,13 +36,13 @@ const EcommerceSolutions = () => {
             name="keywords"
             content="e-commerce development Port Harcourt, online store Lagos, e-commerce solutions Abuja, e-commerce website Nigeria, online shop design, payment gateway integration"
           />
-          <link rel="canonical" href="https://codewithfred.name.ng/services/ecommerce-solutions" />
+          <link rel="canonical" href="https://codewithfred.com.ng/services/ecommerce-solutions" />
           <meta property="og:title" content="E-Commerce Development | Eze Favour" />
           <meta
             property="og:description"
             content="Scalable e-commerce platforms with secure payments, inventory management, and conversion-focused design."
           />
-          <meta property="og:url" content="https://codewithfred.name.ng/services/ecommerce-solutions" />
+          <meta property="og:url" content="https://codewithfred.com.ng/services/ecommerce-solutions" />
           <meta property="og:type" content="service" />
         </Helmet>
 

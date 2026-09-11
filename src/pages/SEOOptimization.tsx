@@ -35,13 +35,13 @@ const SEOOptimization = () => {
             name="keywords"
             content="SEO services Port Harcourt, search engine optimization Lagos, SEO Abuja, local SEO Nigeria, on-page SEO, technical SEO"
           />
-          <link rel="canonical" href="https://codewithfred.name.ng/services/seo-optimization" />
+          <link rel="canonical" href="https://codewithfred.com.ng/services/seo-optimization" />
           <meta property="og:title" content="SEO Optimization Services | Eze Favour" />
           <meta
             property="og:description"
             content="On-page, technical, and local SEO to improve your search visibility."
           />
-          <meta property="og:url" content="https://codewithfred.name.ng/services/seo-optimization" />
+          <meta property="og:url" content="https://codewithfred.com.ng/services/seo-optimization" />
           <meta property="og:type" content="service" />
         </Helmet>
 

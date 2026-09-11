@@ -6,10 +6,10 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Code With Fred | Portfolio",
-    "url": "https://codewithfred.name.ng/",
+    "url": "https://codewithfred.com.ng/",
     "description": "Portfolio of Eze Favour (Code With Fred), full-stack web developer specializing in React, Node.js, and TypeScript.",
     "inLanguage": "en",
-    "isPartOf": { "@id": "https://codewithfred.name.ng/#website" },
+    "isPartOf": { "@id": "https://codewithfred.com.ng/#website" },
   };
 
   return (

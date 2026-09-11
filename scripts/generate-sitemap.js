@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-const baseUrl = 'https://codewithfred.name.ng'
+const baseUrl = 'https://codewithfred.com.ng'
 
 const routes = [
   '/',

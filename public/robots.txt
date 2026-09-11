@@ -1,5 +1,5 @@
 # robots.txt for Code-With-Fred - Full-Stack Web Developer in Nigeria
-# https://codewithfred.name.ng
+# https://codewithfred.com.ng
 
 # Search engines: full access, no artificial crawl delay (a small site
 # benefits from being crawled promptly, not throttled).
@@ -76,4 +76,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://codewithfred.name.ng/sitemap.xml
+Sitemap: https://codewithfred.com.ng/sitemap.xml

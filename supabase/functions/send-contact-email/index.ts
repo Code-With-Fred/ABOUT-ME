@@ -95,7 +95,7 @@ const handler = async (req: Request): Promise<Response> => {
           
           <p>In the meantime, you can:</p>
           <ul>
-            <li>Check out my <a href="https://codewithfred.name.ng/#projects">latest projects</a></li>
+            <li>Check out my <a href="https://codewithfred.com.ng/#projects">latest projects</a></li>
             <li>Connect with me on <a href="https://linkedin.com/in/favour-chimereze-eze-37b1b235a/">LinkedIn</a></li>
             <li>Follow me on <a href="https://github.com/Code-With-Fred">GitHub</a></li>
           </ul>

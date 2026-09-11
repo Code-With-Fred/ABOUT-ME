@@ -13,18 +13,18 @@ const Testimonials = () => {
           <title>Working With Me | Eze Favour Chimereze | Web Developer</title>
           <meta name="description" content="What working with Eze Favour Chimereze looks like: a full-stack web developer in Port Harcourt, Nigeria, building for clients across Lagos, Abuja, and worldwide." />
           <meta name="keywords" content="web developer Nigeria, working with a developer Port Harcourt, web development process, hire developer Lagos, freelance developer Abuja" />
-          <link rel="canonical" href="https://codewithfred.name.ng/testimonials" />
+          <link rel="canonical" href="https://codewithfred.com.ng/testimonials" />
           <meta property="og:title" content="Working With Me | Eze Favour Chimereze" />
           <meta property="og:description" content="A look at how I work with clients, from first message to launch." />
-          <meta property="og:url" content="https://codewithfred.name.ng/testimonials" />
+          <meta property="og:url" content="https://codewithfred.com.ng/testimonials" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://codewithfred.name.ng/my-profile.jpg" />
-          <meta property="og:image:secure_url" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta property="og:image" content="https://codewithfred.com.ng/my-profile.jpg" />
+          <meta property="og:image:secure_url" content="https://codewithfred.com.ng/my-profile.jpg" />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:image:alt" content="Eze Favour | Web Developer" />
-          <meta name="twitter:image" content="https://codewithfred.name.ng/my-profile.jpg" />
+          <meta name="twitter:image" content="https://codewithfred.com.ng/my-profile.jpg" />
           <meta name="twitter:image:alt" content="Eze Favour | Web Developer" />
           <meta name="twitter:title" content="Working With Me | Web Developer Nigeria" />
           <meta name="twitter:description" content="What working together looks like, from first message to launch." />
