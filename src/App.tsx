@@ -25,6 +25,8 @@ const NotFound = lazyWithReload(() => import("./pages/NotFound"));
 const WebDevelopment = lazyWithReload(() => import("./pages/WebDevelopment"));
 const SEOOptimization = lazyWithReload(() => import("./pages/SEOOptimization"));
 const EcommerceSolutions = lazyWithReload(() => import("./pages/EcommerceSolutions"));
+const Blog = lazyWithReload(() => import("./pages/Blog"));
+const BlogPost = lazyWithReload(() => import("./pages/BlogPost"));
 
 const queryClient = new QueryClient();
 
@@ -45,6 +47,8 @@ const AnimatedRoutes = () => {
           <Route path="/skills" element={<Skills />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

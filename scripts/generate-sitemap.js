@@ -3,6 +3,15 @@ import path from 'path'
 
 const baseUrl = 'https://codewithfred.com.ng'
 
+// Blog post slugs are duplicated here rather than imported from
+// src/data/blogPosts.ts (this script runs as plain Node, not through the
+// Vite/TS pipeline) — add new slugs here when a post is added.
+const blogSlugs = [
+  'how-much-does-a-website-cost-in-nigeria',
+  'building-confidantszone-mental-wellness-platform',
+  'signs-your-business-website-needs-a-redesign',
+]
+
 const routes = [
   '/',
   '/about',
@@ -13,7 +22,9 @@ const routes = [
   '/services/ecommerce-solutions',
   '/skills',
   '/testimonials',
-  '/contact'
+  '/contact',
+  '/blog',
+  ...blogSlugs.map((slug) => `/blog/${slug}`),
 ]
 
 const images = {

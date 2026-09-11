@@ -46,7 +46,12 @@ const Breadcrumbs = () => {
           {pathnames.map((value, index) => {
             const to = `/${pathnames.slice(0, index + 1).join("/")}`;
             const isLast = index === pathnames.length - 1;
-            const label = routeLabels[value] || value.charAt(0).toUpperCase() + value.slice(1);
+            const label =
+              routeLabels[value] ||
+              value
+                .split("-")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
 
             return (
               <span key={to} className="contents">
