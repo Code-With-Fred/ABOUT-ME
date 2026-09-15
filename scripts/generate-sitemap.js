@@ -1,43 +1,15 @@
 import fs from 'fs'
 import path from 'path'
-
-const baseUrl = 'https://codewithfred.com.ng'
-
-// Blog post slugs are duplicated here rather than imported from
-// src/data/blogPosts.ts (this script runs as plain Node, not through the
-// Vite/TS pipeline) — add new slugs here when a post is added.
-const blogSlugs = [
-  'how-much-does-a-website-cost-in-nigeria',
-  'building-confidantszone-mental-wellness-platform',
-  'signs-your-business-website-needs-a-redesign',
-]
-
-const routes = [
-  '/',
-  '/about',
-  '/projects',
-  '/services',
-  '/services/web-development',
-  '/services/seo-optimization',
-  '/services/ecommerce-solutions',
-  '/skills',
-  '/testimonials',
-  '/contact',
-  '/blog',
-  ...blogSlugs.map((slug) => `/blog/${slug}`),
-]
-
-const images = {
-  '/': '/my-profile.jpg'
-}
-
-function buildUrl(loc, lastmod = new Date().toISOString().split('T')[0], priority = '0.8', changefreq = 'monthly') {
-  return `  <url>\n    <loc>${baseUrl}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
-}
+import { baseUrl, routes } from './seo-routes.js'
 
 const now = new Date().toISOString().split('T')[0]
 
-const urlset = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${routes.map(r => buildUrl(r, now, r === '/' ? '1.0' : '0.8', r === '/' ? 'weekly' : 'monthly')).join('\n')}\n</urlset>`
+const buildUrl = (loc) => {
+  const isHome = loc === '/'
+  return `  <url>\n    <loc>${baseUrl}${loc}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>${isHome ? 'weekly' : 'monthly'}</changefreq>\n    <priority>${isHome ? '1.0' : '0.8'}</priority>\n  </url>`
+}
+
+const urlset = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map((r) => buildUrl(r.path)).join('\n')}\n</urlset>\n`
 
 const outPath = path.join(process.cwd(), 'public', 'sitemap.xml')
 fs.writeFileSync(outPath, urlset)

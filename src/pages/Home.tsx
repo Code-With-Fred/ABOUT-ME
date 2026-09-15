@@ -19,20 +19,20 @@ const Home = () => {
       <StructuredData />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Eze Favour | Product Engineer | Web Apps & SaaS</title>
-          <meta name="description" content="I design and build web applications that convert users and grow revenue. Product engineering for startups and SMBs, React, TypeScript, Node.js, Supabase." />
-          <meta name="keywords" content="Eze Favour, product engineer, web developer, React developer, TypeScript, Supabase, SaaS developer" />
+          <title>Web Developer in Port Harcourt, Nigeria | Eze Favour - Code-With-Fred</title>
+          <meta name="description" content="Eze Favour (Code-With-Fred) builds fast, mobile-friendly websites, e-commerce stores and web apps for businesses in Port Harcourt, Lagos, Abuja and across Nigeria." />
+          <meta name="keywords" content="web developer Port Harcourt, website designer Nigeria, e-commerce website Nigeria, web developer Lagos, web developer Abuja, Eze Favour, Code-With-Fred" />
           <link rel="canonical" href="https://codewithfred.com.ng/" />
-          <meta property="og:title" content="Eze Favour | Product Engineer" />
-          <meta property="og:description" content="Designing and building web apps that convert users and drive growth." />
+          <meta property="og:title" content="Web Developer in Port Harcourt, Nigeria | Eze Favour - Code-With-Fred" />
+          <meta property="og:description" content="Fast, mobile-friendly websites, e-commerce stores and web apps for businesses across Nigeria." />
           <meta property="og:url" content="https://codewithfred.com.ng/" />
           <meta property="og:image" content="https://codewithfred.com.ng/my-profile.jpg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Eze Favour | Product Engineer" />
+          <meta property="og:image:alt" content="Eze Favour - Web Developer in Port Harcourt, Nigeria" />
           <meta property="og:type" content="website" />
-          <meta name="twitter:title" content="Eze Favour | Product Engineer" />
-          <meta name="twitter:description" content="Designing and building web apps that convert users and drive growth." />
+          <meta name="twitter:title" content="Web Developer in Port Harcourt, Nigeria | Eze Favour" />
+          <meta name="twitter:description" content="Fast, mobile-friendly websites, e-commerce stores and web apps for businesses across Nigeria." />
         </Helmet>
 
         <a

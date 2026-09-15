@@ -7,7 +7,7 @@
     "dev": "vite",
     "sitemap:generate": "node ./scripts/generate-sitemap.js",
     "images:optimize": "node ./scripts/optimize-images.js",
-    "build": "vite build",
+    "build": "node ./scripts/generate-sitemap.js && vite build && node ./scripts/prerender-routes.js",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

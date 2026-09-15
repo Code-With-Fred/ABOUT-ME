@@ -1,4 +1,13 @@
 {
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.codewithfred.com.ng" }],
+      "destination": "https://codewithfred.com.ng/:path",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
