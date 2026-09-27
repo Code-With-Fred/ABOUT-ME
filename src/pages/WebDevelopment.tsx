@@ -42,7 +42,7 @@ const WebDevelopment = () => {
             content="Custom, modern website development for businesses in Nigeria. React, TypeScript, Node.js expertise."
           />
           <meta property="og:url" content="https://codewithfred.com.ng/services/web-development" />
-          <meta property="og:type" content="service" />
+          <meta property="og:type" content="website" />
         </Helmet>
 
         <a

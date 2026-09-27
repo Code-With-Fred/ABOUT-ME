@@ -44,6 +44,7 @@ const SkillsSection = ({ headingLevel = "h2" }: SkillsSectionProps) => {
   const [activeCategory, setActiveCategory] = useState("frontend")
   const active = categories.find((c) => c.id === activeCategory)!
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
 
   return (
     <section
@@ -109,7 +110,7 @@ const SkillsSection = ({ headingLevel = "h2" }: SkillsSectionProps) => {
                 transition={{ duration: 0.3 }}
                 className="p-5 sm:p-6 md:p-8 rounded-xl border border-border/50 bg-card/50"
               >
-                <h3 className="text-xl sm:text-2xl font-bold font-display mb-2 sm:mb-3">{active.title}</h3>
+                <Sub className="text-xl sm:text-2xl font-bold font-display mb-2 sm:mb-3">{active.title}</Sub>
                 <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-lg">{active.description}</p>
 
                 <div className="flex flex-wrap gap-2 sm:gap-3">

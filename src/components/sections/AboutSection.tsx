@@ -33,6 +33,7 @@ interface AboutSectionProps {
 const AboutSection = ({ headingLevel = "h2" }: AboutSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
 
   return (
     <section
@@ -109,7 +110,7 @@ const AboutSection = ({ headingLevel = "h2" }: AboutSectionProps) => {
                     <item.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold font-display text-sm sm:text-base mb-1 sm:mb-1.5">{item.title}</h3>
+                    <Sub className="font-semibold font-display text-sm sm:text-base mb-1 sm:mb-1.5">{item.title}</Sub>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>

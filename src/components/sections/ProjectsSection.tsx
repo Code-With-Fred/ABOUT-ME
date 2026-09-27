@@ -183,6 +183,8 @@ interface ProjectsSectionProps {
 const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true })
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
+  const SubSub = (headingLevel === "h1" ? "h3" : "h4") as "h3" | "h4"
   const isCompact = variant === "compact"
   const shownProjects = isCompact ? realProjects.slice(0, 3) : realProjects
 
@@ -282,9 +284,9 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
                       </span>
                     )}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold font-display mb-1.5">
+                  <Sub className="text-lg sm:text-xl font-bold font-display mb-1.5">
                     {project.title}
-                  </h3>
+                  </Sub>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3 flex-1">
                     {project.summary}
                   </p>
@@ -373,7 +375,7 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
                       </div>
                     </div>
                     <div className="p-4 sm:p-5">
-                      <h4 className="font-semibold mb-1.5">{c.title}</h4>
+                      <SubSub className="font-semibold mb-1.5">{c.title}</SubSub>
                       <p className="text-xs sm:text-sm text-muted-foreground mb-3 leading-relaxed">{c.description}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {c.stack.map((t) => (

@@ -23,6 +23,7 @@ interface ServicesSectionProps {
 const ServicesSection = ({ headingLevel = "h2" }: ServicesSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
 
   return (
     <section
@@ -76,9 +77,9 @@ const ServicesSection = ({ headingLevel = "h2" }: ServicesSectionProps) => {
                 <div className="p-2 sm:p-2.5 rounded-lg bg-primary/10 text-primary w-fit mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <h3 className="font-semibold font-display text-sm sm:text-base mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
+                <Sub className="font-semibold font-display text-sm sm:text-base mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
                   {service.title}
-                </h3>
+                </Sub>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
