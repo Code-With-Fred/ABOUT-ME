@@ -24,7 +24,6 @@ const ServicesSection = ({ headingLevel = "h2" }: ServicesSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
   const Heading = motion[headingLevel]
   const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
-  const SubSub = (headingLevel === "h1" ? "h3" : "h4") as "h3" | "h4"
 
   return (
     <section
