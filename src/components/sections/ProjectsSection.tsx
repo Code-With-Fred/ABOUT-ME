@@ -183,6 +183,8 @@ interface ProjectsSectionProps {
 const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSectionProps) => {
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true })
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
+  const SubSub = (headingLevel === "h1" ? "h3" : "h4") as "h3" | "h4"
   const isCompact = variant === "compact"
   const shownProjects = isCompact ? realProjects.slice(0, 3) : realProjects
 

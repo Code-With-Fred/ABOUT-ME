@@ -42,7 +42,7 @@ const SEOOptimization = () => {
             content="On-page, technical, and local SEO to improve your search visibility."
           />
           <meta property="og:url" content="https://codewithfred.com.ng/services/seo-optimization" />
-          <meta property="og:type" content="service" />
+          <meta property="og:type" content="website" />
         </Helmet>
 
         <a

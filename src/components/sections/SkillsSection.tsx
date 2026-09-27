@@ -44,6 +44,8 @@ const SkillsSection = ({ headingLevel = "h2" }: SkillsSectionProps) => {
   const [activeCategory, setActiveCategory] = useState("frontend")
   const active = categories.find((c) => c.id === activeCategory)!
   const Heading = motion[headingLevel]
+  const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
+  const SubSub = (headingLevel === "h1" ? "h3" : "h4") as "h3" | "h4"
 
   return (
     <section

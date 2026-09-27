@@ -43,7 +43,7 @@ const EcommerceSolutions = () => {
             content="Scalable e-commerce platforms with secure payments, inventory management, and conversion-focused design."
           />
           <meta property="og:url" content="https://codewithfred.com.ng/services/ecommerce-solutions" />
-          <meta property="og:type" content="service" />
+          <meta property="og:type" content="website" />
         </Helmet>
 
         <a
