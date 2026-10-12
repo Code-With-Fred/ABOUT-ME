@@ -26,7 +26,7 @@ const SEOOptimization = () => {
     <PageTransition>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>SEO Optimization Services | Eze Favour | Port Harcourt, Nigeria</title>
+          <title>SEO Services in Nigeria | Get Your Website Found on Google</title>
           <meta
             name="description"
             content="SEO optimization services from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. On-page, technical, and local SEO to help your site get found."
@@ -63,7 +63,7 @@ const SEOOptimization = () => {
             <div className="max-w-3xl mb-12 sm:mb-16">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">Service</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-4 sm:mb-6">
-                SEO Optimization
+                SEO Services in Nigeria
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Rank higher in Google and turn organic search into a real acquisition channel, not an afterthought.

@@ -27,7 +27,7 @@ const EcommerceSolutions = () => {
     <PageTransition>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>E-Commerce Development | Eze Favour | Port Harcourt, Nigeria</title>
+          <title>E-Commerce Website Development in Nigeria | Online Store Design</title>
           <meta
             name="description"
             content="Custom e-commerce development from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. Online stores with payment integration, inventory management, and SEO built in."
@@ -64,7 +64,7 @@ const EcommerceSolutions = () => {
             <div className="max-w-3xl mb-12 sm:mb-16">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">Service</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-4 sm:mb-6">
-                E-Commerce Development
+                E-Commerce Website Development in Nigeria
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Launch or upgrade your online store with a secure, scalable platform built around your actual sales process.

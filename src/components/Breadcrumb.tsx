@@ -19,6 +19,9 @@ const routeLabels: Record<string, string> = {
   "web-development": "Web Development",
   "seo-optimization": "SEO Optimization",
   "ecommerce-solutions": "E-Commerce Solutions",
+  "web-developer-port-harcourt": "Web Developer in Port Harcourt",
+  "web-developer-lagos": "Web Developer in Lagos",
+  "web-developer-abuja": "Web Developer in Abuja",
 };
 
 const Breadcrumbs = () => {

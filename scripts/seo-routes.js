@@ -40,7 +40,7 @@ export const routes = [
   },
   {
     path: '/services/web-development',
-    title: 'Website Development Services | Eze Favour | Port Harcourt, Nigeria',
+    title: 'Website Design & Development in Nigeria | Code-With-Fred',
     description:
       'Website development services from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. Modern, responsive, and SEO-ready websites built with React, TypeScript, and Node.js.',
     h1: 'Website Development',
@@ -48,7 +48,7 @@ export const routes = [
   },
   {
     path: '/services/seo-optimization',
-    title: 'SEO Optimization Services | Eze Favour | Port Harcourt, Nigeria',
+    title: 'SEO Services in Nigeria | Get Your Website Found on Google',
     description:
       'SEO optimization services from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. On-page, technical, and local SEO to help your site get found.',
     h1: 'SEO Optimization',
@@ -56,7 +56,7 @@ export const routes = [
   },
   {
     path: '/services/ecommerce-solutions',
-    title: 'E-Commerce Development | Eze Favour | Port Harcourt, Nigeria',
+    title: 'E-Commerce Website Development in Nigeria | Online Store Design',
     description:
       'Custom e-commerce development from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. Online stores with payment integration, inventory management, and SEO built in.',
     h1: 'E-Commerce Development',
@@ -85,6 +85,33 @@ export const routes = [
       'Get in touch with Eze Favour Chimereze for your web development project. Based in Port Harcourt, serving clients in Lagos, Abuja, and worldwide. Request a free consultation today.',
     h1: 'Hire a Web Developer in Nigeria',
     intro: 'Email ezefavourchimereze@gmail.com or call/WhatsApp +234 704 164 8121 to discuss your project.',
+  },
+  {
+    path: '/web-developer-port-harcourt',
+    title: 'Web Developer in Port Harcourt | Website Design & Development',
+    description:
+      'Web developer based in Port Harcourt, Rivers State. I build business websites, online stores and web apps for Port Harcourt companies — and I can meet you in person.',
+    h1: 'Web Developer in Port Harcourt',
+    intro:
+      'Full-stack web developer based in Port Harcourt, building business websites, online stores and web applications for companies across Rivers State.',
+  },
+  {
+    path: '/web-developer-lagos',
+    title: 'Web Developer in Lagos | Website Design & E-Commerce Development',
+    description:
+      'Nigerian web developer building websites, online stores and web apps for Lagos businesses. Remote-first, with clients in catering, beauty, marketing and retail.',
+    h1: 'Web Developer for Lagos Businesses',
+    intro:
+      'Websites, online stores and web applications for Lagos businesses, built remotely with clients in catering, beauty, marketing and retail.',
+  },
+  {
+    path: '/web-developer-abuja',
+    title: 'Web Developer in Abuja | Business Website & Web App Development',
+    description:
+      'Nigerian web developer building business websites, corporate profiles and web applications for Abuja companies, NGOs and consultancies. Remote, with fixed quotes.',
+    h1: 'Web Developer for Abuja Businesses',
+    intro:
+      'Business websites, corporate profiles and web applications for Abuja companies, NGOs and consultancies, built remotely with fixed quotes.',
   },
   {
     path: '/blog',

@@ -20,6 +20,12 @@ const Footer = () => {
     { href: "/services/seo-optimization", label: "SEO Optimization" },
   ]
 
+  const locationLinks = [
+    { href: "/web-developer-port-harcourt", label: "Web Developer in Port Harcourt" },
+    { href: "/web-developer-lagos", label: "Web Developer in Lagos" },
+    { href: "/web-developer-abuja", label: "Web Developer in Abuja" },
+  ]
+
   const socials = [
     { icon: Github, url: "https://github.com/Code-With-Fred", label: "GitHub" },
     { icon: Linkedin, url: "https://www.linkedin.com/in/eze-favour-chimereze-807954398/", label: "LinkedIn" },
@@ -30,7 +36,7 @@ const Footer = () => {
     <footer className="border-t border-border/30 py-10 sm:py-16" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr,1fr,1fr,1fr] gap-8 sm:gap-12 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr,1fr,1fr,1.2fr,1fr] gap-8 sm:gap-12 mb-8 sm:mb-12">
             {/* Brand */}
             <div className="sm:col-span-2 md:col-span-1 flex flex-col sm:flex-row items-start gap-4">
               <div className="w-12 h-12 bg-white text-black flex items-center justify-center font-bold rounded-sm flex-shrink-0">CF</div>
@@ -78,6 +84,23 @@ const Footer = () => {
               <h3 className="text-xs sm:text-sm font-semibold font-display mb-3 sm:mb-4">Services</h3>
               <ul className="space-y-2 sm:space-y-2.5">
                 {serviceLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      to={link.href}
+                      className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Areas served */}
+            <nav aria-label="Service areas footer navigation">
+              <h3 className="text-xs sm:text-sm font-semibold font-display mb-3 sm:mb-4">Areas I Serve</h3>
+              <ul className="space-y-2 sm:space-y-2.5">
+                {locationLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       to={link.href}

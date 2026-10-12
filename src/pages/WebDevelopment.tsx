@@ -26,7 +26,7 @@ const WebDevelopment = () => {
     <PageTransition>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Website Development Services | Eze Favour | Port Harcourt, Nigeria</title>
+          <title>Website Design & Development in Nigeria | Code-With-Fred</title>
           <meta
             name="description"
             content="Website development services from Eze Favour, a full-stack developer in Port Harcourt, Nigeria. Modern, responsive, and SEO-ready websites built with React, TypeScript, and Node.js."
@@ -63,10 +63,10 @@ const WebDevelopment = () => {
             <div className="max-w-3xl mb-12 sm:mb-16">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-4">Service</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display leading-tight mb-4 sm:mb-6">
-                Website Development
+                Website Design & Development in Nigeria
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                A powerful online presence starts with a site built for performance and conversions — not just something that looks good in a screenshot.
+                Business websites for companies in Port Harcourt, Lagos, Abuja and across Nigeria — built for speed, mobile and search, not just for the screenshot.
               </p>
             </div>
 
