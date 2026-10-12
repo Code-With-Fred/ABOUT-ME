@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Helmet } from "react-helmet-async"
 import BrowserFrame from "@/components/BrowserFrame"
 
+import imgLedgerFlow from "@/assets/project-ledgerflow.jpg"
+import imgLeadPilot from "@/assets/project-leadpilot.jpg"
+import imgJp2Solar from "@/assets/project-jp2solar.jpg"
 import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
 import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
 import imgCaptainBlack from "@/assets/project-captainblack.jpg"
@@ -25,6 +28,36 @@ import imgTradePro from "@/assets/project-tradepro.jpg"
 
 // Real, shipped projects. Keep every claim here verifiable — no invented metrics.
 const realProjects = [
+  {
+    title: "LedgerFlow",
+    tag: "Invoicing SaaS · Nigeria",
+    summary: "Invoicing for Nigerian businesses: build an invoice, email it as a PDF, collect payment through Paystack, and chase late payers automatically.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Paystack"],
+    image: imgLedgerFlow,
+    liveUrl: "https://buiness-invoice-generator.vercel.app/" as string | null,
+    frameLabel: "LedgerFlow — invoicing SaaS",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "LeadPilot",
+    tag: "AI Sales Automation",
+    summary: "Finds and qualifies prospects, writes personalised outreach, and sends it from connected Gmail or Microsoft 365 inboxes with reply tracking.",
+    stack: ["React", "TypeScript", "Supabase", "AI"],
+    image: imgLeadPilot,
+    liveUrl: "https://leadpilot-three-fawn.vercel.app/" as string | null,
+    frameLabel: "LeadPilot — AI sales automation",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "JP2 Solar Energy",
+    tag: "Solar & Energy · Nigeria",
+    summary: "Site for a solar and energy company covering home and business installations, with a solutions catalogue and a quote-request flow.",
+    stack: ["React", "TypeScript"],
+    image: imgJp2Solar,
+    liveUrl: "https://jp2-solar.vercel.app/" as string | null,
+    frameLabel: "jp2-solar.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
   {
     title: "ConfidantsZone",
     tag: "Mental Wellness Platform",

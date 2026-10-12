@@ -28,7 +28,7 @@ export const routes = [
       'Explore my portfolio of web development projects including e-commerce websites, business applications, and custom web solutions. See real examples of my work as a web developer in Nigeria.',
     h1: 'Projects',
     intro:
-      'Real websites and web apps I have built, including ConfidantsZone, KelviqTech, Ceendy Spa Aesthetics, Sassy Hairs, ZOD Stores, Darasun Doors & Furniture and Thrive Africa Health Initiative.',
+      'Real websites and web apps I have built, including LedgerFlow invoicing SaaS, LeadPilot sales automation, JP2 Solar Energy, ConfidantsZone, KelviqTech, Sassy Hairs, ZOD Stores and Darasun Doors & Furniture.',
   },
   {
     path: '/services',
