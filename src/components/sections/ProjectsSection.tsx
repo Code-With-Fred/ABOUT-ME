@@ -44,7 +44,7 @@ export const realProjects = [
     summary: "Finds and qualifies prospects, writes personalised outreach, and sends it from connected Gmail or Microsoft 365 inboxes with reply tracking.",
     stack: ["React", "TypeScript", "Supabase", "AI"],
     image: imgLeadPilot,
-    liveUrl: "https://leadpilot-three-fawn.vercel.app/" as string | null,
+    liveUrl: "https://leadpilott.lovable.app/" as string | null,
     frameLabel: "LeadPilot — AI sales automation",
     status: "live" as "live" | "in-progress",
   },
