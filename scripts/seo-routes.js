@@ -114,6 +114,14 @@ export const routes = [
       'Business websites, corporate profiles and web applications for Abuja companies, NGOs and consultancies, built remotely with fixed quotes.',
   },
   {
+    path: '/links',
+    title: 'Links From My Videos | Code-With-Fred',
+    description:
+      'Every website, tool and project mentioned in Code-With-Fred videos, in one place. Search for the link you saw, newest videos first.',
+    h1: 'Links from my videos',
+    intro: 'Every link mentioned in my videos ends up here, newest first.',
+  },
+  {
     path: '/blog',
     title: 'Blog | Web Development Insights | Eze Favour - Code-With-Fred',
     description:

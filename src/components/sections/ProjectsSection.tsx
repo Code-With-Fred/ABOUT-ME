@@ -27,7 +27,7 @@ import imgRealEstate from "@/assets/project-realestate.jpg"
 import imgTradePro from "@/assets/project-tradepro.jpg"
 
 // Real, shipped projects. Keep every claim here verifiable — no invented metrics.
-const realProjects = [
+export const realProjects = [
   {
     title: "LedgerFlow",
     tag: "Invoicing SaaS · Nigeria",
