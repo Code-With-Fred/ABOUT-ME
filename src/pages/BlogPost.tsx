@@ -45,7 +45,10 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />
   }
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2)
+  const otherPosts = blogPosts
+    .filter((p) => p.slug !== post.slug)
+    .sort((a, b) => (a.publishDate < b.publishDate ? 1 : -1))
+    .slice(0, 3)
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -130,6 +133,25 @@ const BlogPost = () => {
                     <Block key={i} block={block} />
                   ))}
                 </motion.div>
+
+                {post.related && post.related.length > 0 && (
+                  <nav aria-label="Related pages" className="mt-10 sm:mt-12 p-5 sm:p-6 rounded-xl border border-border/50 bg-card/30">
+                    <p className="text-xs font-medium uppercase tracking-wider text-primary mb-3">Related</p>
+                    <ul className="space-y-2">
+                      {post.related.map((r) => (
+                        <li key={r.href}>
+                          <Link
+                            to={r.href}
+                            className="group inline-flex items-center gap-2 text-sm sm:text-base text-foreground hover:text-primary transition-colors"
+                          >
+                            {r.label}
+                            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                )}
 
                 <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl border border-border/50 bg-card/40 text-center">
                   <p className="text-sm sm:text-base text-muted-foreground mb-4">

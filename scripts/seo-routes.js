@@ -130,6 +130,33 @@ export const routes = [
     intro: 'Practical guides on website costs, redesigns and real project case studies.',
   },
   {
+    path: '/blog/how-to-create-a-business-website-in-nigeria',
+    title: 'How to Create a Website for Your Business in Nigeria (Step by Step) | Code-With-Fred Blog',
+    description:
+      'A step-by-step guide to getting a business website in Nigeria: domain, hosting, building it yourself vs hiring a developer, and getting found on Google.',
+    h1: 'How to Create a Website for Your Business in Nigeria (Step by Step)',
+    intro:
+      'Domain, hosting, DIY builder or developer, what content you need, and the account mistakes that cost business owners their own website. Everything in order.',
+  },
+  {
+    path: '/blog/how-to-start-an-online-store-in-nigeria',
+    title: 'How to Start an Online Store in Nigeria: What You Actually Need | Code-With-Fred Blog',
+    description:
+      'Payments, delivery, product photos, platform choice and trust signals: what it really takes to move a Nigerian business from Instagram DMs to an online store.',
+    h1: 'How to Start an Online Store in Nigeria: What You Actually Need',
+    intro:
+      "Selling through DMs works until it doesn't. Here's what an online store in Nigeria actually needs: payments that settle in naira, delivery that doesn't eat your margin, and enough trust to make strangers pay.",
+  },
+  {
+    path: '/blog/how-to-get-your-business-on-google-nigeria',
+    title: 'How to Get Your Business on Google Search and Maps in Nigeria | Code-With-Fred Blog',
+    description:
+      'How Nigerian businesses show up on Google Maps and in search: Google Business Profile, reviews, Search Console and the mistakes that keep you invisible.',
+    h1: 'How to Get Your Business on Google Search and Maps in Nigeria',
+    intro:
+      "Showing up on Google Maps and showing up in search results are two different things. Here's how to do both — free — and what actually moves you up.",
+  },
+  {
     path: '/blog/how-much-does-a-website-cost-in-nigeria',
     title: 'How Much Does a Website Cost in Nigeria? A Real Breakdown | Code-With-Fred Blog',
     description:
