@@ -38,14 +38,6 @@ for (const route of routes) {
   html = replaceTag(html, /<meta name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${title}" data-rh="true" />`)
   html = replaceTag(html, /<meta name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${description}" data-rh="true" />`)
 
-  // The FAQ schema in index.html answers homepage questions. Left on every page it
-  // would compete with the per-page FAQPage data the city pages render themselves.
-  if (route.path !== '/') {
-    html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (block) =>
-      block.includes('"FAQPage"') ? '' : block
-    )
-  }
-
   // React replaces this on mount; until then crawlers and no-JS visitors see real content.
   const fallback =
     `<div id="root"><main style="max-width:760px;margin:0 auto;padding:120px 20px 60px;line-height:1.6">` +

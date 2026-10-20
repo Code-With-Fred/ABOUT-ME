@@ -6,7 +6,7 @@ export const baseUrl = 'https://codewithfred.com.ng'
 export const routes = [
   {
     path: '/',
-    title: 'Web Developer in Port Harcourt, Nigeria | Eze Favour - Code-With-Fred',
+    title: 'Web Developer in Port Harcourt, Nigeria | Eze Favour',
     description:
       'Eze Favour (Code-With-Fred) builds fast, mobile-friendly websites, e-commerce stores and web apps for businesses in Port Harcourt, Lagos, Abuja and across Nigeria.',
     h1: 'Web Developer in Port Harcourt, Nigeria',

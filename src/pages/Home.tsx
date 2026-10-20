@@ -19,11 +19,11 @@ const Home = () => {
       <StructuredData />
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Helmet>
-          <title>Web Developer in Port Harcourt, Nigeria | Eze Favour - Code-With-Fred</title>
+          <title>Web Developer in Port Harcourt, Nigeria | Eze Favour</title>
           <meta name="description" content="Eze Favour (Code-With-Fred) builds fast, mobile-friendly websites, e-commerce stores and web apps for businesses in Port Harcourt, Lagos, Abuja and across Nigeria." />
           <meta name="keywords" content="web developer Port Harcourt, website designer Nigeria, e-commerce website Nigeria, web developer Lagos, web developer Abuja, Eze Favour, Code-With-Fred" />
           <link rel="canonical" href="https://codewithfred.com.ng/" />
-          <meta property="og:title" content="Web Developer in Port Harcourt, Nigeria | Eze Favour - Code-With-Fred" />
+          <meta property="og:title" content="Web Developer in Port Harcourt, Nigeria | Eze Favour" />
           <meta property="og:description" content="Fast, mobile-friendly websites, e-commerce stores and web apps for businesses across Nigeria." />
           <meta property="og:url" content="https://codewithfred.com.ng/" />
           <meta property="og:image" content="https://codewithfred.com.ng/my-profile.jpg" />
