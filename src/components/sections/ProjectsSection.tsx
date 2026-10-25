@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet-async"
 import BrowserFrame from "@/components/BrowserFrame"
 
 import imgLedgerFlow from "@/assets/project-ledgerflow.jpg"
-import imgLeadPilot from "@/assets/project-leadpilot.jpg"
 import imgJp2Solar from "@/assets/project-jp2solar.jpg"
 import imgProeditus from "@/assets/project-proeditus.jpg"
 import imgFacelessFlow from "@/assets/project-facelessflow.jpg"
@@ -39,16 +38,6 @@ export const realProjects = [
     image: imgLedgerFlow,
     liveUrl: "https://buiness-invoice-generator.vercel.app/" as string | null,
     frameLabel: "LedgerFlow — invoicing SaaS",
-    status: "live" as "live" | "in-progress",
-  },
-  {
-    title: "LeadPilot",
-    tag: "AI Sales Automation",
-    summary: "Finds and qualifies prospects, writes personalised outreach, and sends it from connected Gmail or Microsoft 365 inboxes with reply tracking.",
-    stack: ["React", "TypeScript", "Supabase", "AI"],
-    image: imgLeadPilot,
-    liveUrl: "https://leadpilott.lovable.app/" as string | null,
-    frameLabel: "LeadPilot — AI sales automation",
     status: "live" as "live" | "in-progress",
   },
   {
