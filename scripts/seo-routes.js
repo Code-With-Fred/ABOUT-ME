@@ -28,7 +28,7 @@ export const routes = [
       'Explore my portfolio of web development projects including e-commerce websites, business applications, and custom web solutions. See real examples of my work as a web developer in Nigeria.',
     h1: 'Projects',
     intro:
-      'Real websites and web apps I have built, including LedgerFlow invoicing SaaS, LeadPilot sales automation, JP2 Solar Energy, ConfidantsZone, KelviqTech, Sassy Hairs, ZOD Stores and Darasun Doors & Furniture.',
+      'Real websites and web apps I have built, including LedgerFlow invoicing SaaS, LeadPilot sales automation, Proeditus, FacelessFlow AI, JP2 Solar Energy, Cure Connect Pharmacy, KelviqTech and Sassy Hairs.',
   },
   {
     path: '/services',

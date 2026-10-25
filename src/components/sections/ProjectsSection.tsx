@@ -9,6 +9,9 @@ import BrowserFrame from "@/components/BrowserFrame"
 import imgLedgerFlow from "@/assets/project-ledgerflow.jpg"
 import imgLeadPilot from "@/assets/project-leadpilot.jpg"
 import imgJp2Solar from "@/assets/project-jp2solar.jpg"
+import imgProeditus from "@/assets/project-proeditus.jpg"
+import imgFacelessFlow from "@/assets/project-facelessflow.jpg"
+import imgCureConnect from "@/assets/project-cureconnect.jpg"
 import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
 import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
 import imgCaptainBlack from "@/assets/project-captainblack.jpg"
@@ -49,6 +52,26 @@ export const realProjects = [
     status: "live" as "live" | "in-progress",
   },
   {
+    title: "Proeditus",
+    tag: "Academic Editing · Professional Services",
+    summary: "Site for an editing and academic writing service, built to turn researchers, students and authors into project enquiries.",
+    stack: ["React", "TypeScript"],
+    image: imgProeditus,
+    liveUrl: "https://www.proeditus.com/" as string | null,
+    frameLabel: "proeditus.com",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "FacelessFlow AI",
+    tag: "AI SaaS · Content Creators",
+    summary: "A workspace for faceless YouTube creators: research a topic, shape the narration and plan every scene with ready-to-use visual prompts.",
+    stack: ["React", "TypeScript", "AI"],
+    image: imgFacelessFlow,
+    liveUrl: "https://facelessflow-xi.vercel.app/" as string | null,
+    frameLabel: "FacelessFlow AI — scene planner",
+    status: "live" as "live" | "in-progress",
+  },
+  {
     title: "JP2 Solar Energy",
     tag: "Solar & Energy · Nigeria",
     summary: "Site for a solar and energy company covering home and business installations, with a solutions catalogue and a quote-request flow.",
@@ -56,6 +79,16 @@ export const realProjects = [
     image: imgJp2Solar,
     liveUrl: "https://jp2-solar.vercel.app/" as string | null,
     frameLabel: "jp2-solar.vercel.app",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Cure Connect Pharmacy",
+    tag: "Pharmacy · Healthcare",
+    summary: "Lets customers search a pharmacy's product list and check availability before making the trip, with clear in-stock and unavailable labels.",
+    stack: ["React", "TypeScript"],
+    image: imgCureConnect,
+    liveUrl: "https://pharmizu-rust.vercel.app/" as string | null,
+    frameLabel: "Cure Connect Pharmacy",
     status: "live" as "live" | "in-progress",
   },
   {
