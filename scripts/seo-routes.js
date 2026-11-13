@@ -28,7 +28,7 @@ export const routes = [
       'Explore my portfolio of web development projects including e-commerce websites, business applications, and custom web solutions. See real examples of my work as a web developer in Nigeria.',
     h1: 'Projects',
     intro:
-      'Real websites and web apps I have built, including LedgerFlow invoicing SaaS, Proeditus, FacelessFlow AI, JP2 Solar Energy, Cure Connect Pharmacy, KelviqTech and Sassy Hairs.',
+      'Real websites and web apps I have built, including Pacific Summer Travels and Tours, LedgerFlow invoicing SaaS, Proeditus, Salient Corporate Advisory, AARIF Global Travel, AgencyOS AI, Cure Connect Pharmacy and KelviqTech.',
   },
   {
     path: '/services',
@@ -69,14 +69,6 @@ export const routes = [
       'Discover the technical skills of Eze Favour Chimereze: React.js, Next.js, Node.js, TypeScript, PostgreSQL, MongoDB, and 40+ tools & technologies. Expert full-stack developer in Port Harcourt, Lagos, and Abuja, Nigeria.',
     h1: 'Technical Skills',
     intro: 'React, Next.js, Node.js, TypeScript, PostgreSQL, Supabase and the tools I use to build for clients.',
-  },
-  {
-    path: '/testimonials',
-    title: 'Working With Me | Eze Favour Chimereze | Web Developer',
-    description:
-      'What working with Eze Favour Chimereze looks like: a full-stack web developer in Port Harcourt, Nigeria, building for clients across Lagos, Abuja, and worldwide.',
-    h1: 'Working With Me',
-    intro: 'How I work with clients, from first message to launch.',
   },
   {
     path: '/contact',

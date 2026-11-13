@@ -14,7 +14,6 @@ const routeLabels: Record<string, string> = {
   services: "Services",
   projects: "Projects",
   skills: "Skills",
-  testimonials: "Testimonials",
   contact: "Contact",
   "web-development": "Web Development",
   "seo-optimization": "SEO Optimization",

@@ -1,11 +1,16 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { useInView } from "react-intersection-observer"
-import { ArrowUpRight, ArrowRight, Info } from "lucide-react"
+import { ArrowUpRight, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Helmet } from "react-helmet-async"
 import BrowserFrame from "@/components/BrowserFrame"
 
+import imgPacificSummer from "@/assets/project-pacificsummer.jpg"
+import imgSalient from "@/assets/project-salient.jpg"
+import imgAarif from "@/assets/project-aarif.jpg"
+import imgJohito from "@/assets/project-johito.jpg"
+import imgAgencyOS from "@/assets/project-agencyos.jpg"
 import imgLedgerFlow from "@/assets/project-ledgerflow.jpg"
 import imgJp2Solar from "@/assets/project-jp2solar.jpg"
 import imgProeditus from "@/assets/project-proeditus.jpg"
@@ -14,7 +19,6 @@ import imgCureConnect from "@/assets/project-cureconnect.jpg"
 import imgConfidantsZone from "@/assets/project-confidantszone.jpg"
 import imgKelviqTech from "@/assets/project-kelviqtech.jpg"
 import imgCaptainBlack from "@/assets/project-captainblack.jpg"
-import imgStorevia from "@/assets/project-storevia.jpg"
 import imgChaDecor from "@/assets/project-chadecor.jpg"
 import imgDcMedtech from "@/assets/project-dcmedtech.jpg"
 import imgCeendy from "@/assets/project-ceendy.jpg"
@@ -23,13 +27,19 @@ import imgAnacoda from "@/assets/project-anacoda.jpg"
 import imgZodStores from "@/assets/project-zodstores.jpg"
 import imgDarasun from "@/assets/project-darasun.jpg"
 import imgThriveAfrica from "@/assets/project-thriveafrica.jpg"
-import imgEcommerce from "@/assets/project-ecommerce.jpg"
-import imgHealthcare from "@/assets/project-healtrackcare.jpg"
-import imgRealEstate from "@/assets/project-realestate.jpg"
-import imgTradePro from "@/assets/project-tradepro.jpg"
 
 // Real, shipped projects. Keep every claim here verifiable — no invented metrics.
 export const realProjects = [
+  {
+    title: "Pacific Summer Travels and Tours",
+    tag: "Travel Agency · Abuja",
+    summary: "Site for an Abuja travel agency covering flights, visas, hotels, tours and study abroad, with a fare-request form that sends enquiries straight to the team.",
+    stack: ["React", "TypeScript"],
+    image: imgPacificSummer,
+    liveUrl: "https://pacificsummertravels.com/" as string | null,
+    frameLabel: "pacificsummertravels.com",
+    status: "live" as "live" | "in-progress",
+  },
   {
     title: "LedgerFlow",
     tag: "Invoicing SaaS · Nigeria",
@@ -48,6 +58,46 @@ export const realProjects = [
     image: imgProeditus,
     liveUrl: "https://www.proeditus.com/" as string | null,
     frameLabel: "proeditus.com",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Salient Corporate Advisory",
+    tag: "HR & Governance Advisory · Lagos",
+    summary: "Site for an HR and corporate governance firm helping growing Nigerian businesses move beyond founder-led management, built around booking a diagnostic.",
+    stack: ["React", "TypeScript"],
+    image: imgSalient,
+    liveUrl: "https://salient-corporate-advisory.vercel.app/" as string | null,
+    frameLabel: "Salient Corporate Advisory",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "AARIF Global Travel",
+    tag: "Travel Agency · Abuja",
+    summary: "Flights, visas, holiday packages and Hajj for a walk-in travel office in Lugbe, with a boarding-pass style fare request that routes to WhatsApp.",
+    stack: ["React", "TypeScript"],
+    image: imgAarif,
+    liveUrl: "https://aarif-global-travel.vercel.app/" as string | null,
+    frameLabel: "AARIF Global Travel",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "AgencyOS AI",
+    tag: "AI SaaS · Agencies",
+    summary: "A workspace for SEO, marketing and web agencies that automates website audits, client proposals, white-label reporting and onboarding.",
+    stack: ["React", "TypeScript", "AI"],
+    image: imgAgencyOS,
+    liveUrl: "https://agencyos-six-nu.vercel.app/" as string | null,
+    frameLabel: "AgencyOS AI — agency toolkit",
+    status: "live" as "live" | "in-progress",
+  },
+  {
+    title: "Johito Academy",
+    tag: "Online Learning · Education",
+    summary: "Beginner computer classes online: simple video lessons that take complete beginners from switching on a computer to being ready for work.",
+    stack: ["React", "TypeScript"],
+    image: imgJohito,
+    liveUrl: "https://johito-academy.vercel.app/" as string | null,
+    frameLabel: "Johito Academy",
     status: "live" as "live" | "in-progress",
   },
   {
@@ -86,8 +136,8 @@ export const realProjects = [
     summary: "Connects people with verified therapists and support specialists — anonymous venting, professional matching, secure sessions.",
     stack: ["React", "TypeScript", "Supabase"],
     image: imgConfidantsZone,
-    liveUrl: null as string | null,
-    frameLabel: "ConfidantsZone — live preview",
+    liveUrl: "https://kindred-paths-ai.vercel.app/" as string | null,
+    frameLabel: "ConfidantsZone",
     status: "live" as "live" | "in-progress",
   },
   {
@@ -129,16 +179,6 @@ export const realProjects = [
     liveUrl: "https://dcmedtech-graphix.vercel.app/" as string | null,
     frameLabel: "dcmedtech-graphix.vercel.app",
     status: "live" as "live" | "in-progress",
-  },
-  {
-    title: "Storvia",
-    tag: "Campus Commerce Platform",
-    summary: "Lets campus sellers launch a branded storefront, list products, and receive orders in minutes — no coding required.",
-    stack: ["React", "TypeScript", "Supabase"],
-    image: imgStorevia,
-    liveUrl: null as string | null,
-    frameLabel: "storevia.name.ng",
-    status: "in-progress" as "live" | "in-progress",
   },
   {
     title: "Ceendy Spa Aesthetics",
@@ -202,36 +242,9 @@ export const realProjects = [
   },
 ]
 
-const concepts = [
-  {
-    title: "Multi-Vendor Marketplace",
-    description: "A commerce concept with seller onboarding, per-vendor storefronts, and commission-based checkout.",
-    stack: ["React", "Node.js", "Stripe Connect"],
-    image: imgEcommerce,
-  },
-  {
-    title: "Patient Care Dashboard",
-    description: "A healthcare admin concept for scheduling, patient records, and care-team coordination.",
-    stack: ["React", "TypeScript", "PostgreSQL"],
-    image: imgHealthcare,
-  },
-  {
-    title: "Real Estate Listings Platform",
-    description: "A property marketplace concept with saved searches, agent profiles, and map-based browsing.",
-    stack: ["React", "Node.js", "PostGIS"],
-    image: imgRealEstate,
-  },
-  {
-    title: "Trading & Portfolio Tracker",
-    description: "A fintech dashboard concept for tracking positions, watchlists, and real-time price data.",
-    stack: ["React", "TypeScript", "WebSockets"],
-    image: imgTradePro,
-  },
-]
-
 interface ProjectsSectionProps {
   headingLevel?: "h1" | "h2"
-  /** "compact" (Home): top 3 real projects + a link to the full page, no concept grid. "full" (Projects page): everything. */
+  /** "compact" (Home): top 3 projects + a link to the full page. "full" (Projects page): every project. */
   variant?: "full" | "compact"
 }
 
@@ -239,7 +252,6 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true })
   const Heading = motion[headingLevel]
   const Sub = (headingLevel === "h1" ? "h2" : "h3") as "h2" | "h3"
-  const SubSub = (headingLevel === "h1" ? "h3" : "h4") as "h3" | "h4"
   const isCompact = variant === "compact"
   const shownProjects = isCompact ? realProjects.slice(0, 3) : realProjects
 
@@ -386,73 +398,14 @@ const ProjectsSection = ({ headingLevel = "h2", variant = "full" }: ProjectsSect
               </Button>
             </motion.div>
           ) : (
-            <>
-              {/* More concepts grid */}
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.2 }}
-                className="text-xl sm:text-2xl font-bold font-display mt-12 sm:mt-16 mb-4"
-              >
-                More concept builds
-              </motion.h3>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.22 }}
-                className="flex items-start gap-2.5 mb-6 sm:mb-8 rounded-xl border border-border/50 bg-card/40 px-4 py-3 max-w-2xl"
-              >
-                <Info className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
-                <p className="text-xs sm:text-sm text-muted-foreground">
-                  The builds below are example concepts I designed and built to demonstrate range beyond the real projects above &mdash; not client deliveries.
-                </p>
-              </motion.div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
-                {concepts.map((c, i) => (
-                  <motion.div
-                    key={c.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.25 + i * 0.06, duration: 0.6 }}
-                    className="rounded-xl border border-border/50 bg-card/50 overflow-hidden group"
-                  >
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <img
-                        src={c.image}
-                        alt={`${c.title} concept preview`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="eager"
-                        width={800}
-                        height={500}
-                      />
-                      <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-medium border border-border/50 bg-background/70 backdrop-blur-sm text-muted-foreground">
-                        Example Concept
-                      </div>
-                    </div>
-                    <div className="p-4 sm:p-5">
-                      <SubSub className="font-semibold mb-1.5">{c.title}</SubSub>
-                      <p className="text-xs sm:text-sm text-muted-foreground mb-3 leading-relaxed">{c.description}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {c.stack.map((t) => (
-                          <span key={t} className="px-2 py-0.5 text-[10px] font-medium rounded-full border border-border/50 text-muted-foreground">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="rounded-3xl border border-border/50 bg-card/50 p-8 sm:p-12 text-center">
-                <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                  Have a real project in mind? Let's talk about what you're building.
-                </p>
-                <Button asChild size="lg" className="mx-auto">
-                  <a href="/contact">Book a Project Review</a>
-                </Button>
-              </div>
-            </>
+            <div className="mt-12 sm:mt-16 rounded-3xl border border-border/50 bg-card/50 p-8 sm:p-12 text-center">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4">
+                Have a project in mind? Let's talk about what you're building.
+              </p>
+              <Button asChild size="lg" className="mx-auto">
+                <Link to="/contact">Book a Project Review</Link>
+              </Button>
+            </div>
           )}
         </motion.div>
       </div>

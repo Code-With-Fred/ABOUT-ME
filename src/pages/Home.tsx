@@ -10,9 +10,9 @@ import Footer from "@/components/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
 import StructuredData from "@/components/StructuredData"
 
-// Home is a short, focused landing page on purpose — full depth on About, Skills,
-// Services, and Testimonials lives on their own pages (linked from the nav and
-// from the CTAs below), not duplicated here.
+// Home is a short, focused landing page on purpose — full depth on About, Skills
+// and Services lives on their own pages (linked from the nav and from the CTAs
+// below), not duplicated here.
 const Home = () => {
   return (
     <PageTransition>

@@ -19,7 +19,6 @@ const About = lazyWithReload(() => import("./pages/About"));
 const Services = lazyWithReload(() => import("./pages/Services"));
 const Projects = lazyWithReload(() => import("./pages/Projects"));
 const Skills = lazyWithReload(() => import("./pages/Skills"));
-const Testimonials = lazyWithReload(() => import("./pages/Testimonials"));
 const Contact = lazyWithReload(() => import("./pages/Contact"));
 const NotFound = lazyWithReload(() => import("./pages/NotFound"));
 const WebDevelopment = lazyWithReload(() => import("./pages/WebDevelopment"));
@@ -47,7 +46,6 @@ const AnimatedRoutes = () => {
           <Route path="/services/ecommerce-solutions" element={<EcommerceSolutions />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

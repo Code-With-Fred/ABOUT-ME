@@ -6,6 +6,11 @@
       "has": [{ "type": "host", "value": "www.codewithfred.com.ng" }],
       "destination": "https://codewithfred.com.ng/:path",
       "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/projects",
+      "permanent": true
     }
   ],
   "rewrites": [
